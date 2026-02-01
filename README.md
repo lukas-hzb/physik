@@ -1,19 +1,19 @@
 # Physik-Leistungskurs - Wiederholung aller Themen
 
-Ein umfassendes LaTeX-Dokument zur Wiederholung aller relevanten Themen fuer den Physik-Leistungskurs in Baden-Wuerttemberg (Abitur 2026). Es enthaelt detaillierte Herleitungen zentraler Groessen und Formeln sowie Erklaerungen wichtiger Phaenomene und deren Zusammenhaenge.
+Ein umfassendes LaTeX-Dokument zur Wiederholung aller relevanten Themen für den Physik-Leistungskurs in Baden-Württemberg (Abitur 2026). Es enthält detaillierte Herleitungen zentraler Größen und Formeln sowie Erklärungen wichtiger Phänomene und deren Zusammenhänge.
 
 ## Inhalt
 
-- **Schwingungstheorie**: Harmonische Schwingungen, Pendel, Resonanz und Daempfung.
-- **Wellentheorie**: Wellenarten, Ausbreitung, Interferenz und Huygensches Prinzip.
-- **Elektrizitaetslehre**: Elektrische Felder, Kondensatoren, Stromkreise und Energie.
+- **Schwingungstheorie**: Harmonische Schwingungen, Pendel, Resonanz und Dämpfung.
+- **Wellentheorie**: Wellenarten, Ausbreitung, Interferenz und Huygenssches Prinzip.
+- **Elektrizitätslehre**: Elektrische Felder, Kondensatoren, Stromkreise und Energie.
 - **Magnetismus**: Magnetfelder, Lorentzkraft, Fadenstrahlrohr und Hall-Effekt.
 - **Elektromagnetismus**: Induktion, Maxwell-Gleichungen und elektromagnetische Wellen.
 - **Wellenoptik & Quantenmechanik**: Beugung, Interferenz, Photoeffekt und Welle-Teilchen-Dualismus.
 
 ## Kompilierung
 
-Fuer die Kompilierung wird eine LaTeX-Distribution (z.B. TeX Live, MiKTeX) benoetigt.
+Für die Kompilierung wird eine LaTeX-Distribution (z.B. TeX Live, MiKTeX) benötigt.
 
 1. LaTeX-Distribution installieren.
 2. Repository klonen oder herunterladen.
