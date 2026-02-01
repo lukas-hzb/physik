@@ -1,0 +1,362 @@
+\section{Wellentheorie}
+Die nachfolgenden Grundlagen der Wellentheorie wurden in der zweiten Klausur der elften Klasse abgefragt.
+
+\subsection{Relevante Größen und deren Zusammenhänge}
+
+\subsubsection{Ausbreitungsgeschwindigkeit ($c$)}
+\label{sec:ausbreitungsgeschwindigkeit}
+Die Ausbreitungsgeschwindigkeit $c$ ist die Geschwindigkeit, mit der sich eine Welle oder ein Wellensignal durch ein Medium fortbewegt.
+\begin{gather}
+    c = \lambda f
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\lambda$ & Wellenlänge \\
+        $f$ & Frequenz
+    \end{tabular}
+\end{center}
+
+\subsubsection{Wellenlänge ($\lambda$)}
+\label{sec:wellenlaenge}
+Die Wellenlänge $\lambda$ ist der räumliche Abstand zwischen zwei aufeinanderfolgenden Punkten gleicher Phase einer Welle, zum Beispiel zwischen zwei benachbarten Wellenbergen.
+\begin{gather}
+    \lambda=\frac{c}{f}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $c$ & Ausbreitungsgeschwindigkeit der Welle \\
+        $f$ & Frequenz
+    \end{tabular}
+\end{center}
+
+\subsubsection{Phasenverschiebung ($\Delta \varphi$)}
+\label{sec:phasenverschiebung}
+Die Phasenverschiebung $\Delta \varphi$ ist der Unterschied im zeitlichen Verlauf zweier Schwingungen oder Wellen gleicher Frequenz, der angibt, um welchen Winkel oder Bruchteil einer Periode eine Welle gegenüber der anderen vor- oder nachläuft. Sie gibt die zeitliche Verschiebung zweier Wellen an.
+\begin{gather}
+    \Delta \varphi = \frac{2\pi}{\lambda} \cdot \delta
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\lambda$ & Wellenlänge \\
+        $\delta$ & Gangunterschied
+    \end{tabular}
+\end{center}
+Die Einheit der Phasenverschiebung ist
+\begin{center}
+    $[\Delta \varphi] = \si{\radian}$
+\end{center}
+
+\subsubsection{Gangunterschied ($\delta$)}
+\label{sec:gangunterschied}
+Der Gangunterschied ist der Unterschied in den Weglängen, die zwei Wellen bis zu einem gemeinsamen Punkt zurückgelegt haben bzw. die räumliche Verschiebung der Wellen zueinander. Er ist entscheidend dafür, ob sich die kohärenten Wellen am Überlagerungspunkt konstruktiv (Verstärkung) oder destruktiv (Auslöschung) überlagern.
+\begin{gather}
+    \delta = \frac{\Delta \varphi}{2\pi} \cdot \lambda
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\Delta \varphi$ & Phasenverschiebung \\
+        $\lambda$ & Wellenlänge
+    \end{tabular}
+\end{center}
+Damit entspricht ein Gangunterschied von $\lambda$ einer Phasenverschiebung von $2\pi$, während ein Gangunterschied von $\frac{\lambda}{2}$ einer Phasenverschiebung von $\pi$ entspricht.
+
+\subsubsection{Schnelle ($v_s$)}
+\label{sec:schnelle}
+In der Wellenlehre bezeichnet die Schnelle $v_s$ die momentane Geschwindigkeit der Teilchen eines Mediums bei einer mechanischen Welle und gibt an, wie schnell sich die einzelnen Teilchen um ihre Gleichgewichtslage bewegen.
+\begin{gather}
+    v_s(t) = \dot{y}(t)
+\end{gather}
+
+\subsubsection{Wellengleichung mit Kreiswellenzahl ($y(x,\,t)$, $k$)}
+\label{sec:wellengleichung_mit_kreiswellenzahl}
+Die Wellengleichung $y(x,\,t)$ beschreibt die Abhängigkeit der Auslenkung einer Welle sowohl von der Zeit $t$ als auch vom Ort $x$. Sie entsteht, indem die zeitliche Schwingung $s(t)$ eines harmonischen Oszillators um den Ortsparameter $x$ erweitert wird. Dadurch wird nicht mehr nur die zeitliche Schwingung an einem festen Punkt, sondern die Ausbreitung dieser Schwingung im Raum beschrieben.
+\begin{align}
+    y(x,\,t) &= \hat y_0 \cdot \sin(\omega t - kx) \\
+    &= \hat y_0 \cdot \sin\left(\frac{2\pi t}{T}  - \frac{2\pi x}{\lambda}\right) \\
+    y(x,\,t) &= \hat y_0 \cdot \sin\left[2\pi \cdot \left(\frac{t}{T} - \frac{x}{\lambda}\right)\right]
+\end{align}
+\begin{center}
+    \begin{tabular}{rl}
+        $\hat y_0$ & Amplitude \\
+        $\omega$ & Kreisfrequenz \\
+        $k$ & Kreiswellenzahl (entspricht einer räumlichen Kreisfrequenz) \\
+        $T$ & Periodendauer \\
+        $\lambda$ & Wellenlänge
+    \end{tabular}
+\end{center}
+Falls die Welle an der Stelle $x = 0$ oder am Zeitpunkt $t = 0$ nicht in der Ruhelage startet, muss anstelle von $\sin$ die Funktion $\cos$ verwendet oder eine entsprechende initiale Phasenverschiebung bzw. ein initialer Gangunterschied addiert werden; zudem ist das Vorzeichen je nach Ausbreitungsrichtung der Welle anzupassen. Im weiteren Verlauf des Dokuments wird die vereinfachte Form ohne eine Phase $\varphi'$ verwendet:
+\begin{align}
+    y(x,\,t) &= \hat y_0 \cdot \sin(\omega t + \Delta \varphi - kx + \delta) \\
+    &= \hat y_0 \cdot \sin(kx - \omega t + \varphi')
+\end{align}
+\begin{center}
+    \begin{tabular}{rl}
+        $\varphi'$ & Effektive Phase aus $\Delta \varphi$ und $\delta$
+    \end{tabular}
+\end{center}
+Die Einheit der Kreiswellenzahl ist
+\begin{center}
+    $[k] = \si{\per\meter} = \si{\radian\per\meter}$
+\end{center}
+
+\subsection{Wichtige Phänomene und Ergänzungen}
+
+\subsubsection{Welle}
+\label{sec:welle}
+Eine Welle ist die räumliche und zeitliche Ausbreitung einer räumlichen und zeitlichen Schwingung bzw. Störung, bei der Energie, aber nicht dauerhaft Materie, von einem Ort zum anderen übertragen wird; sie erfolgt nach bestimmten periodischen Gesetzmäßigkeiten.
+
+Eine Welle kann als Kette von gekoppelten Oszillatoren in einem Medium aufgefasst werden. Der erste Oszillator einer Kette wird in Schwingung versetzt. Jede Phase dieser erzwungenen Schwingung wird nach und nach von den anderen Körpern übernommen, als wären die Oszillatoren durch Federn verbunden. Durch diese Kopplung kann die Energie zwischen den Schwingkörpern weitergereicht werden.
+
+Im Inneren von Flüssigkeiten und Gasen können im Gegensatz zu festen Körpern nur Längswellen entstehen. Die Oberfläche einer Flüssigkeit ist dagegen bestrebt, sich nach einer Störung wieder horizontal einzustellen. Diese Eigenschaft ermöglicht an einer Wasseroberfläche sogenannte \emph{Oberflächenwellen} mit einer Quer- als auch einer Längskomponente.
+
+Die Ausbreitungsgeschwindigkeit $c$ hängt maßgeblich von der Masse und (Stärke der) Kopplung der Oszillatoren und somit dem Material/Medium zusammen. Ihre Energie ist als Spannerenergie $(W_\mathrm{span})$ und Bewegungsenergie $(W_\mathrm{kin})$ auf die einzelnen Oszillatoren verteilt.
+
+\subsubsection{Querwelle bzw. Transversalwelle}
+\label{sec:querwelle_bzw_transversalwelle}
+Querwellen (Transversalwellen) sind im Unterschied zu \hyperref[sec:laengswelle_bzw_longitudinalwelle]{Längswellen} Wellen, bei denen die Schwingungsrichtung der Teilchen senkrecht zur Ausbreitungsrichtung der Welle steht.
+
+\subsubsection{Längswelle bzw. Longitudinalwelle}
+\label{sec:laengswelle_bzw_longitudinalwelle}
+Längswellen (Longitudinalwellen) sind Wellen, bei denen die Schwingungsrichtung der Teilchen parallel zur Ausbreitungsrichtung der Welle verläuft. Dazu ist die Kompression und Expansion des Mediums erforderlich, was nur in festen Körpern möglich ist. Längswellen sind dabei meist schneller als Querwellen.
+
+\subsubsection{Wasserwelle}
+\label{sec:wasserwelle}
+Wasserwellen stellen einen Spezialfall dar, da sie keine reinen \hyperref[sec:querwelle_bzw_transversalwelle]{Quer-} oder \hyperref[sec:laengswelle_bzw_longitudinalwelle]{Längswellen} sind. Vielmehr handelt es sich um Überlagerungen beider Wellenarten: Die Wasserteilchen führen näherungsweise Kreisbahnen aus, die sowohl eine senkrechte als auch eine parallele Komponente zur Ausbreitungsrichtung besitzen. In tieferen Schichten des Wassers nimmt der Radius dieser Kreisbahnen ab, bis die Bewegung in großer Tiefe praktisch vernachlässigbar ist. Deshalb zählen Wasserwellen zu den sogenannten Oberflächenwellen. Sie treten an der Grenzfläche zwischen Wasser und Luft auf und spielen insbesondere in der Ozeanographie und Strömungslehre eine bedeutende Rolle.
+
+\subsubsection{Stehende Welle}
+\label{sec:stehende_welle}
+Eine stehende Welle entsteht, wenn sich zwei Wellen mit gleicher Frequenz, gleicher Amplitude und gleicher Geschwindigkeit überlagern, die in entgegengesetzten Richtungen laufen. Diese Überlagerung führt zu einem charakteristischen Muster, bei dem sich Bereiche ohne Schwingung, sogenannte \emph{Knoten}, mit Bereichen maximaler Auslenkung, den \emph{Bäuchen}, abwechseln. Die Welle scheint dabei stillzustehen, obwohl sie aus der kontinuierlichen Überlagerung der beiden sich bewegenden Wellen resultiert.
+
+Die Wellenlänge einer stehenden Welle kann durch Messung des Abstands benachbarter Knoten bestimmt werden: $\lambda = 2 \cdot d_{knot}$
+
+Ein klassisches Beispiel für stehende Wellen ist die schwingende Saite eines Musikinstruments. Die an beiden Enden fixierte Saite reflektiert die Wellen, wodurch stehende Wellen mit Knoten an den Enden entstehen. Je nach Frequenz bilden sich verschiedene Muster, von der Grundschwingung mit einem Bauch bis zu höheren Moden mit mehreren Knoten und Bäuchen.
+
+Stehende Wellen entstehen auch in anderen Medien wie Luftsäulen oder Wasseroberflächen durch Reflexion oder Interferenz in begrenzten Systemen. Entscheidend sind dabei die Eigenfrequenzen des Systems, bei denen die Wellenlänge genau passt und Resonanz auftritt.
+
+ Siehe auch: \url{https://www.leifiphysik.de/mechanik/mechanische-wellen/versuche/stehende-welle-simulation}
+
+\subsubsection{Huygens'sches Prinzip mit Wellenfront und Wellennormale}
+\label{sec:huygenssches_prinzip_mit_wellenfront_und_wellennormale}
+Das Huygens'sche Prinzip besagt, dass jeder Punkt einer Wellenfront als Ausgangspunkt für neue Elementarwellen betrachtet werden kann. Diese Elementarwellen breiten sich in alle Richtungen mit der gleichen Geschwindigkeit aus wie die ursprüngliche Welle. Die Überlagerung dieser Wellen beschreibt die Fortpflanzung der Gesamten Wellenfront.
+
+Dieses Prinzip erklärt zentrale Welleneffekte wie Beugung, Brechung oder Reflexion.
+
+Bei ebenen Wellen wird die Wellenfront durch parallele, gleichphasige Elementarwellen erzeugt. Bei Kreiswellen sendet ein Punkt als Quelle neue Wellenfronten aus. Alle Punkte, die gleich weit vom Erregerzentrum entfernt sind, schwingen in Phase.
+
+Die Wellennormale ist in der Physik eine Linie, die senkrecht zur Wellenfront verläuft und die Richtung der Wellenausbreitung angibt.
+
+\subsubsection{Beugung}
+\label{sec:beugung}
+Die Beugung beschreibt das Phänomen, bei dem Wellen um Hindernisse oder durch enge Öffnungen abgelenkt werden und sich hinter dem Hindernis in neue Richtungen ausbreiten. Beugung ist besonders ausgeprägt, wenn die Wellenlänge der Welle vergleichbar mit der Größe des Hindernisses oder der Öffnung ist.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.35\linewidth]{figures/beugung_schlitz.png}
+    \caption{Schematische Darstellung der Beugung an einem Schlitz.}
+    \label{fig:beugung_schlitz}
+\end{figure}
+
+\subsubsection{Brechung}
+\label{sec:brechung}
+Bei der Brechung tritt eine Welle von einem Medium in ein anderes mit unterschiedlicher Ausbreitungsgeschwindigkeit ein. Nach dem Huygens'schen Prinzip entstehen an jedem Punkt der Wellenfront neue Elementarwellen, die sich mit der Geschwindigkeit des jeweiligen Mediums ausbreiten.
+Der Winkel zwischen dem einfallenden Strahl und der Lotrechten an der Grenzfläche wird als Einfallswinkel $\alpha$ bezeichnet, der Winkel des gebrochenen Strahls als Brechungswinkel $\beta$. Diese Größen stehen im folgenden Zusammenhang, dem Brechungsgesetz:
+\begin{gather}
+    \frac{\sin \alpha}{\sin \beta} = \frac{c_1}{c_2}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\alpha$ & Einfallswinkel (zwischen einfallender Welle und Lot) \\
+        $\beta$ & Brechungswinkel (zwischen gebrochener Welle und Lot) \\
+        $c_1, c_2$ & Ausbreitungsgeschwindigkeiten in den beiden Medien
+    \end{tabular}
+\end{center}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.43\linewidth]{figures/brechung.png}
+    \caption{Schematische Darstellung der Brechung am Übergang zwischen zwei Medien.}
+    \label{fig:brechung}
+\end{figure}
+
+\subsubsection{Reflexion am festen und losen Ende}
+\label{sec:reflexion_am_festen_und_losen_ende}
+Die Reflexion einer Welle beschreibt das Zurückwerfen einer Welle an einem Hindernis. Die Art der Reflexion hängt davon ab, ob das reflektierende Ende fest oder los ist.
+\begin{itemize}
+    \item \emph{Festes Ende:} Die Welle wird mit Phasenumkehr reflektiert, d.\,h., die Auslenkung wird um $\pi$ verschoben. Die reflektierte Welle schwingt in entgegengesetzter Richtung zur ursprünglichen Auslenkung.
+    \item \emph{Loses Ende:} Die Welle wird ohne Phasenverschiebung reflektiert. Die Auslenkung der reflektierten Welle behält die gleiche Richtung wie die ursprüngliche Welle.
+\end{itemize}
+Siehe auch: \url{https://www.leifiphysik.de/mechanik/mechanische-wellen/grundwissen/reflexion}
+
+Der Verlauf der reflektierten Welle lässt sich mithilfe des Huygens'schen Prinzips herleiten: Jeder Punkt der einfallenden Wellenfront wirkt als Quelle neuer Elementarwellen, die sich in alle Richtungen ausbreiten.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/reflexion_huygens.png}
+    \vspace{-0.8cm} % Ausgleich für dicken Rand am Bild
+    \caption{Schematische Darstellung der Reflexion nach Huygens.}
+    \label{fig:reflexion_huygens}
+\end{figure}
+Die Richtung der reflektierten Welle wird durch den Einfallswinkel $\alpha$ zum Lot bestimmt. Dabei gilt das Reflexionsgesetz:
+\begin{gather}
+    \alpha_\mathrm{einfall} = \alpha_\mathrm{reflektiert}
+\end{gather}
+
+\subsubsection{Interferenz}
+\label{sec:interferenz}
+Interferenz ist das Phänomen, das auftritt, wenn zwei oder mehr Wellen im gleichen Raum aufeinandertreffen und sich überlagern. Diese Überlagerung kann konstruktiv oder destruktiv sein, je nach \hyperref[sec:phasenverschiebung]{Phasenverschiebung} der Wellen. Die Phasenverschiebung wiederum lässt sich häufig durch den sogenannten \hyperref[sec:gangunterschied]{Gangunterschied} erklären, also den Unterschied in den zurückgelegten Weglängen der Wellen. Auch bei der Überlagerung von Wellen kann wie bei der Überlagerung von Schwingungen Schwebung auftreten, was gut bei Schallwellen wahrnehmbar ist.
+
+Bei konstruktiver Interferenz verstärken sich die Wellen, wenn ihre Auslenkungen in die gleiche Richtung zeigen, was zu einer größeren Amplitude führt. Bei destruktiver Interferenz schwächen sich die Wellen ab, wenn ihre Auslenkungen in entgegengesetzte Richtungen zeigen und sich gegenseitig auslöschen oder vermindern.
+
+Die resultierende Elongation an jedem Punkt ist das Ergebnis der Vektoraddition aller Einzelelongationen.
+
+\subsubsection{Kohärenz}
+\label{sec:kohaerenz}
+Kohärenz beschreibt die Eigenschaft von Wellen, in einem festen phasenmäßigen Zusammenhang zueinander zu stehen. Zwei Wellen sind kohärent, wenn ihr Phasenunterschied über die Zeit konstant bleibt. Man unterscheidet dabei zwischen \emph{zeitlicher Kohärenz}, die eine feste Phasenbeziehung an einem Ort über die Zeit beschreibt, und \emph{räumlicher Kohärenz}, bei der an verschiedenen Orten einer Wellenfront ein fester Phasenbezug vorliegt. Kohärenz ist die Voraussetzung dafür, dass sich Wellen durch Überlagerung (Interferenz) verstärken oder auslöschen können.
+
+Ein Beispiel für hohe Kohärenz ist das Licht eines Lasers: Die ausgesendeten Wellen haben nahezu die gleiche Frequenz und eine feste Phasenbeziehung. Gewöhnliche Lichtquellen wie Glühlampen sind hingegen inkohärent, da sie viele verschiedene Frequenzen abstrahlen und die Phasenbeziehungen der einzelnen Wellen zufällig variieren. Das Laserlicht zeichnet sich zusätzlich durch eine hohe Bündelung (geringe Divergenz) und Monochromasie (Einfarbigkeit) aus, die im Zusammenhang mit der Kohärenz eine gezielte technische Nutzung ermöglichen.
+
+\subsubsection{Eigenschwingungen mit festen und losen Enden}
+\label{sec:eigenschwingungen_mit_festen_und_losen_Enden}
+Eigenschwingungen entstehen, wenn ein System so schwingt, dass an seinen Randbedingungen (fest oder frei) immer ein Knoten (feste Stelle, keine Auslenkung) oder ein Bauch (freie Stelle, maximale Auslenkung) passt. Da somit nur bestimmte Wellenlängen $\lambda$ erlaubt sind, ergeben sich nur bestimmte Frequenzen $f$, die als Eigenfrequenzen bezeichnet werden.
+
+Die niedrigste Frequenz wird als Grundfrequenz $f_1$ und die höheren als Oberfrequenzen oder Harmonische $f_k$ bezeichnet.
+
+Bei \emph{zwei festen oder zwei freien Enden}, wie bei einer Gitarrensaite, die an beiden Enden eingespannt ist, oder einer Luftsäule mit zwei offenen Enden, enthält die Länge $l$ immer ein ganzzahliges Vielfaches von $\frac{\lambda}{2}$:
+\begin{gather}
+    l = k \cdot \frac{\lambda}{2}
+\end{gather}
+Mit der Gleichung $c = f \lambda$ folgt:
+\begin{gather}
+    f_k = \frac{k c}{2 l} = k \cdot f_1
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $k$ & Ordnung der Harmonischen (ganzzahlig) \\
+        $c$ & Ausbreitungsgeschwindigkeit \\
+        $l$ & Länge des schwingenden Systems
+    \end{tabular}
+\end{center}
+Das heißt: Die Eigenfrequenzen sind ganzzahlige Vielfache der Grundfrequenz und bilden die Harmonischen.
+
+Bei \emph{einem festen und einem freien Ende}, also zum Beispiel eine Saite, die an einem Ende eingespannt, am anderen aber frei schwingbar ist, oder eine Orgelpfeife mit einem geschlossenen und einem offenen Ende, passt in die Länge $l$ immer ein ungeradzahliges Vielfaches von $\frac{\lambda}{4}$
+\begin{gather}
+    l = (2k - 1) \cdot \frac{\lambda}{4}
+\end{gather}
+Daraus folgt für $f_k$:
+\begin{gather}
+    f_k = \frac{(2k-1) \cdot c}{4l}
+\end{gather}
+Auch hier bezeichnet man die Grundfrequenz $f_1$ als erste harmonische Schwingung und die höheren Frequenzen als ungerade Harmonische.
+
+\subsubsection{Polarisation, Polfilter und Analysator}
+\label{sec:polarisation_polfilter_und_analysator}
+Die Polarisation einer Welle beschreibt die Richtung, in der die Schwingung der Welle erfolgt. Bei elektromagnetischen Wellen, wie Licht, bezieht sich dies auf die Richtung des elektrischen Feldvektors. Schwingt dieser Vektor schnell und ungeordnet, spricht man von unpolarisiertem Licht.
+
+Ein Polarisationsfilter (Polfilter) kann verwendet werden, um aus unpolarisiertem Licht polarisiertes Licht zu erzeugen. Der Filter lässt nur Licht mit einer bestimmten Schwingungsrichtung passieren. Polfilter bestehen typischerweise aus parallelen Molekülketten, die den Teil der Welle absorbieren, der in dieselbe Richtung wie die Moleküle schwingt, während der senkrecht dazu schwingende Teil durchgelassen wird.
+
+Ein Analysator ist ein weiterer Polfilter, der nach einem ersten Polfilter angeordnet wird, um die Polarisation des durchgelassenen Lichts zu überprüfen oder zu messen. Durch Drehung des Analysators kann man feststellen, ob das Licht linear polarisiert ist und in welcher Richtung seine Schwingung verläuft. Man unterscheidet verschiedene Arten der Polarisation:
+\begin{itemize}
+    \item \emph{Lineare Polarisation:} Der elektrische Feldvektor schwingt in einer festen Richtung.
+    \item \emph{Kreis- oder elliptische Polarisation:} Der elektrische Feldvektor rotiert während der Ausbreitung, sodass die Spitze des Vektors eine Kreis- oder Ellipsenbahn beschreibt.
+\end{itemize}
+Dadurch lassen sich Polarisationszustände von Licht genau analysieren und gezielt einsetzen.
+
+Polarisationsfilter werden in der Fotografie verwendet, um Reflexionen zu reduzieren und die Sättigung von Farben zu erhöhen. Sie sind besonders nützlich bei der Aufnahme von Landschaften, da sie störende Reflexionen von Wasseroberflächen, Glas oder anderen reflektierenden Oberflächen eliminieren können. Dies führt zu klareren und kontrastreicheren Bildern.
+
+\subsection{Apparaturen und Sonstiges}
+
+\subsubsection{Zeigermodell bei Wellen}
+\label{sec:zeigermodell_bei_wellen}
+Das Zeigermodell bei Wellen stellt eine harmonische Welle durch gegen den Uhrzeigersinn rotierende Pfeile (Zeiger) dar, die sich an jedem Ort mit derselben Frequenz drehen. Die absolute Länge der Zeiger entspricht der Amplitude der Welle. Betrachtet man die Projektion der Zeiger auf die y-Achse, so ergibt sich daraus die momentane Auslenkung an jedem Ort. In einer Momentaufnahme sieht man, dass die Zeiger an verschiedenen Orten um unterschiedliche Winkel gedreht sind -- diese Unterschiede entsprechen den Phasenverschiebungen entlang der Ausbreitungsrichtung der Welle. Auf diese Weise macht das Modell anschaulich, wie sich eine Welle aus vielen einzelnen Schwingungen zusammensetzt, die alle dieselbe Frequenz haben, aber ortsabhängig mit verschiedener Phase verlaufen.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/zeigermodell_bei_wellen.png}
+    \caption{Darstellung des Zeigermodells bei Wellen.}
+    \label{fig:zeigermodell_bei_wellen}
+\end{figure}
+
+\subsubsection{Darstellung von Wellen zu bestimmten Zeitpunkten}
+\label{sec:darstellung_von_wellen_zu_bestimmten_zeitpunkten}
+Fixiert man die Zeit $t$ und betrachtet die Welle in Abhängigkeit vom Ort $x$ in einem $y$-$x$-Diagramm, so erhält man ein räumliches Bild der Welle. Es beschreibt, wie die Welle zu einem bestimmten Zeitpunkt an verschiedenen Orten ausgelenkt ist. Eine harmonische Welle kann allgemein durch folgende Gleichung beschrieben werden:
+\begin{gather*}
+    y(x,\,t) = \hat y_0 \cdot \sin(\omega t - kx)
+\end{gather*}
+Für einen festen Zeitpunkt $t = t_0$ reduziert sich die Gleichung auf Folgendes:
+\begin{align*}
+    y(x,\,t) &= \hat y_0 \cdot \sin(\omega t_0 - kx) \\
+             &= \hat y_0 \cdot \sin(-kx + \varphi'(t_0))
+\end{align*}
+Dabei ist $\varphi'(t_0) = \omega t_0$ eine effektive Phase, die die Zeitabhängigkeit enthält. Außerdem muss beachtet werden, dass sich die Welle bis zum Zeitpunkt $t_0$ nur bis zur Position $x(t_0) = c \cdot t_0$ ausgebreitet hat. Das entsprechende Diagramm darf daher nur bis zu diesem Ort $x(t_0)$ gezeichnet werden. Es ist sinnvoll, die Welle von dieser Stelle aus rückwärts zu zeichnen, um die Phasenverschiebung korrekt darzustellen. Beginnt die Welle beispielsweise mit einer Auslenkung aus der Ruhelage nach oben, so muss sie auch im Diagramm von rechts nach links mit einer Auslenkung nach oben beginnen. Der Grund ist, dass beim weiteren Fortschreiten der Welle die Teilchen links der Wellenfront zuerst nach oben ausgelenkt werden.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/welle_zu_fester_zeit.png}
+    \caption{Darstellung einer Welle zum Zeitpunkt $t_0$.}
+    \label{fig:welle_zu_fester_zeit}
+\end{figure}
+
+\subsubsection{Darstellung von Wellen an bestimmten Orten}
+\label{sec:darstellung_von_wellen_an_bestimmten_orten}
+Fixiert man den Ort $x$ und betrachtet die Welle in Abhängigkeit von der Zeit $t$, so erhält man ein zeitliches Bild der Welle als $y$-$t$-Diagramm. Es beschreibt quasi wie bei einer harmonischen Schwingung, wie sich die Auslenkung an diesem festen Punkt $x_0$ im Laufe der Zeit verändert. Eine harmonische Welle lässt sich allgemein durch folgende Gleichung beschreiben:
+\begin{gather*}
+    y(x,\,t) = \hat y_0 \cdot \sin(\omega t - kx)
+\end{gather*}
+Für einen festen Ort $x = x_0$ ergibt sich Folgendes:
+\begin{align*}
+    y(x_0, t) &= \hat{y}_0 \cdot \sin\!\left(\omega t - kx_0\right) \\
+              &= \hat{y}_0 \cdot \sin\!\left(\omega t + \varphi'(x_0)\right)
+\end{align*}
+Dabei ist $\varphi'(x_0) = -kx_0$ eine effektive Phase, die die Ortsabhängigkeit enthält. Hierbei bietet es sich an, die welle von $t_0 = \tfrac{x_0}{c}$, also dem Zeitpunkt, an dem die Welle den Ort $x_0$ erreicht, aus nach rechts zu zeichnen. Beginnt die Welle an diesem Ort zum Beispiel mit einer Auslenkung aus der Ruhelage nach unten, so muss sie auch im Diagramm Aus der Ruhelage nach unten starten. Der Grund ist, dass die Teilchen an diesem Ort $x_0$ zuerst nach unten ausgelenkt werden, wenn sie bei $t_0$ von der die Welle erreicht werden.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/welle_an_festem_ort.png}
+    \caption{Darstellung einer Welle bei $x_0$.}
+    \label{fig:welle_an_festem_ort}
+\end{figure}
+
+\subsubsection{Noise-Cancelling durch Gegenschall}
+\label{sec:noise-cancelling_durch_gegenschall}
+Beim Noise-Cancelling wird das Prinzip der destruktiven Interferenz genutzt: Ein störendes Schallsignal (z.\,B. Umgebungslärm) wird durch ein Mikrofon aufgenommen und elektronisch verarbeitet. Anschließend erzeugt das System eine zweite Schallwelle, die exakt dieselbe Frequenz und Amplitude, jedoch eine Phasenverschiebung von $180^\circ$ besitzt. Treffen beide Wellen aufeinander, heben sie sich gegenseitig weitgehend auf, sodass das resultierende Schallsignal stark abgeschwächt wird. Dieser Effekt ist besonders bei tiefen, gleichmäßigen Frequenzen (z.\,B. Motorengeräuschen) wirksam. Bei unregelmäßigen, hochfrequenten Geräuschen ist die Unterdrückung technisch schwieriger, da diese sich nicht so einfach exakt gegenphasig erzeugen lassen.
+
+\subsubsection{Tsunami}
+\label{sec:tsunami}
+Ein Tsunami entsteht durch plötzliche, starke Verlagerungen großer Wassermassen, die meist durch ein Erdbeben unter dem Meeresboden verursacht werden. Dabei verschieben sich Gesteinsschichten entlang einer tektonischen Platte, wodurch der Meeresboden entweder angehoben oder abgesenkt wird. Diese Verlagerung überträgt sich auf die darüber liegende Wassersäule, wodurch eine Welle erzeugt wird. Andere Ursachen können auch Vulkanausbrüche, Erdrutsche oder Meteoriteneinschläge ins Wasser sein.
+
+Die Wellen eines Tsunamis breiten sich kreisförmig von ihrem Entstehungsort aus und erreichen Geschwindigkeiten von bis zu \SI{800}{\kilo\meter\per\hour}, abhängig von der Tiefe des Wassers. In tiefem Wasser sind die Wellen kaum zu bemerken, da ihre Amplitude gering ist und sich die Energie auf eine große Fläche verteilt. Wenn der Tsunami flacheres Küstenwasser erreicht, wird die Geschwindigkeit aufgrund der geringeren Wassertiefe reduziert. Gleichzeitig steigt die Höhe der Wellen (Amplitude), weil die Wellenlänge abnimmt und die gesamte Energie der Welle auf eine kleinere Fläche konzentriert wird. Dieser Prozess nennt sich Wellenaufsteilung und ist über die folgenden Formeln nachvollziehbar:
+\begin{gather}
+    c = \lambda \cdot f = \sqrt{g \cdot h} \\
+    \lambda \propto \sqrt{h}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\lambda$ & Wellenlänge \\
+        $f$ & Frequenz \\
+        $g$ & Erdbeschleunigung ($\approx 9{,}81\,\mathrm{m/s^2}$) \\
+        $h$ & Wassertiefe \\
+        $c$ & Ausbreitungsgeschwindigkeit
+    \end{tabular}
+\end{center}
+Schließlich erreicht der Tsunami die Küste und kann dort mit großer Zerstörungskraft auftreten, da riesige Wassermassen auf Land treffen.
+
+\subsubsection{Erdbeben und Seismograf}
+\label{sec:erdbeben_und_seismograf}
+Ein Erdbeben entsteht durch plötzliche Verschiebungen von Gesteinsmassen im Erdinneren, meist entlang von Verwerfungen. Dabei werden mechanische Wellen freigesetzt, die sich kugelförmig vom Herd ausbreiten.
+\begin{itemize}
+    \item \emph{Primärwellen (P-Wellen):} Längswellen, die sich am schnellsten ausbreiten und zuerst an Messstationen ankommen.
+    \item \emph{Sekundärwellen (S-Wellen):} Querwellen, die langsamer als P-Wellen sind und danach registriert werden.
+    \item \emph{Oberflächenwellen:} Breiten sich nur entlang der Erdoberfläche aus und treffen zuletzt ein, verursachen oft die stärksten Zerstörungen.
+\end{itemize}
+Die Laufzeitdifferenz von P- und S-Wellen ermöglicht die Abschätzung der Entfernung zum Erdbebenherd.
+
+Ein Seismograf kann die Erschütterungen des Bodens aufzeichnen und besteht zum Beispiel aus einem schweren Pendel oder Topfmagneten, der wegen seiner Trägheit gegenüber dem bewegten Untergrund nahezu unbewegt bleibt. Relativbewegungen zwischen Untergrund und Masse werden durch einen Schreibstift oder Sensor registriert und liefern ein Seismogramm der Bodenbewegung.
+
+\subsection{Versuche}
+\begin{itemize}
+    \item Erklären, dass ein Beobachter, der sich relativ zu einem Wellensender bewegt, eine andere
+    Frequenz beziehungsweise Wellenlänge wahrnimmt als die von der Quelle erzeugte
+    (Doppler-Effekt, Rotverschiebung und Blauverschiebung)
+    \item Eindimensionale stehende Transversalwellen beschreiben und als Interferenzphänomen
+    erklären (Bäuche, Knoten, Eigenfrequenzen, Stellen konstruktiver beziehungsweise destruktiver
+    Interferenz, Reflexion an festen beziehungsweise losen Enden, Wellenlängenbestimmung mittels
+    Knotenabstand)
+    \item Mithilfe des Gangunterschieds die Überlagerung zweidimensionaler kohärenter Wellen
+    beschreiben
+\end{itemize}
+
+\emph{Weitere Versuche hier einfügen.}

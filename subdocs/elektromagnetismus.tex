@@ -1,0 +1,183 @@
+\section{Elektromagnetismus}
+Die nachfolgenden Grundlagen des Elektromagnetismus wurden in der ersten Klausur der zwölften Klasse abgefragt.
+
+\subsection{Relevante Größen und deren Zusammenhänge}
+
+\emph{Hier ergänzen!}
+
+\subsection{Wichtige Konzepte und Vertiefung}
+
+\subsubsection{Elektromagnetisches Spektrum}
+\label{sec:elektromagnetisches_spektrum}
+Das elektromagnetische Spektrum umfasst die Gesamtheit aller elektromagnetischen Wellen, die sich durch ihre Wellenlänge $\lambda$ und Frequenz $f$ unterscheiden. Es reicht von den langwelligen Radiowellen bis zu den extrem kurzwelligen Gammastrahlen.
+Radiowellen ($\lambda \approx 1\,\text{m}$ bis $1\,\text{mm}$, $f \approx 300\,\text{MHz}$ bis $300\,\text{GHz}$) werden etwa für Rundfunk, Radar oder in Mikrowellenherden eingesetzt. Daran schließen sich Mikrowellen und Infrarotstrahlung an. Infrarotstrahlung ($\lambda \approx 1\,\text{mm}$ bis $780\,\text{nm}$) wird unter anderem für Fernbedienungen, Wärmebildkameras und Temperaturmessungen genutzt.
+Das sichtbare Licht bildet nur einen sehr kleinen Bereich des Spektrums ($\lambda \approx 780\,\text{nm}$ bis $380\,\text{nm}$) und ist für das menschliche Auge wahrnehmbar. Kurzwelliger ist die Ultraviolettstrahlung ($\lambda \approx 380\,\text{nm}$ bis $1\,\text{nm}$), die technische Anwendungen wie Geldscheinprüfung, Desinfektion oder das Aushärten von Klebstoffen ermöglicht.
+Noch energiereicher sind Röntgenstrahlen ($\lambda \approx 1\,\text{nm}$ bis $10\,\text{pm}$), die in der Medizin zur Bildgebung genutzt werden. Am unteren Ende der Wellenlänge liegen schließlich die Gammastrahlen ($\lambda < 10\,\text{pm}$), die beim radioaktiven Zerfall oder in Teilchenreaktionen entstehen und eine sehr hohe Eindringtiefe besitzen.
+
+\subsubsection{Lichtgeschwindigkeit im Vakuum}
+\label{sec:lichtgeschwindigkeit_im_vakuum}
+Die Lichtgeschwindigkeit im Vakuum ist eine fundamentale Naturkonstante und beträgt exakt $c = \SI{299792458}{\meter\per\second}$. Diese Geschwindigkeit ist unabhängig von der Bewegung der Lichtquelle oder des Beobachters und stellt die maximale Geschwindigkeit dar, mit der sich Informationen oder Energie im Universum ausbreiten können.
+In Medien wie Luft, Wasser oder Glas ist die Lichtgeschwindigkeit geringer als im Vakuum. Der Brechungsindex $n$ eines Mediums beschreibt das Verhältnis der Lichtgeschwindigkeit im Vakuum zur Lichtgeschwindigkeit im Medium:
+\begin{gather}
+    n = \frac{c}{v}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $c$ & Lichtgeschwindigkeit im Vakuum \\
+        $v$ & Lichtgeschwindigkeit im Medium
+    \end{tabular}
+\end{center}
+Die Lichtgeschwindigkeit spielt eine zentrale Rolle in der speziellen Relativitätstheorie, die von Albert Einstein entwickelt wurde. Sie besagt, dass die Gesetze der Physik in allen Inertialsystemen gleich sind und dass die Lichtgeschwindigkeit im Vakuum für alle Beobachter konstant ist, unabhängig von deren Relativbewegung zueinander.
+Heute wird die Lichtgeschwindigkeit mit Hilfe von Lasern und hochpräzisen Zeitmessungen bestimmt. Seit 1983 ist die Lichtgeschwindigkeit im Vakuum als Naturkonstante definiert und beträgt exakt $c = \SI{299792458}{\meter\per\second}$.
+
+\subsubsection{Elektromagnetische Wellen}
+\label{sec:elektromagnetische_wellen}
+Elektromagnetische Wellen ...
+
+\subsubsection{Maxwell-Gleichungen}
+\label{sec:maxwell_gleichungen}
+Die Maxwell-Gleichungen sind ein System von vier partiellen Differentialgleichungen, die die fundamentalen Gesetze des Elektromagnetismus beschreiben. Sie wurden von James Clerk Maxwell im 19. Jahrhundert formuliert und fassen alle bekannten Phänomene der Elektrizität und des Magnetismus zusammen. Aus ihnen lässt sich die Existenz elektromagnetischer Wellen ableiten, die sich mit Lichtgeschwindigkeit im Vakuum ausbreiten. 
+
+Die vier Gleichungen in der differenziellen Form lauten:
+\begin{enumerate}
+    \item \emph{Gauß'sches Gesetz für elektrische Felder:} Ein elektrisches Feld $E$ hat dort eine Divergenz, wo sich Ladungen befinden. $\rho$ steht für die Ladungsdichte. Die Feldlinine beginnen an positiven Ladungen und enden an negativen Ladungen. Divergenz von $E$ bedeutet, dass das $E$-Feld seine Quellen bei einer Ladung hat.
+    \begin{gather}
+        \nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0} 
+    \end{gather}
+    \item \emph{Gauß'sches Gesetz für magnetische Felder:} Die Divergenz von $B$ ist überall null. Das bedeutet: Es gibt keine Monopole. Magnetische Feldlinien sind immer geschlossen und bilden Schleifen. Divergenz von $B$ bedeutet, dass die $B$-Linien geschlossen sind.
+    \begin{gather}
+        \nabla \cdot \vec{B} = 0 
+    \end{gather}
+    \item \emph{Faraday'sches Induktionsgesetz:} Ein sich änderndes $B$-Feld erzeugt ein elektrisches Feld. $\delta B / \delta t$ beschreibt die Änderung von B mit der Zeit. Das erklärt die Induktion in Spulen und die Funktionsweise von Generatoren und Transformatoren. Rotation von $E$ entsteht durch die Veränderung des $B$-Feldes.
+    \begin{gather}
+        \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}
+    \end{gather}
+    \item \emph{Ampère-Maxwell-Gesetz:} Ein Magnetfeld wird durch Strom oder durch ein sich änderndes $E$-Feld erzeugt. Hierbei ist $j$ die Stromdichte. Der Zusatzterm $\mu_0 \varepsilon_0 \partial E / \partial t$ heißt auch Verschiebungsstrom. Rotation von $B$ entsteht durch die Veränderung des $E$-Feldes. Der Verschiebungsstrom sorgt dafür, dass das Ampère'sche Gesetz im Vakuum gilt.
+    \begin{gather}
+        \nabla \times \vec{B} = \mu_0 \vec{J} + \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} 
+    \end{gather}
+\end{enumerate}
+Die vier Gleichungen lauten in ihrer integralen Form:
+\begin{enumerate}
+    \item \emph{Gauß'sches Gesetz für elektrische Felder:} Der elektrische Fluss durch eine geschlossene Oberfläche ist proportional zur eingeschlossenen elektrischen Ladung. Es beschreibt, wie elektrische Ladungen elektrische Felder erzeugen.
+    \begin{gather}
+        \oint_A \vec{E} \cdot d\vec{A} = \frac{Q}{\varepsilon_0}
+    \end{gather}
+    \item \emph{Gauß'sches Gesetz für magnetische Felder:} Der magnetische Fluss durch eine geschlossene Oberfläche ist immer null. Dies bedeutet, dass es keine magnetischen Monopole gibt; Magnetfelder sind immer als geschlossene Feldlinien konfiguriert. 
+    \begin{gather}
+        \oint_A \vec{B} \cdot d\vec{A} = 0
+    \end{gather}
+    \item \emph{Faraday'sches Induktionsgesetz:} Ein sich zeitlich änderndes Magnetfeld erzeugt ein elektrisches Wirbelfeld. Dies ist die Grundlage der elektromagnetischen Induktion und erklärt die Funktionsweise von Generatoren und Transformatoren.
+    \begin{gather}
+        \oint_C \vec{E} \cdot d\vec{s} = - \frac{d\Phi_B}{dt}
+    \end{gather}
+    \item \emph{Ampère-Maxwell-Gesetz:} Ein elektrischer Strom oder ein sich zeitlich änderndes elektrisches Feld (Maxwell'scher Verschiebungsstrom) erzeugt ein magnetisches Wirbelfeld. Diese Erweiterung des ursprünglichen Ampère'schen Gesetzes war entscheidend für die Vorhersage elektromagnetischer Wellen.
+    \begin{gather}
+        \oint_C \vec{B} \cdot d\vec{s} = \mu_0 \cdot I + \mu_0 \cdot \frac{d\Phi_E}{dt}
+    \end{gather}
+\end{enumerate}
+
+ Siehe auch: \url{https://physikbuch.schule/maxwells-equations.html#maxwells-equations} (Weitere Erklärung der Maxwell'schen Gleichungen)
+
+\emph{Hier ergänzen!}
+
+\subsection{Apparaturen und Sonstiges}
+
+\subsubsection{Elektromagnetischer Schwingkreis}
+\label{sec:elektromagnetischer_schwingkreis}
+Ein elektromagnetischer Schwingkreis besteht aus einer Spule (Induktivität $L$) und einem Kondensator (Kapazität $C$), die in Serie oder parallel geschaltet sind. Wenn der Kondensator aufgeladen wird und dann entladen wird, fließt ein Strom durch die Spule, wodurch ein magnetisches Feld aufgebaut wird. Sobald der Kondensator entladen ist, baut das magnetische Feld der Spule eine Spannung auf, die den Kondensator wieder auflädt, jedoch mit umgekehrter Polarität. Dieser Prozess wiederholt sich, wodurch eine Schwingung entsteht.
+Der geladene Kondensator besitzt elektrische Feldenergie. Diese treibt die Ladungen beim Entladen des Kondensators an und es fließt ein elektrischer Strom durch die Spule. Nach der Lenzschen Regel behindert die Spule zunächst den Stromfluss, indem sie ein magnetisches Feld aufbaut, das diesem Strom entgegenwirkt (Selbstinduktion). Ist der Kondensator schließlich entladen, ist die Energie als magnetische Feldenergie in der Spule gespeichert. Der Stromfluss würde jetzt zum Erliegen kommen, aber nach der Lenzsche Regel erhält die Spule den Stromfluss weiter aufrecht. Als Energiequelle dient das Magnetfeld, das sich dabei wieder abbaut. Die Ladungen bewegen sich weiter auf die gegenüberliegende Kondensatorplatte und bilden dort ein elektrisches Feld mit umgekehrter Polung. Jetzt wiederholt sich der Vorgang in umgekehrter Richtung.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/schwingkreis.png}
+    \caption{Schematische Darstellung eines Schwingkreises.}
+    \label{fig:schwingkreis}
+\end{figure}
+So wie jeder mechanische Oszillator besitzt auch ein Schwingkreis eine Eigenfrequenz. Die Eigenfrequenz eines Schwingkreises kann durch die \hyperref[sec:thomsonsche_schwingungsgleichung]{Thomson'sche Schwingungsgleichung} berechnet werden:
+\begin{gather}
+    \omega_0 = \frac{1}{\sqrt{L C}} \\
+    f_0 = \frac{1}{2 \pi \sqrt{L C}}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $L$ & Induktivität \\
+        $C$ & Kapazität
+    \end{tabular}
+\end{center}
+
+ Siehe auch: \url{https://physikbuch.schule/tuned-circuits.html#lc-circuit-natural-angular-frequency-derived} (Herleitung der Eigenfrequenz eines Schwingkreises)
+
+\subsubsection{Thomson'sche Schwingungsgleichung eines Schwingkreises}
+\label{sec:thomsonsche_schwingungsgleichung}
+Betrachten wir den elektrischen Schwingkreis als ein geschlossenes System, so ist die Summe aller Energieformen in diesem System zu jeder Zeit $t$ konstant:
+\begin{gather}
+    W_{\mathrm{el}}(t) + W_{\mathrm{mag}}(t) = W_{\mathrm{ges}}
+\end{gather}
+Setzt man die entsprechenden Formeln ein, so kommt man auf folgende Differentialgleichung:
+\begin{gather*}
+    \frac{1}{2 C} Q^2(t) + \frac{1}{2} L I^2(t) = W_{\mathrm{ges}}
+\end{gather*}
+Aus
+\begin{gather*}
+    I(t) = \frac{dQ(t)}{dt} = \dot{Q}(t)
+\end{gather*}
+folgt:
+\begin{gather*}
+    \frac{1}{2 C} Q^2(t) + \frac{1}{2} L \dot{Q}^2(t) = W_{\mathrm{ges}}
+\end{gather*}
+Nun leitet man diese Gleichung nach der Zeit ab und erhält:
+\begin{align}
+    \frac{1}{C} Q \dot{Q}(t) + L \dot{Q} \ddot{Q}(t) &= 0 \nonumber \\
+    I(t) \left(L \ddot{Q} + \frac{1}{C} Q(t)\right) &= 0 \nonumber \\
+    L \ddot{Q} + \frac{1}{C} Q(t) &= 0 \nonumber \\
+    \ddot{Q} + \frac{1}{L C} Q(t) &= 0
+\end{align}
+Das entspricht der bekannten Differentialgleichung für eine harmonische Schwingung mit $\omega = \frac{1}{\sqrt{LC}}$. Man darf durch $I(t)$ teilen, da im Schwingkreis $I(t) \neq 0$. 
+
+Auch über die Spannung lässt sich die Thomson'sche Schwingungsgleichung herleiten. Es gilt nach der Maschenregel, dass die Summe aller Spannungen in einem geschlossenen Stromkreis null ist:
+\begin{align}
+    U_C(t) + U_L(t) &= 0 \\
+    \frac{Q}{C} + \abs{- L \cdot \dot{I}(t)} &= 0 \nonumber
+\end{align}
+Nun leitet man diese Gleichung nach der Zeit ab und erhält:
+\begin{align}
+    \frac{\dot{Q}(t)}{C} + L \ddot{I}(t) &= 0 \nonumber \\
+    \frac{I(t)}{C} + L \ddot{I}(t) &= 0 \nonumber \\
+    \ddot{I}(t) + \frac{1}{L C} I(t) &= 0
+\end{align}
+Auch hier erhält man die bekannte Differentialgleichung für eine harmonische Schwingung mit $\omega = \frac{1}{\sqrt{LC}}$.
+
+\subsubsection{Hertz'scher Dipol}
+\label{sec:hertzscher_dipol}
+Der Hertz'sche Dipol stellt den Grenzfall eines elektromagnetische Schwingkreises dar. Er besteht aus einem kurzen, geraden Leiterstück, das von einem Wechselstrom durchflossen wird. Durch die Beschleunigung der Ladungen im Leiterstück entstehen elektromagnetische Wellen, die sich im Raum ausbreiten. 
+
+Ein \hyperref[sec:elektromagnetischer_schwingkreis]{Elektromagnetischer Schwingkreis} besteht aus einer Spule und einem Kondensator, die zusammen eine Resonanzfrequenz besitzen. Im Hertz'sche Dipol wird versucht, dessen Frequenz besonders weit zu erhöhen:
+\begin{align}
+    f &= \frac{1}{2 \pi \sqrt{L C}} \\
+    &= \frac{1}{2 \pi \sqrt{\mu_0 \mu_r \frac{N^2 A}{l} \cdot \varepsilon_0 \varepsilon_r \frac{A}{d}}} \nonumber
+\end{align}
+Um die Frequenz zu erhöhen, muss also $L$ und $C$ möglichst klein gehalten werden. Dazu wird die Spule durch einen geraden Leiter ersetzt, sodass $N = 1$ und $A \approx 0$ gilt. Die exakte Frequenz kann durch eine Anpassung der Länge des Leiters angepasst werden.
+
+\subsubsection{Mikrowellenherd}
+\label{sec:mikrowellenherd}
+Ein Mikrowellenherd nutzt elektromagnetische Wellen im Mikrowellenbereich ($\lambda \approx 12\,\text{cm}$, $f \approx 2{,}45\,\text{GHz}$), um Nahrungsmittel von innen zu erwärmen. Dabei wird die elektrische Feldkomponente der Wellen ausgenutzt, um polare Moleküle, wie Wasser, in den Lebensmitteln in ständiger Rotation zu versetzen. Diese Molekülorientierungen verursachen Reibung, die als Wärme in den Lebensmitteln umgesetzt wird. 
+
+Die Mikrowellen werden durch einen Magnetron erzeugt, ein spezieller Hochfrequenzgenerator. Über einen Hohlleiter werden die Mikrowellen in den Garraum geleitet, wo sie sich ausbreiten und auf die Lebensmittel treffen. Reflektierende Innenwände sorgen für eine möglichst gleichmäßige Verteilung der Mikrowellen. 
+
+Die Energieübertragung erfolgt hauptsächlich durch die Wechselwirkung des elektrischen Feldes mit den Dipolen in den Molekülen. Die Wirksamkeit hängt von der Frequenz, der Permittivität der Substanz und der Wassergehalt der Lebensmittel ab. Materialien wie Glas, Keramik oder Kunststoff werden kaum erwärmt, da sie keine freien oder polarisierten Ladungen enthalten. 
+
+Die Vorteile des Mikrowellenherds liegen in der schnellen und effizienten Erwärmung, da die Energie direkt in den Lebensmitteln umgesetzt wird, im Gegensatz zu konventionellen Herden, bei denen Wärme über Konvektion oder Wärmeleitung übertragen wird.
+
+% Zu behandelnde Themen:
+% X Elektromagnetisches Spektrum
+% - Eigenschaften von elektromagnetischen Wellen und Gravitationswellen vergleichen (zum Beispiel Ausbreitungsgeschwindigkeit, Ausbreitung im Vakuum, Transversalwellen)
+% - kohärentes Licht als elektromagnetische Welle beschreiben (unter anderem Lichtgeschwindigkeit)
+% - Ursache und Struktur elektromagnetischer Felder anhand der Aussagen der Maxwell-Gleichungen im Überblick beschreiben
+% X Schwingkreis mit Schwingungsdifferenzialgleichung beschreiben, Energieumwandlungen im Schwingkreis erklären, ...
+% - Gemeinsamkeiten und Unterschiede von mechanischen und elektromagnetischen Schwingungen erläutern (zum Beispiel anhand eines Federpendels und eines elektromagnetischen Schwingkreises)
+% - den Hertz’schen Dipol als Grenzfall eines elektromagnetischen Schwingkreises erkennen und die daraus entstehende Abstrahlung elektromagnetischer Wellen in Grundzügen beschreiben
+% - Mikrowellenherd
+% X Thomson'sche Schwingungsgleichung
+% - Funktionsweise von RFID-Chips
+% X Maxwell-Gleichungen
+% - elektromagnetische Wellen

@@ -1,0 +1,28 @@
+# VS Code
+.vscode/
+
+# Project-specific exclusions
+RULES.md
+other/
+scripts/
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+
+# OS files
+.DS_Store
+Thumbs.db

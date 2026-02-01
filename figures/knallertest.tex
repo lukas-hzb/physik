@@ -1,0 +1,128 @@
+\documentclass[tikz, border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+
+% TikZ Einstellungen
+\usetikzlibrary{calc, positioning, decorations.pathreplacing, shadows, arrows.meta}
+
+% --- Farbpalette ---
+\definecolor{colImitat}{RGB}{179, 217, 255}     
+\definecolor{colBombe}{RGB}{255, 179, 179}      
+\definecolor{colAbsorbiert}{RGB}{120, 120, 120} 
+\definecolor{colSuccess}{RGB}{255, 165, 0}      
+
+\begin{document}
+
+\begin{tikzpicture}[
+    yscale=1.3, % Skalierung aus deinem Code übernommen
+    font=\small,
+    boxlabel/.style={
+        align=center, 
+        anchor=center,
+        text=black
+    },
+    problabel/.style={
+        align=center,
+        fill=white,
+        inner sep=1pt,
+        text=black!80,
+        font=\footnotesize\itshape,
+        rounded corners=2pt,
+        fill opacity=0.8,
+        text opacity=1
+    }
+]
+
+    % --- Konfiguration der Geometrie ---
+    \def\wBox{2.5}  
+    \def\wGap{2.5}  
+    
+    % ==============================================
+    % 1. START-SÄULEN
+    % ==============================================
+    \fill[colImitat] (0, 4) rectangle (\wBox, 8);
+    \node[boxlabel] at (0.5*\wBox, 6) {\textbf{Imitat}\\(50\%)};
+
+    \fill[colBombe] (0, 0) rectangle (\wBox, 4);
+    \node[boxlabel] at (0.5*\wBox, 2) {\textbf{Scharfe}\\\textbf{Bombe}\\(50\%)};
+
+    % ==============================================
+    % 2. VERBINDUNG ZUR MITTE
+    % ==============================================
+    % Imitat
+    \fill[colImitat!60] (\wBox, 4) -- (\wBox+\wGap, 4) -- (\wBox+\wGap, 8) -- (\wBox, 8) -- cycle;
+    \node[problabel] at (\wBox+0.5*\wGap, 6) {100\% ohne\\eindeutigen\\Weg};
+
+    % Bombe -> Absorption
+    \fill[colAbsorbiert!60] (\wBox, 0) -- (\wBox+\wGap, 0) -- (\wBox+\wGap, 2) -- (\wBox, 2) -- cycle;
+    \node[problabel] at (\wBox+0.5*\wGap, 1) {50\% durch\\Bombe};
+
+    % Bombe -> Frei
+    \fill[colBombe!60] (\wBox, 2) -- (\wBox+\wGap, 2) -- (\wBox+\wGap, 4) -- (\wBox, 4) -- cycle;
+    \node[problabel] at (\wBox+0.5*\wGap, 3) {50\% durch\\freien Weg};
+
+    % ==============================================
+    % 3. MITTLERE SÄULEN
+    % ==============================================
+    \fill[colImitat] (\wBox+\wGap, 4) rectangle (2*\wBox+\wGap, 8);
+    \node[boxlabel, font=\footnotesize] at (1.5*\wBox+\wGap, 6) {Verhält sich\\wie leeres\\Interferometer};
+
+    \fill[colBombe] (\wBox+\wGap, 2) rectangle (2*\wBox+\wGap, 4);
+    \node[boxlabel, font=\footnotesize] at (1.5*\wBox+\wGap, 3) {Wellenfunktion\\kollabiert};
+
+    \fill[colAbsorbiert] (\wBox+\wGap, 0) rectangle (2*\wBox+\wGap, 2);
+    \node[boxlabel, color=white, font=\footnotesize] at (1.5*\wBox+\wGap, 1) {Wellenfunktion\\kollabiert\\und\\EXPLOSION};
+
+    % ==============================================
+    % 4. VERBINDUNG ZUM ZIEL
+    % ==============================================
+    % Imitat -> Rechts
+    \fill[colImitat!60] (2*\wBox+\wGap, 4) -- (3*\wBox+2*\wGap, 4) -- (3*\wBox+2*\wGap, 8) -- (2*\wBox+\wGap, 8) -- cycle;
+    \node[problabel] at (2.5*\wBox+1.5*\wGap, 6) {100\% unbestimmt};
+
+    % Bombe (Frei) -> Rechts
+    \fill[colBombe!60] (2*\wBox+\wGap, 3) -- (3*\wBox+2*\wGap, 3) -- (3*\wBox+2*\wGap, 4) -- (2*\wBox+\wGap, 4) -- cycle;
+    \node[problabel] at (2.5*\wBox+1.5*\wGap, 3.5) {50\% unbestimmt};
+
+    % Bombe (Frei) -> Oben (Detektor)
+    \fill[colSuccess!60] (2*\wBox+\wGap, 2) -- (3*\wBox+2*\wGap, 0.5) -- (3*\wBox+2*\wGap, 1.5) -- (2*\wBox+\wGap, 3) -- cycle;
+    \node[problabel] at (2.5*\wBox+1.5*\wGap, 1.75) {50\% erkannt};
+
+    % ==============================================
+    % 5. ZIEL-SÄULEN
+    % ==============================================
+    
+    % --- Detektor RECHTS ---
+    \draw[gray, fill=white] (3*\wBox+2*\wGap, 2.8) rectangle (4*\wBox+2*\wGap, 8.2);
+    \fill[colImitat] (3*\wBox+2*\wGap, 4) rectangle (4*\wBox+2*\wGap, 8);
+    \fill[colImitat] (3*\wBox+2*\wGap, 3) rectangle (4*\wBox+2*\wGap, 4); 
+    
+    \node[boxlabel, align=center] at (3.5*\wBox+2*\wGap, 5.4) {
+        \textbf{RECHTS}\\
+        (62,5\%)\\
+        \footnotesize Keine Aussage\\möglich
+    };
+
+    % --- Detektor OBEN ---
+    \draw[gray, fill=white] (3*\wBox+2*\wGap, 0.3) rectangle (4*\wBox+2*\wGap, 1.7);
+    \fill[colSuccess!85] (3*\wBox+2*\wGap, 0.5) rectangle (4*\wBox+2*\wGap, 1.5);
+    
+    \node[boxlabel, align=center] at (3.5*\wBox+2*\wGap, 1) {
+        \textbf{OBEN}\\ 
+        (12,5\%)\\
+        \footnotesize Bombe erkannt
+    };
+    
+    % Beschriftungen
+    \node[anchor=south, gray, font=\scshape] at (0.5*\wBox, 8.2) {Objekt};
+    \node[anchor=south, gray, font=\scshape] at (1.5*\wBox+\wGap, 8.2) {Interferometer};
+    \node[anchor=south, gray, font=\scshape] at (3.5*\wBox+2*\wGap, 8.2) {Detektor};
+
+\end{tikzpicture}
+
+\end{document}

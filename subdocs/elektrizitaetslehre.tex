@@ -1,0 +1,604 @@
+\section{Elektrizitätslehre}
+Die nachfolgenden Grundlagen der Elektrizitätslehre wurden in der dritten Klausur der elften Klasse abgefragt.
+
+\subsection{Relevante Größen und deren Zusammenhänge}
+
+\subsubsection{Elektrische Ladung ($Q$, $q$)}
+\label{sec:elektrische_ladung}
+Die elektrische Ladung $Q$ oder $q$ ist eine fundamentale physikalische Größe, die angibt, wie stark ein Teilchen an elektromagnetischen Wechselwirkungen beteiligt ist. $Q$ bezeichnet dabei eine makroskopische Gesamtladung, $q$ die Ladung einzelner Teilchen. Sie ist die Ursache aller elektrischen Erscheinungen.
+
+Die kleinste bekannte Ladungseinheit ist die Elementarladung $e$. Elektronen tragen die Ladung $-e$, Protonen die Ladung $+e$. Negativ geladene Körper besitzen einen Elektronenüberschuss, positiv geladene einen Elektronenmangel. Gleichnamige Ladungen stoßen sich ab, ungleichnamige ziehen sich an.
+\begin{gather}
+    e \approx 1{,}602 \times 10^{-19}\,\si{\coulomb}
+\end{gather}
+Ein grundlegendes Prinzip ist die Ladungserhaltung: Ladung kann nicht erzeugt oder vernichtet werden. Bei der Neutralisation bleiben die einzelnen Ladungen bestehen, ihre Wirkung hebt sich jedoch nach außen auf.
+Jede Ladung ist Quelle eines elektrischen Feldes, das die Kräfte zwischen den Ladungen vermittelt (vgl. Abschnitt~\ref{sec:elektrisches_feld}).
+
+Die Einheit der elektrischen Ladung ist
+\begin{center}
+    $[Q] = \si{\coulomb} = \mathrm{Coulomb} = \si{\ampere\second}$
+\end{center}
+
+\subsubsection{Flächenladungsdichte ($\sigma_{\mathrm{allg}}$, $\sigma_{\mathrm{hom}}$)}
+\label{sec:flaechenladungsdichte}
+Die Flächenladungsdichte $\sigma$ beschreibt die auf einer Fläche $A$ gespeicherte elektrische Ladung $Q$ pro Flächeneinheit. Sie charakterisiert somit die Verteilung von Ladung auf Oberflächen.
+
+Allgemein gilt:
+\begin{gather}
+    \sigma_{\mathrm{allg}} = \frac{Q}{A}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $Q$ & Elektrische Ladung \\
+        $A$ & Fläche
+    \end{tabular}
+\end{center}
+Für homogene Felder, wie sie beispielsweise im Plattenkondensator auftreten, ergibt sich:
+\begin{gather}
+    \sigma_{\mathrm{hom}} = \varepsilon_0 \cdot E_{\mathrm{hom}}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\varepsilon_0$ & Elektrische Feldkonstante \\
+        $E_{\mathrm{hom}}$ & Elektrische Feldstärke
+    \end{tabular}
+\end{center}
+Die Einheit der Flächenladungsdichte ist
+\begin{center}
+    $[\sigma] = \si{\coulomb\per\meter\squared}$
+\end{center}
+
+\subsubsection{Elektrische Stromstärke ($I$)}
+\label{sec:stromstaerke}
+Die elektrische Stromstärke $I$ beschreibt die Menge an elektrischer Ladung $\Delta Q$, die pro Zeitintervall $\Delta t$ durch einen Leiterquerschnitt transportiert wird. Sie ist damit ein Maß für die Bewegung von Ladungsträgern, die entweder in Metallen als Elektronen oder in Flüssigkeiten und Gasen als Ionen auftreten können.
+\begin{gather}
+    I = \frac{\Delta Q}{\Delta t}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\Delta Q$ & Transportierte Ladungsmenge \\
+        $\Delta t$ & Zeitintervall
+    \end{tabular}
+\end{center}
+Elektrischer Strom ist also der gerichtete Transport von Ladungsträgern durch einen Stoff oder im Vakuum. Die Leitfähigkeit eines Materials hängt davon ab, wie fest die Elektronen an die Atome gebunden sind. Metalle besitzen viele frei bewegliche Elektronen und sind daher gute Leiter, während Isolatoren wie Glas oder Kunststoff kaum freie Ladungsträger enthalten und elektrischen Strom nahezu nicht leiten.
+
+Die Einheit der elektrischen Stromstärke ist
+\begin{center}
+    $[I] = \si{\ampere} = \mathrm{Ampere} = \si{\coulomb\per\second}$
+\end{center}
+
+\subsubsection{Elektrisches Potenzial ($\varphi$)}
+\label{sec:elektrisches_potenzial}
+Das elektrische Potenzial $\varphi$ beschreibt die potenzielle Energie $W$ pro Ladungseinheit $q$ an einem bestimmten Punkt im Raum. Es gibt an, welche Arbeit notwendig ist, um eine Probeladung von einem Bezugsniveau an diesen Punkt zu bringen.
+\begin{gather}
+    \varphi = \frac{W}{q}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $W$ & Potenzielle Energie \\
+        $q$ & Probeladung
+    \end{tabular}
+\end{center}
+Das Potenzial eines Punktes $P$ entspricht der Spannung zwischen $P$ und einem gewählten Bezugspunkt. Die Spannung zwischen zwei Punkten $P_1$ und $P_2$ ist die Potenzialdifferenz $\varphi_{P_1} - \varphi_{P_2}$. Spannung ist somit der Unterschied der Potenziale.
+
+Beim Transport einer positiven Ladung von der positiven zur negativen Platte eines Kondensators verringert sich ihre potenzielle Energie entsprechend der durchlaufenen Potenzialdifferenz um $\Delta W_{\mathrm{pot}} = q \cdot (\varphi_{P_1} - \varphi_{P_2}) = q \cdot U$. Dabei ist der Weg, den die Ladung zurücklegt, unerheblich. Auf halber Strecke besitzt die Ladung die Hälfte der Energie und das halbe Potenzial.
+
+Das höhere (positive) Potenzial befindet sich am Pluspol, das niedrigere (negative) am Minuspol. Äquipotenzialflächen verbinden Punkte gleichen Potenzials und verlaufen stets senkrecht zu den Feldlinien (vgl. Abschnitt~\ref{sec:elektrisches_feld}).
+
+Die Einheit des elektrischen Potenzials ist
+\begin{center}
+    $[\varphi] = \si{\volt} = \mathrm{Volt} = \si{\joule\per\coulomb}$
+\end{center}
+
+\medskip
+\begin{tcolorbox}[colframe=blue!30!gray, colback=blue!10, title=Vertiefung: Vergleich des elektrisches Potenzials und der Spannung mit Gravitationsfeldern]
+    Das elektrische Potenzial $\varphi$ an einem Punkt im Raum ist vergleichbar mit der Höhe im Gravitationsfeld:
+    \begin{itemize}
+        \item Wie ein Körper im Gravitationsfeld von höherem zu niedrigerem Potenzial (von oben nach unten) fällt, bewegt sich eine positive Ladung im elektrischen Feld von höherem zu niedrigerem elektrischen Potenzial.
+        \item Die Spannung $U$ zwischen zwei Punkten entspricht dem Höhenunterschied im Gravitationsfeld. Sie gibt an, wie viel Energie pro Ladungseinheit bei der Bewegung zwischen diesen Punkten umgesetzt wird.
+        \item Äquipotenzialflächen sind vergleichbar mit Höhenlinien auf einer Landkarte.
+    \end{itemize}
+\end{tcolorbox}
+
+\subsubsection{Coulomb-Potenzial ($\varphi_{\mathrm{coul}}$)}
+\label{sec:coulomb_potenzial}
+Das Coulomb-Potenzial $\varphi_{\mathrm{coul}}$ ist ein Spezialfall des \hyperref[sec:elektrisches_potenzial]{elektrischen Potenzials} und beschreibt das von einer einzelnen Punktladung $Q$ erzeugte elektrische Potenzial in einem Abstand $r$ von der Ladung.
+
+Für eine Punktladung gilt:
+\begin{gather}
+    \varphi_{\mathrm{coul}} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{Q}{r}.
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $Q$ & Punktladung \\
+        $r$ & Abstand zur Ladung \\
+        $\varepsilon_0$ & Elektrische Feldkonstante
+    \end{tabular}
+\end{center}
+Bei mehreren Punktladungen addieren sich die Potenziale vektorfrei nach dem Superpositionsprinzip. Das Innere einer geladenen Hohlkugel ist feldfrei und besitzt überall das gleiche Potenzial wie an der Oberfläche.
+Das Potenzial nimmt mit dem Abstand $r$ wie $\frac{1}{r}$ ab, während die elektrische Feldstärke $\vec{E}$ mit $\frac{1}{r^2}$ abnimmt.
+
+\subsubsection{Elektrische Spannung ($U$)}
+\label{sec:elektrische_spannung}
+Die elektrische Spannung beschreibt die Arbeit pro Ladungseinheit, die beim Transport einer Ladung zwischen zwei Punkten verrichtet wird und entsteht, wenn entgegengesetzte Ladungen unter Energiezufuhr getrennt werden. Sie entspricht der Differenz des \hyperref[sec:elektrisches_potenzial]{elektrischen Potenzials} zwischen diesen Punkten. In verschiedenen elektrischen Feldern ergeben sich aus den geltenden Formeln für das elektrische Potenzial unterschiedliche Formeln für die Spannung. Der Weg, den die Ladung zurücklegt, ist für die Spannung unerheblich.
+\begin{gather}
+    U_{\mathrm{allg}} = \frac{W}{q} \\
+    U_{\mathrm{hom}} = E \cdot d \\
+    U_{\mathrm{rad}} = \varphi_{\mathrm{coul,\,r_1}} - \varphi_{\mathrm{coul,\,r_2}} = \frac{Q}{4\pi\varepsilon_0} \cdot \left(\frac{1}{r_1} - \frac{1}{r_2}\right)
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $W$ & Arbeit \\
+        $q$ & Ladung \\
+        $E$ & Feldstärke \\
+        $d$ & Abstand der Punkte entlang der Feldlinien \\
+        $r_1, r_2$ & Abstände zur Punktladung $Q$
+    \end{tabular}
+\end{center}
+Die zweite Formel gilt für homogene Felder, wie sie z.~B. in Plattenkondensatoren zwischen zwei Äquipotenzialflächen mit dem Abstand $d$ auftreten. Die dritte Formel beschreibt radialsymmetrische Felder, wie sie um einzelne Punktladungen entstehen.
+
+Die Einheit der elektrischen Spannung ist
+\begin{center}
+    $[U] = \si{\volt} = \mathrm{Volt} = \si{\joule\per\coulomb}$
+\end{center}
+
+\subsubsection{Elektrische Feldstärke ($E_\mathrm{allg}$, $E_\mathrm{pkond}$, $E_\mathrm{rad}$)}
+\label{sec:elektrische_feldstaerke}
+Die elektrische Feldstärke $\vec{E}$ ist ein Maß für die Stärke eines elektrischen Feldes und beschreibt die auf eine positive Probeladung $q$ wirkende Kraft $F_\mathrm{el}$ pro Ladungseinheit. Damit charakterisiert sie eine Eigenschaft des Feldes selbst und ist unabhängig von der Wahl der Probeladung.
+\begin{gather}
+    E_\mathrm{allg} = \frac{F_\mathrm{el}}{q}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $F_\mathrm{el}$ & Elektrische Kraft \\
+        $q$ & Probeladung
+    \end{tabular}
+\end{center}
+In speziellen Feldern ergeben sich vereinfachte Zusammenhänge. In einem homogenen Feld, wie es im Plattenkondensator auftritt, gilt
+\begin{gather}
+    E_\mathrm{hom} = \frac{U}{d}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $U$ & Angelegte Spannung \\
+        $d$ & Plattenabstand
+    \end{tabular}
+\end{center}
+In einem radialsymmetrischen Feld, das von einer Punktladung $Q$ erzeugt wird, folgt aus dem Coulomb-Gesetz folgende Beziehung:
+\begin{gather}
+    E_\mathrm{rad} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{Q}{r^2}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $Q$ & Erzeugende Ladung \\
+        $r$ & Abstand von der Ladung \\
+        $\varepsilon_0$ & Elektrische Feldkonstante
+    \end{tabular}
+\end{center}
+Die Richtung des Vektors $\vec{E}$ ist stets die Richtung, in die eine positive Probeladung beschleunigt würde. Treffen mehrere Felder zusammen, so überlagern sich die Feldstärken nach dem Superpositionsprinzip vektoriell.
+
+Die Einheit der elektrischen Feldstärke ist
+\begin{center}
+    $[E] = \si{\newton\per\coulomb} = \si{\volt\per\meter}$
+\end{center}
+
+\subsubsection{Elektrische Feldkonstante ($\varepsilon_0$)}
+\label{sec:elektrische_feldkonstante}
+Die elektrische Feldkonstante $\varepsilon_0$ ist eine fundamentale Naturkonstante, die als Proportionalitätsfaktor in den Gleichungen der Elektrostatik auftritt. Sie verknüpft die Stärke des elektrischen Feldes mit den zugrunde liegenden Ladungsverteilungen und legt damit die Ausbreitungseigenschaften elektrischer Felder im Vakuum fest.
+
+\begin{gather*}
+    \varepsilon_0 \approx 8{,}85 \times 10^{-12}\,\si{\coulomb\squared\per\newton\per\meter\squared}
+\end{gather*}
+In der Feldtheorie verbindet $\varepsilon_0$ die Flächenladungsdichte $\sigma$ mit der erzeugten Feldstärke $E$:
+\begin{gather}
+    \sigma = \varepsilon_0 \cdot \varepsilon_r \cdot E
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\varepsilon_r$ & Relative Permittivität des Mediums
+    \end{tabular}
+\end{center}
+Die Feldkonstante tritt in den Formeln für \hyperref[sec:homogene_felder]{homogene Felder} und für \hyperref[sec:elektrische_feldstaerke]{radialsymmetrische Felder} explizit auf und spielt eine zentrale Rolle in den Maxwell-Gleichungen.
+
+Die Einheit der elektrischen Feldkonstante ist
+\begin{center}
+    $[\varepsilon_0] = \si{\coulomb\squared\per\newton\per\meter\squared}$
+\end{center}
+
+\subsubsection{Elektrische Kapazität ($C_{\mathrm{allg}}$, $C_{\mathrm{pkond}}$, $C_{\mathrm{kugel}}$) und Permittivitätszahl ($\varepsilon_r$)}
+\label{sec:elektrische_kapazitaet}
+Die elektrische Kapazität gibt an, welche Ladung ein Kondensator oder eine Kugel bei einer bestimmten Spannung $U$ beziehungsweise bei einem Potenzialunterschied speichern kann. Sie wird allgemein definiert als:
+\begin{gather}
+    C_{\mathrm{allg}} = \varepsilon_r \cdot \frac{Q}{U}
+\end{gather}
+Da in Luft oder im Vakuum die relative Permittivität $\varepsilon_r \approx 1$ ist, vereinfacht sich dies zu:
+\begin{gather}
+    C_{\mathrm{allg}} = \frac{Q}{U}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\varepsilon_r$ & Relative Permittivität (Stoffkonstante) \\
+        $Q$ & Gespeicherte Ladung \\
+        $U$ & Anliegende Spannung
+    \end{tabular}
+\end{center}
+Die Einheit der Kapazität ist
+\begin{center}
+    $[C] = \si{\farad} = \mathrm{Farad} = \si{\coulomb\per\volt}$
+\end{center}
+Für die Herleitung der Kapazität eines Plattenkondensators werden die Formeln für die \hyperref[sec:flaechenladungsdichte]{Flächenladungsdichte} $\sigma$ miteinander verknüpft und nach $Q$ umgestellt:
+\begin{gather*}
+    \sigma_{\mathrm{allg}} = \frac{Q}{A} = \sigma_{\mathrm{hom}} = \varepsilon_0 \cdot E_{\mathrm{allg}} \\
+    Q = \varepsilon_0 \cdot E_{\mathrm{allg}} \cdot A
+\end{gather*}
+Setzt man $E_{\mathrm{allg}} = \tfrac{U}{d}$ ein, ergibt sich:
+\begin{align}
+    C_{\mathrm{pkond}} &= \varepsilon_r \cdot \frac{\varepsilon_0 \cdot E_{\mathrm{allg}} \cdot A}{U} \nonumber \\
+                        &= \varepsilon_r \cdot \frac{\varepsilon_0 \cdot \frac{U}{d} \cdot A}{U} \nonumber \\
+    C_{\mathrm{pkond}} &= \varepsilon_0 \cdot \varepsilon_r \cdot \frac{A}{d}
+\end{align}
+\begin{center}
+    \begin{tabular}{rl}
+        $\varepsilon_0$ & Elektrische Feldkonstante \\
+        $\varepsilon_r$ & Relative Permittivität des Dielektrikums zwischen den Platten \\
+        $A$ & Fläche einer Kondensatorplatte \\
+        $d$ & Abstand der Platten
+    \end{tabular}
+\end{center}
+Für die Kapazität einer Kugel wird das \hyperref[sec:coulomb_potenzial]{Coulomb-Potenzial} an der Oberfläche verwendet. Für eine Kugel mit Ladung $Q$ und Radius $R$ gilt:
+\begin{gather*}
+    \varphi_{\mathrm{coul},\,R} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{Q}{R}
+\end{gather*}
+Das Referenzpotenzial im Unendlichen beträgt $\varphi_{\mathrm{coul},\,\infty} = 0\si{\volt}$, sodass die Spannung gegen Unendlich lautet:
+\begin{gather*}
+    U = \varphi_{\mathrm{coul},\,R} - \varphi_{\mathrm{coul},\,\infty} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{Q}{R}
+\end{gather*}
+Die Kapazität der Kugel ergibt sich dann über die allgemeine Definition $C = \varepsilon_r \tfrac{Q}{U}$ zu:
+\begin{align}
+    C_{\mathrm{kugel}} &= \varepsilon_r \cdot \frac{Q}{\frac{1}{4 \pi \varepsilon_0} \cdot \frac{Q}{R}} \nonumber \\
+    C_{\mathrm{kugel}} &= 4 \pi \cdot \varepsilon_0 \varepsilon_r \cdot R
+\end{align}
+\begin{center}
+    \begin{tabular}{rl}
+        $\varepsilon_0$ & Elektrische Feldkonstante \\
+        $\varepsilon_r$ & Relative Permittivität des Dielektrikums, das die Kugel umgibt \\
+        $R$ & Radius der Kugel
+    \end{tabular}
+\end{center}
+
+\medskip
+\begin{tcolorbox}[colframe=red!30!gray, colback=red!10, title=Vertiefung: Veränderung der Kapazität in einem Kondensator]
+    Die Erhöhung der Kapazität durch Dielektrika funktioniert folgendermaßen: Das Dielektrikum wird durch das elektrische Feld polarisiert und erzeugt ein Gegenfeld, das das ursprüngliche Feld abschwächt. Da das $d$ in $E = \frac{U}{d}$ konstant bleibt und sich $E$ verkleinert, muss sich die Spannung $U$ ebenfalls verringern. Mit $C_{\mathrm{pkond}} = \frac{Q}{U}$ und konstanter Ladung $Q$ führt die geringere Spannung zu einer größeren Kapazität.
+\end{tcolorbox}
+
+\subsubsection{Kraft im elektrischen Feld ($F_{\mathrm{el,\,hom}}$, $F_{\mathrm{el,\,rad}}$)}
+\label{sec:kraft_im_elektrischen_feld}
+Die elektrische Kraft $F_{\mathrm{el}}$ beschreibt die Wechselwirkung einer Ladung $q$ mit einem elektrischen Feld. Sie ist proportional zur Ladung und zur Stärke des Feldes. In homogenen Feldern gilt:
+\begin{gather}
+    F_{\mathrm{el,\,hom}} = q \cdot E_{\mathrm{hom}} = \frac{W_{\mathrm{el,\,hom}}}{s}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $q$ & Ladung \\
+        $E_{\mathrm{hom}}$ & Homogene Feldstärke \\
+        $W_{\mathrm{el,\,hom}}$ & Arbeit \\
+        $s$ & Wegstrecke
+    \end{tabular}
+\end{center}
+In radialsymmetrischen Feldern, etwa um eine Punktladung $Q$, berechnet sich die Kraft nach dem Coulomb-Gesetz:
+\begin{gather}
+    F_{\mathrm{el,\,rad}} = q \cdot E_{\mathrm{rad}} = \frac{1}{4\pi \varepsilon_0} \cdot \frac{Q q}{r^2}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $Q, q$ & Ladungen \\
+        $r$ & Abstand der Ladungen \\
+        $\varepsilon_0$ & Elektrische Feldkonstante
+    \end{tabular}
+\end{center}
+Die Richtung der Kraft hängt von der Vorzeichen der Ladung ab: Bei positiver Ladung wirkt die Kraft in Richtung des Feldes, bei negativer entgegen der Feldrichtung.
+
+Das Coulomb-Gesetz für radialsymmetrische Felder ähnelt formal dem Newton'schen Gravitationsgesetz, der Unterschied liegt lediglich in den Vorzeichen und der Art der Wechselwirkung (vgl. Abschnitt~\ref{sec:elektrisches_potenzial}).
+
+\subsubsection{Elektrische Energie ($W_{\mathrm{el,\,allg}}$, $ W_{\mathrm{el,\,hom}}$, $W_{\mathrm{el,\,rad}}$)}
+\label{sec:elektrische_energie}
+Die elektrische Energie $W_{\mathrm{el}}$ beschreibt die Arbeit, die beim Transport einer Ladung $q$ in einem elektrischen Feld verrichtet wird. Sie hängt von der Ladung und der \hyperref[sec:elektrisches_potenzial]{Potenzialdifferenz} zwischen Start- und Endpunkt ab. Allgemein gilt für eine Ladung, die zwischen zwei Punkten mit der Spannung $U$ bewegt wird:
+\begin{gather}
+    W_{\mathrm{el,\,allg}} = q \cdot U
+\end{gather}
+Für den Transport einer Ladung $q$ über eine Strecke $s$ im homogenen elektrischen Feld (konstante Feldstärke $E$), wie etwa zwischen den Platten eines Plattenkondensators, gilt:
+\begin{gather}
+    W_{\mathrm{el,\,hom}} = F_{\mathrm{el,\,hom}} \cdot s = E_{\mathrm{hom}} \cdot q \cdot s
+\end{gather}
+Im radialen elektrischen Feld, z.\,B. um eine Punktladung $Q$, berechnet sich die Arbeit für die Bewegung von $q$ von $r_1$ nach $r_2$ über das Integral der Kraft:
+\begin{align}
+    W_{\mathrm{el,\,rad}} &= \int_{r_1}^{r_2} F_{\mathrm{el,\,rad}} \, dr \nonumber \\
+                          &= \frac{Qq}{4 \pi \varepsilon_0} \int_{r_1}^{r_2} \frac{1}{r^2} \, dr \nonumber \\
+    W_{\mathrm{el,\,rad}} &= \frac{Qq}{4\pi\varepsilon_0} \cdot \left(\frac{1}{r_1} - \frac{1}{r_2}\right)
+\end{align}
+\begin{center}
+    \begin{tabular}{rl}
+        $Q, q$ & Ladungen \\
+        $U$ & Spannung \\
+        $E_{\mathrm{hom}}$ & Feldstärke \\
+        $s$ & Wegstrecke \\
+        $r_1, r_2$ & Abstände
+    \end{tabular}
+\end{center}
+Die elektrische Energie ist wegunabhängig: Sie hängt nur von Start- und Endpunkt ab, nicht vom gewählten Weg.
+
+Für kleine Teilchen wird häufig das Elektronenvolt verwendet:
+\begin{gather}
+    1 \, \mathrm{eV} = 1{,}602 \times 10^{-19} \, \si{\joule}
+\end{gather}
+Ein Helium-Kern mit zwei Elementarladungen gewinnt beim Durchlaufen einer Spannung von $1\,\si{\volt}$ die Energie $2 \, \mathrm{eV}$.
+
+\subsubsection{Energie im geladenen Kondensator ($W_{\mathrm{kond}}$, $W_{\mathrm{pkond}}$)}
+\label{sec:energie_im_geladenen_kondensator}
+Die im geladenen Kondensator gespeicherte elektrische Energie $W_{\mathrm{kond}}$ kann auf verschiedene Weisen ausgedrückt werden. Allgemein gilt:
+\begin{gather}
+    W_{\mathrm{kond}} = \frac{1}{2} Q U = \frac{1}{2} C U^2 = \frac{1}{2} \frac{Q^2}{C}
+\end{gather}
+Speziell beim Plattenkondensator kann die Energie durch Einsetzen von $C_{\mathrm{pkond}} = \varepsilon_0 \cdot \varepsilon_r \cdot \frac{A}{d}$ und $U_{\mathrm{hom}} = E \cdot d$ berechnet werden. Mit $V = A \cdot d$ als Volumen zwischen den Platten ergibt sich:
+\begin{align}
+    W_{\mathrm{pkond}} &= \frac{1}{2} C U^2 \\
+                       &= \frac{1}{2} \left(\varepsilon_0 \varepsilon_r \frac{A}{d}\right) \left(E_{\mathrm{hom}} d\right)^2 \\
+    W_{\mathrm{pkond}} &= \frac{1}{2} \varepsilon_0 \varepsilon_r E_{\mathrm{hom}}^2 V
+\end{align}
+\begin{center}
+    \begin{tabular}{rl}
+        $Q$ & Ladung \\
+        $C$ & Kapazität \\
+        $U$ & Spannung \\
+        $V$ & Volumen des elektrischen Feldes
+    \end{tabular}
+\end{center}
+Der Faktor $\frac{1}{2}$ entsteht wie unten erklärt, weil die Spannung während des Ladevorgangs linear ansteigt. Beim Entladen des Kondensators wird die gespeicherte Energie gleichmäßig freigesetzt. Zieht man die Platten eines geladenen Kondensators auseinander, der nicht mit einer Spannungsquelle verbunden ist, steigt die Energie, da das vom Feld eingenommene Volumen zunimmt, obwohl die Ladung unverändert bleibt. Die Energie liegt folglich im elektrischen Feld selbst.
+
+\medskip
+\begin{tcolorbox}[colframe=green!30!gray, colback=green!10, title=Vertiefung: Herkunft des Faktors $\frac{1}{2}$]
+    Die Formel $W = QU$ von oben würde nur gelten, wenn während des gesamten Ladevorgangs eine konstante Spannung $U$ anliegen würde. In Wirklichkeit steigt die Spannung jedoch kontinuierlich von $0 \, \si{\volt}$ bis zum Endwert $U$ an. Der Faktor $\frac{1}{2}$ entspricht der Dreiecksfläche unter dem Graphen in einem $U$-$Q$-Diagramm. Beim Entladen sinkt die Spannung auf die gleiche Weise ab.
+\end{tcolorbox}
+
+\subsubsection{Energiedichte im Plattenkondensator ($\rho_{W,\,\mathrm{pkond}}$)}
+\label{sec:energiedichte_im_plattenkondensator}
+Die Energiedichte $\rho_{W,\,\mathrm{pkond}}$ beschreibt die im elektrischen Feld eines Plattenkondensators pro Volumeneinheit gespeicherte Energie. Sie ergibt sich aus der gespeicherten Energie $W_{\mathrm{pkond}}$ und dem Volumen $V$ zwischen den Platten:
+\begin{gather}
+    \rho_{W,\,\mathrm{pkond}} = \frac{W_{\mathrm{pkond}}}{V} = \frac{1}{2} \varepsilon_0 \varepsilon_r E^2.
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $E$ & Elektrische Feldstärke \\
+        $\varepsilon_0, \varepsilon_r$ & Feldkonstante und Permittivitätszahl
+    \end{tabular}
+\end{center}
+Die Energie steckt ausschließlich im elektrischen Feld selbst, nicht in den Ladungen. Die Energiedichte ist proportional zum Quadrat der Feldstärke $E$ und unabhängig davon, wie das Feld erzeugt wurde.
+
+Die Einheit der Energiedichte ist
+\begin{center}
+    $[\rho_W] = \si{\joule\per\cubic\meter}$
+\end{center}
+
+\subsubsection{Be- und Entladen eines Kondensators ($U(t)$, $I(t)$, $Q(t)$, $\tau$)}
+\label{sec:be_und_entladen_eines_kondensators}
+Beim Entladen eines Kondensators ändern sich Spannung, Strom und gespeicherte Ladung zeitabhängig nach einem exponentiellen Gesetz. Die Größen nehmen jeweils mit der Zeitkonstante
+\begin{gather}
+    \tau = R C
+\end{gather}
+ab, die das Tempo des Entladevorgangs bestimmt: Je größer der Widerstand $R$ oder die Kapazität $C$, desto langsamer verläuft die Entladung. Die zeitabhängigen Größen lassen sich durch folgende Gleichungen beschreiben:
+\begin{gather}
+    U_{\mathrm{entl}}(t) = U_0 \cdot e^{-t / (RC)} \\
+    I_{\mathrm{entl}}(t) = -\frac{U_0}{R} \cdot e^{-t / (RC)} \\
+    Q_{\mathrm{entl}}(t) = Q_0 \cdot e^{-t / (RC)} = C \cdot U_0 \cdot e^{-t / (RC)} \\
+    \tau_{\mathrm{entl}} = RC
+\end{gather}
+Beim Beladen eines Kondensators steigt die Spannung $U_{\mathrm{bel}}(t)$ exponentiell gegen den Endwert $U_0$. Der Ladestrom $I_{\mathrm{bel}}(t)$ nimmt dabei exponentiell ab, während die gespeicherte Ladung $Q_{\mathrm{bel}}(t)$ mit dem gleichen Verlauf wie die Spannung zunimmt. Die Zeitkonstante $\tau = RC$ bestimmt auch hier, wie schnell der Kondensator den Endwert erreicht:
+\begin{gather}
+    U_{\mathrm{bel}}(t) = U_0 \cdot \left(1 - e^{-t / (RC)}\right) \\
+    I_{\mathrm{bel}}(t) = \frac{U_0}{R} \cdot e^{-t / (RC)} \\
+    Q_{\mathrm{bel}}(t) = Q_0 \cdot \left(1 - e^{-t / (RC)}\right) = C \cdot U_0 \cdot \left(1 - e^{-t / (RC)}\right) \\
+    \tau_{\mathrm{bel}} = RC
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\tau$ & Zeitkonstante \\
+        $R$ & Widerstand \\
+        $C$ & Kapazität \\
+        $U_0, Q_0$ & Maximale Spannung und Ladung
+    \end{tabular}
+\end{center}
+Die Exponentialfunktion beschreibt die schnelle Änderung zu Beginn und die langsame Annäherung an den Endwert. Der Ladestrom ist beim Beladen zu Beginn maximal und nimmt mit zunehmender Spannung ab, während beim Entladen Spannung, Strom und Ladung kontinuierlich abnehmen.
+
+\subsection{Wichtige Phänomene und Ergänzungen}
+
+\subsubsection{Elektrisches Feld}
+\label{sec:elektrisches_feld}
+Ein elektrisches Feld vermittelt die Kräfte zwischen elektrischen Ladungen. Es beschreibt den Raum, in dem auf eine Probeladung eine Kraft wirkt, und besitzt typische Eigenschaften, die sich anschaulich durch Feldlinien darstellen lassen. Ladungen sind die Quellen und Senken des Feldes: Positive Ladungen erzeugen Feldlinien, während negative Ladungen Feldlinien \enquote{anziehen}.
+
+Feldlinien veranschaulichen die Richtung der Kraft, die auf eine positive Probeladung im elektrischen Feld wirkt. Die Dichte der Feldlinien gibt dabei Aufschluss über die Stärke des Feldes: Je dichter die Feldlinien beieinander liegen, desto stärker ist das elektrische Feld an dieser Stelle. Treffen mehrere Felder, etwa von verschiedenen Ladungen, zusammen, so addieren sich die Feldstärken vektoriell gemäß dem Superpositionsprinzip. Feldlinien verlaufen stets senkrecht auf der Oberfläche von Leitern und konzentrieren sich besonders an Kanten und Spitzen, was dort zu einer erhöhten Feldstärke führt. Äquipotenzialflächen verbinden alle Punkte gleichen elektrischen Potenzials und stehen immer senkrecht zu den Feldlinien.
+
+\medskip
+\begin{tcolorbox}[colframe=orange!30!gray, colback=orange!10, title=Vertiefung: Zeichnen von Feldlinien]
+    Beim Zeichnen von Feldlinien sind verschiedene Konfigurationen zu beachten:
+    \begin{itemize}
+        \item Einzelne Punktladungen (positiv/negativ): Radiale Feldlinien - Siehe auch: Dipolfeld
+        \item Zwei gleichnamige Ladungen: Abstoßung, Feldlinien krümmen sich voneinander weg
+        \item Zwei ungleichnamige Ladungen: Anziehung, Feldlinien verbinden beide Ladungen
+        \item Plattenkondensator: Parallele Feldlinien zwischen den Platten
+        \item Kondensator mit leitendem Ring: Abschirmung des Feldes innerhalb des Rings
+        \item Feldlinien an Kanten und Spitzen: Erhöhte Feldstärke, Feldlinien konzentrieren sich
+        \item Feldlinien beim Faraday-Käfig: Das innere des Käfigs ist in Summe feldfrei
+    \end{itemize}
+
+
+ Siehe auch: \url{https://www.leifiphysik.de/elektrizitaetslehre/ladungen-felder-mittelstufe/grundwissen/feldlinien} (Einige Beispiele mit Erklärung)
+\end{tcolorbox}
+
+\subsubsection{Äquipotenziallinien}
+\label{sec:aequipotenziallinien}
+Äquipotenziallinien verbinden Punkte gleichen elektrischen Potenzials in einem Feld. Sie stehen immer senkrecht zu den Feldlinien und verdeutlichen, dass keine Arbeit verrichtet wird, wenn eine Ladung entlang einer Äquipotenziallinie bewegt wird.
+
+In homogenen Feldern, wie sie z.\,B. in Plattenkondensatoren auftreten, sind die Äquipotenziallinien parallel und gleichmäßig verteilt. In radialsymmetrischen Feldern, etwa um Punktladungen, sind die Äquipotenziallinien konzentrisch um die Ladung angeordnet. Bei mehreren Ladungen können die Äquipotenziallinien komplexe Muster bilden, die die Überlagerung der Potenziale widerspiegeln.
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/aequipotenziallinien_ungleichnamige_ladungen.png}
+        \caption{Äquipotenziallinien bei zwei ungleichnamigen Ladungen.}
+        \label{fig:aequipotenziallinien_ungleichnamige_ladungen}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/aequipotenziallinien_gleichnamige_ladungen.png}
+        \caption{Äquipotenziallinien bei zwei gleichnamigen Ladungen.}
+        \label{fig:aequipotenziallinien_gleichnamige_ladungen}
+    \end{minipage}
+\end{figure}
+
+\subsubsection{Bewegung geladener Teilchen im elektrischen Feld}
+\label{sec:bewegung_geladener_teilchen_im_elektrischen_feld}
+Geladene Teilchen bewegen sich im elektrischen Feld nach den Gesetzen der Kinematik, wobei die elektrische Kraft die beschleunigende Wirkung übernimmt.
+
+In einem homogenen Feld wirkt auf eine Ladung $q$ eine konstante Kraft $F_{\mathrm{el,\,hom}}$, die eine gleichmäßige Beschleunigung $a$ verursacht:
+\begin{gather}
+    a = \frac{F_{\mathrm{el,\,hom}}}{m} = \frac{qE}{m} \\
+    v = a \cdot t = \frac{qE \cdot t}{m}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $F_{\mathrm{el,\,hom}}$ & Elektrische Kraft \\
+        $m, q$ & Masse und Ladung des Teilchens \\
+        $E$ & Feldstärke
+    \end{tabular}
+\end{center}
+Die Geschwindigkeit $v$ der Ladung kann auch über deren kinetische Energie $W_{\mathrm{kin}}$ berechnet werden, da die Arbeit des elektrischen Feldes $W_{\mathrm{el,\,allg}}$ mit der Spannung $U$ vollständig in kinetische Energie umgesetzt wird:
+\begin{align}
+    W_{\mathrm{kin}}        &= W_{\mathrm{el,\,allg}} \nonumber \\
+    \frac{1}{2} m \cdot v^2 &= q \cdot U, \quad \nonumber \\
+    v                       &= \sqrt{\frac{2qU}{m}}
+\end{align}
+Bei der Ablenkung eines Elektronenstrahls senkrecht zu den Feldlinien (hier y-Richtung) überlagern sich gleichförmige Bewegung in x-Richtung und gleichmäßig beschleunigte Bewegung in y-Richtung:
+\begin{gather}
+    s_y(t) = \frac{1}{2} a_y t^2, \quad s_x(t) = v_x \cdot t \\
+    a_y = \frac{F_{\mathrm{el,\,hom}}}{m} = \frac{q \cdot E_\mathrm{pkond}}{m} = \frac{q \cdot U_\mathrm{pkond}}{m \cdot d} \\
+    s_y(t) = \frac{1}{2} \frac{q \cdot U_\mathrm{pkond}}{m \cdot d} \cdot t^2
+           = \frac{1}{2} \frac{q \cdot U_\mathrm{pkond}}{m \cdot d} \cdot \left(\frac{s_x(t)}{v_x}\right)^2
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $s_x, s_y$ & Auslenkung in x- und y-Richtung \\
+        $v_x$ & Eintrittsgeschwindigkeit \\
+        $U_\mathrm{pkond}$ & Ablenkspannung
+    \end{tabular}
+\end{center}
+Die Bewegung des Teilchens entspricht dem waagerechten Wurf in der Mechanik. Die horizontale Geschwindigkeitskomponente bleibt konstant, während die Ablenkung proportional zur Ablenkspannung $U_\mathrm{pkond}$ und umgekehrt proportional zum Quadrat der Eintrittsgeschwindigkeit $v_x$ ist.
+
+\subsubsection{Homogene Felder ($E_{\mathrm{hom}}$)}
+\label{sec:homogene_felder}
+In einem homogenen elektrischen Feld ist die Feldstärke $E$ an jedem Punkt gleich groß und zeigt in die gleiche Richtung. Ein solches Feld kann näherungsweise zwischen den Platten eines Kondensators erzeugt werden.
+\begin{gather}
+    E_{\mathrm{hom}} = \frac{U}{d}
+\end{gather}
+Homogene Felder entstehen idealerweise zwischen parallelen Platten eines Plattenkondensators. Ihre Feldlinien verlaufen parallel und mit konstantem Abstand. Die Spannung zwischen den Platten ist bei konstanter Feldstärke $E$ proportional zum Plattenabstand $d$.
+
+\subsubsection{Radialsymmetrische Felder ($E_{\mathrm{rad}}$)}
+\label{sec:radialsymmetrische_felder}
+Radialsymmetrische elektrische Felder entstehen um Punktladungen oder kugelförmig symmetrisch verteilte Ladungen. Die Feldstärke nimmt mit dem Quadrat der Entfernung vom Zentrum ab und ist damit nicht konstant wie im homogenen Feld.
+\begin{gather}
+    E_{\mathrm{rad}}(r) = \frac{1}{4\pi\varepsilon_0} \cdot \frac{Q}{r^2}
+\end{gather}
+Die Feldlinien radialsymmetrischer elektrischer Felder verlaufen radial: bei positiver Ladung nach außen, bei negativer nach innen. Ihre Feldstärke nimmt quadratisch mit der Entfernung $r$ ab. Das Coulomb-Gesetz beschreibt die Kraftwirkung zwischen Punktladungen und bildet die Grundlage dieses Feldes.
+
+ Siehe auch: \url{http://www.physik.osz-biv.de/GK/ph-1_2013/coulomb.php} (Begründung des Proportionalitätsfaktors $\frac{1}{4 \pi \cdot \varepsilon_0}$ über Eigenschaften einer Kugeloberfläche)
+
+\subsubsection{Influenz}
+\label{sec:influenz}
+Unter Influenz versteht man die Verschiebung freier Ladungsträger in einem neutralen Leiter unter dem Einfluss eines äußeren elektrischen Feldes. Auf der feldnahen Seite sammeln sich dabei Ladungen entgegengesetzter Polarität, während sich auf der feldfernen Seite gleichnamige Ladungen ansammeln. Der Leiter bleibt insgesamt elektrisch neutral, da keine neuen Ladungen entstehen, sondern lediglich vorhandene verschoben werden. Dieser Effekt lässt sich beispielsweise mit einem Elektroskop beobachten.
+
+Im Unterschied zur Polarisation von Isolatoren, bei der sich lediglich gebundene Ladungen geringfügig innerhalb der Moleküle verschieben, erfolgt bei der Influenz eine makroskopische Umverteilung freier Ladungsträger im gesamten Leiter.
+
+\subsubsection{Polarisation}
+\label{sec:polarisation}
+Unter Polarisation versteht man anders als bei der Influenz die Verschiebung gebundener Ladungen in Atomen oder Molekülen, wenn ein äußeres elektrisches Feld angelegt wird. Es entstehen innerhalb der Teilchen selbst indizierte elektrische Dipole oder vorhandene Dipole richten sich aus. Diese Verschiebung führt zu einer leichten Trennung von positiven und negativen Ladungen, wodurch ein inneres Gegenfeld erzeugt wird, das dem äußeren Feld entgegenwirkt.
+
+In Isolatoren sind die Ladungsträger fest an ihre Positionen gebunden, sodass keine freien Ladungen zur Verfügung stehen. Die Polarisation bewirkt durch die Erzeugung eines Gegenfeldes eine Verringerung der effektiven Feldstärke im Material, was durch die relative Permittivität $\varepsilon_r$ beschrieben wird. Diese Größe gibt an, um welchen Faktor die Kapazität eines Kondensators durch das Einbringen des Dielektrikums erhöht wird.
+
+Bei Molekülen mit dauerhaftem Dipolmoment (z.~B. Wasser) richten sich die Dipole im elektrischen Feld aus, was zur Orientierungspolarisation führt.
+
+\subsection{Apparaturen und Sonstiges}
+
+\subsubsection{Plattenkondensator}
+\label{sec:plattenkondensator}
+Der Plattenkondensator stellt die einfachste Bauform eines Kondensators dar und erzeugt näherungsweise ein homogenes elektrisches Feld zwischen seinen parallelen Platten.
+
+\begin{gather*}
+    E_{\mathrm{hom}} = \frac{U}{d} \\
+    \sigma_{\mathrm{hom}} = \varepsilon_0 \cdot E_{\mathrm{hom}} \\
+    C_{\mathrm{hom}} = \varepsilon_0 \cdot \varepsilon_r \cdot \frac{A}{d} \\
+    F_{\mathrm{el,\,hom}} = \frac{W_{\mathrm{el,\,hom}}}{s} = q \cdot E_{\mathrm{hom}} \\
+    W_{\mathrm{hom}} = F_{\mathrm{el,\,hom}} \cdot s = E_{\mathrm{hom}} \cdot q \cdot s \\
+    W_{\mathrm{pkond}} = \frac{1}{2} C U^2 = \frac{1}{2} \varepsilon_0 \varepsilon_r E_{\mathrm{hom}}^2 V
+\end{gather*}
+Wird ein geladener Kondensator, der von einer Spannungsquelle getrennt ist, auseinandergezogen, so steigt die im Kondensator gespeicherte Energie, da der felderfüllte Raum vergrößert wird. Wenn beim Auseinanderziehen der Kondensator weiterhin an eine Spannungsquelle angeschlossen bleibt, ändert sich die Situation im Vergleich zum getrennten Kondensator: Da die Spannung $U$ konstant bleibt, muss die Feldstärke $E_{\mathrm{hom}} = \tfrac{U}{d}$ bei zunehmendem Plattenabstand $d$ abnehmen. Die Kapazität $C = \varepsilon_0 \varepsilon_r \tfrac{A}{d}$ nimmt ebenfalls ab, sodass zuletzt auch die gespeicherte Energie mit zunehmendem Abstand abnimmt.
+
+Kondensatoren können zur Speicherung von Ladung und Energie verwendet werden. Es ist zu beachten, dass die Energie des elektrischen Feldes im Kondensator von der Energie eines darin befindlichen Teilchens zu unterscheiden ist.
+
+ Siehe auch: \url{https://www.leifiphysik.de/elektrizitaetslehre/ladungen-elektrisches-feld/aufgabe/auslenkung-im-homogenen-elektrischen-feld} (Rückstellkraft eines Fadenpendels und Kondensator)
+
+\subsubsection{Elektroskop}
+\label{sec:elektroskop}
+Das Elektroskop ist ein Instrument zum qualitativen Nachweis elektrischer Ladungen. Es besteht aus einem leitenden Gehäuse und einem beweglichen Zeiger oder Folien, die die gleiche Ladung wie das Gehäuse erhalten, sobald Ladung zugeführt wird.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.35\linewidth]{figures/elektroskop.png}
+    \caption{Schematische Darstellung eines Elektroskops.}
+    \label{fig:elektroskop}
+\end{figure}
+Die Wirkung beruht auf der gegenseitigen Abstoßung gleichnamiger Ladungen. Je größer die aufgebrachte Ladung, desto stärker schlägt der Zeiger oder die Folien aus. Zusätzlich lassen sich Influenzeffekte beobachten, wenn geladene Körper in die Nähe des Elektroskops gebracht werden, wodurch sich die Ladungen im Gerät verschieben.
+
+\subsubsection{Faraday-Käfig}
+\label{sec:faraday_kaefig}
+Ein Faraday-Käfig bezeichnet eine leitende Hülle, die den Innenraum vor äußeren elektrischen Feldern abschirmt. Das zugrunde liegende Prinzip beruht auf der Influenz: Trifft ein äußeres Feld auf den Leiter, so verschieben sich die freien Ladungsträger innerhalb der leitenden Hülle. Auf der dem Feld zugewandten Seite sammeln sich entgegengesetzte Ladungen, während sich auf der abgewandten Seite gleichnamige Ladungen anhäufen. Diese Ladungsverteilung erzeugt ein inneres elektrisches Feld, das dem äußeren Feld genau entgegenwirkt. Dadurch heben sich beide Felder im Inneren auf, sodass der Raum innerhalb des Faraday-Käfigs \enquote{feldfrei} bleibt. Die äußeren Feldlinien enden auf der einen Seite des Leiters und setzen sich von der anderen Seite aus fort.
+
+Die Abschirmung funktioniert unabhängig von der Form des Leiters, solange eine geschlossene oder nahezu geschlossene leitende Hülle vorliegt. Sie gilt jedoch ausschließlich für elektrische Felder; magnetische Felder können so nicht abgeschirmt werden. Die Ladungsverteilung auf der Oberfläche des Käfigs stellt sich dabei selbsttätig so ein, dass die Feldfreiheit im Inneren gewährleistet bleibt.
+
+ Siehe auch: \url{https://www.youtube.com/watch?v=pda98jkZSkg} (Erklärung des Faraday-Käfigs)
+
+\subsubsection{Braun'sche Röhre (Elektronenstrahlröhre)}
+\label{sec:braunsche_roehre}
+Die Braun'sche Röhre dient zur Demonstration der Beschleunigung und Ablenkung von Elektronen in elektrischen Feldern. Alte Röhrenfernseher, -monitore und Oszilloskope basieren auf diesem Prinzip.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/braunsche_roehre.jpeg}
+    \caption{Schematische Darstellung einer Elektronenstrahlröhre.}
+    \label{fig:braunsche_roehre}
+\end{figure}
+Elektronen werden von der Glühkathode (negativ) zur Anode (positiv) beschleunigt. Ihre kinetische Energie ergibt sich direkt aus der durchlaufenen Anodenspannung. Ein negativer Wehnelt-Zylinder sorgt für die Fokussierung des Elektronenstrahls, während Ablenkplatten die zweidimensionale Ablenkung ermöglichen. Die Bahn der Elektronen wird durch einen Leuchtschirm sichtbar gemacht. Ihre Bahn folgt den Gesetzen aus Abschnitt~\ref{sec:bewegung_geladener_teilchen_im_elektrischen_feld}.
+
+ Siehe auch: \url{https://www.leifiphysik.de/elektrizitaetslehre/bewegte-ladungen-feldern/ausblick/braunsche-roehre} (Formeln und Animation zur Braunschen Röhre)
+
+\subsection{Versuche}
+
+\paragraph{Kondensatorexperimente}
+\begin{itemize}
+    \item Ladung und Entladung eines Kondensators über verschiedene Widerstände
+    \item Nachweis der Kapazitätsabhängigkeit von Plattenabstand, Plattenfläche und Dielektrikum
+    \item Energiemessung beim Auseinanderziehen der Kondensatorplatten
+    \item Technische Anwendungen beschreiben (zum Beispiel Standlicht beim Fahrrad)
+\end{itemize}
+
+\paragraph{Feldliniendarstellung}
+\begin{itemize}
+    \item Sichtbarmachung von Feldlinien mit Grießkörnern in Rizinusöl
+    \item Untersuchung verschiedener Elektrodenkonfigurationen
+    \item Nachweis von Äquipotenziallinien mit Spannungsmessungen
+\end{itemize}
+
+\paragraph{Elektronenstrahlen}
+\begin{itemize}
+    \item Geschwindigkeitsbestimmung von Elektronen aus der Beschleunigungsspannung
+    \item Ablenkung im elektrischen Feld (Braunsche Röhre)
+    \item Bestimmung der spezifischen Elektronenladung $\frac{e}{m}$
+\end{itemize}
+
+\emph{Weitere Versuche hier einfügen.}

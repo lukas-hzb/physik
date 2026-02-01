@@ -1,0 +1,72 @@
+% --- Grundlegende Pakete ---
+\usepackage[utf8]{inputenc}    % Zeichencodierung
+\usepackage[T1]{fontenc}       % Schriftart-Kodierung
+\usepackage[ngerman]{babel}    % Deutsche Sprache
+\usepackage{csquotes}
+\usepackage{lmodern}           % Moderne Schriftart
+\usepackage{microtype}         % Mikrotypografie-Verbesserungen
+\usepackage{parskip}           % Absätze durch Leerzeilen statt Einrückung
+\usepackage[margin=2.5cm]{geometry} % Seitenränder
+
+% --- Weitere nützliche Pakete ---
+\usepackage{amsmath, amssymb}  % Mathematische Symbole und Formeln
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{enumitem}          % Weitere Art der Aufzählung
+\usepackage{booktabs}          % Schöne Tabellen
+\usepackage{graphicx}          % Bilder einbinden
+\usepackage{xcolor}            % Farbige Schrift
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref} % Hyperlinks im PDF
+
+% --- Zusätzliche Pakete für verbesserte Darstellung ---
+\usepackage{tikz}              % Für Diagramme und Zeichnungen
+\usetikzlibrary{calc}          % Für komplexe Berechnungen in TikZ
+\usepackage{tcolorbox}         % Für farbige Boxen
+\usepackage{multicol}          % Für mehrspaltige Layouts
+\usepackage{float}             % Für eine bessere Platzierung von Figuren
+\usepackage{xurl}              % Links werden immer gebrochen
+
+% --- Anpassungen ---
+\hypersetup{
+    unicode=true,        % Allows non-ASCII characters in bookmarks
+    colorlinks=true,
+    linkcolor=blue!50!black,
+    filecolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={Physik Lernzettel Klausur 4 - Magnetismus},
+    pdfauthor={Lukas Harzbecker}
+}
+
+\setlist[itemize]{label=--, left=0.55em}    % Alternative Listen
+
+\setlength{\parindent}{0pt}    % Keine Einrückung bei Absätzen
+
+% --- Kopf- und Fußzeilen ---
+\usepackage{fancyhdr}
+
+\fancypagestyle{titleandtocstyle}{
+    \fancyhf{}
+    \fancyfoot[C]{} % Leerer Fußbereich für keine Seitenzahl
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+\fancypagestyle{contentstyle}{
+    \fancyhf{}
+    \fancyhead[L]{Lukas Harzbecker}
+    \fancyhead[C]{Physik-LK -- Alle Themen}
+    \fancyhead[R]{\rightmark}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0.5pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+% Section-Kurztitel fuer Header setzen (ohne Nummer)
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\subsubsectionmark}[1]{}
+
+% --- Titelseite ---
+\author{Lukas Harzbecker}
+\date{\today}

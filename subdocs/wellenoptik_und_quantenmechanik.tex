@@ -1,0 +1,471 @@
+\section[Quantenphysik und Wellen]{Wellenoptik und Quantenmechanik}
+Die nachfolgenden Grundlagen der Wellenoptik sowie die der Quantenmechanik wurden in der zweiten Klausur der zwölften Klasse abgefragt.
+
+\subsection{Relevante Größen und deren Zusammenhänge}
+
+\subsubsection{Planck-Konstante ($h$)}
+\label{sec:planck_konstante}
+Die Planck-Konstante $h$ ist eine fundamentale Naturkonstante der Quantenphysik.
+Sie legt fest, wie stark Energie und Frequenz quantisiert sind und markiert die Grenze, ab der klassische Physik versagt.
+\begin{gather}
+    h \approx 6{,}626 \times 10^{-34} \, \si{\joule\second} \\
+    h \approx 4{,}136 \times 10^{-15} \, \si{\electronvolt\second}
+\end{gather}
+
+\subsubsection{Energie eines Photons ($W_\gamma$)}
+\label{sec:energie_photonen}
+Die Energie eines Photons $W_\gamma$ ist proportional zur Wellenfrequenz $f$ des Lichts, das auf die Elektrode einfällt.
+\begin{gather}
+    W_\gamma = h \cdot f = \frac{h \cdot c}{\lambda}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $h$ & Planck-Konstante \\
+        $f$ & Frequenz des Lichts \\
+        $c$ & Lichtgeschwindigkeit \\
+        $\lambda$ & Wellenlänge
+    \end{tabular}
+\end{center}
+
+\subsubsection{Impuls eines Photons ($p_\gamma$)}
+\label{sec:impuls_photonen}
+Da Photonen keine Masse haben, können sie nicht mit der Formel $p = m \cdot v$ beschrieben werden. Stattdessen wird dem Photon nach der Gleichung $W = m \cdot c^2$ ein Impuls $p_\gamma$ zugeordnet.
+\begin{gather}
+    p_\gamma = m \cdot v = m \cdot c = \frac{h \cdot f}{c^2} \cdot c = \frac{h \cdot f}{c} = \frac{h}{\lambda}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $p_\gamma$ & Impuls des Photons \\
+        $h$ & Planck-Konstante \\
+        $\lambda$ & Wellenlänge
+    \end{tabular}
+\end{center}
+
+\subsubsection{Energie der Elektronen beim Photoelektrischen Effekt ($W_\mathrm{kin,\,max}$, $W_\mathrm{lös}$)}
+\label{sec:energie_elektronen_photoelektrischer_effekt}
+Im Vakuum einer \hyperref[sec:fotozelle]{Fotozelle} wird die Energie $W_\mathrm{kin,\,max}$ der schnellsten Elektronen untersucht, die durch den Photoelektrischen Effekt aus der Elektrode herausgelöst wurden. Ihre Energie $W_\mathrm{kin,\,max}$ ist linear proportional zur Wellenfrequenz $f$ des Lichts, das auf die Elektrode einfällt. Zudem ist die Steigung aller Geraden in einem $W$-$f$-Diagramm gleich der \hyperref[sec:planck_konstante]{Planck-Konstante} $h$ und vom Material unabhängig.
+Da herausgelöste Elektronen nur eine bestimmte Energie besitzen, können sie maximal eine Spannung $U_\mathrm{max} = \frac{W_\mathrm{kin,\,max}}{q}$ durchqueren.
+\begin{gather}
+    W_\mathrm{kin,\,max} = h \cdot f - W_\mathrm{lös} = \frac{1}{2} \cdot m_\mathrm{e} \cdot v_\mathrm{max}^2 = U_\mathrm{max} \cdot q
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $W_\mathrm{kin,\,max}$ & Maximale kinetische Energie der Elektronen \\
+        $W_\mathrm{lös}$ & Ablöseenergie (materialabhängig) \\
+        $h$ & Planck-Konstante \\
+        $f$ & Frequenz des einfallenden Lichts \\
+        $m_\mathrm{e}$ & Elektronenmasse \\
+        $v_\mathrm{max}$ & Maximale Geschwindigkeit der Elektronen \\
+        $U_\mathrm{max}$ & Maximale durchquerbare Spannung \\
+        $q$ & Elementarladung
+    \end{tabular}
+\end{center}
+Die negativen Achsenabschnitte $-W_\mathrm{lös}$ der Geraden hängen vom Metall ab und stehen für die Ablöseenergie. Sie verkleinert die Energie, die von den Photonen ($W_\gamma = h \, f$) an die Elektronen abgegeben wird.
+
+\subsubsection{de Broglie-Wellenlänge ($\lambda_\mathrm{dB}$)}
+\label{sec:de_broglie_wellenlaenge}
+Mit der de Broglie-Wellenlänge $\lambda_\mathrm{dB}$ kann auch massebehafteten Teilchen wie Elektronen eine Wellenlänge zugeordnet werden.
+\begin{gather}
+    \lambda_\mathrm{dB} = \frac{h}{p} = \frac{h}{m \cdot v}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\lambda_\mathrm{dB}$ & de Broglie-Wellenlänge \\
+        $h$ & Planck-Konstante \\
+        $p$ & Impuls des Teilchens \\
+        $m$ & Masse des Teilchens \\
+        $v$ & Geschwindigkeit des Teilchens
+    \end{tabular}
+\end{center}
+
+\subsection{Wichtige Konzepte und Vertiefung}
+
+\subsubsection{Photoelektrischer Effekt}
+\label{sec:photoelektrischer_effekt}
+Der Photoelektrische Effekt ist ein experimenteller Effekt, bei dem Elektronen aus einer Metallplatte abgestoßen werden, wenn sie mit Lichtstrahlen ausgesetzt sind. Die Elektronen werden durch die Lichtstrahlung beschleunigt und können somit einen elektrischen Strom erzeugen.
+
+Ein zentrales Experiment ist der \hyperref[sec:hallwachs_versuch]{Hallwachs-Versuch}.
+
+\subsubsection{Leuchtdioden (LEDs)}
+\label{sec:leds}
+Bei Leuchtdioden wird die Umkehrung des photoelektrischen Effekts genutzt, um Licht zu erzeugen. Eine LED besteht aus einem Halbleiter mit einem p-n-Übergang. Wird die Diode in Durchlassrichtung betrieben, so werden Elektronen aus dem n-dotierten Bereich und Löcher aus dem p-dotierten Bereich in den Übergangsbereich gedrückt.
+Dort rekombinieren die Elektronen mit den Löchern. Dabei geht ein Elektron von einem energetisch höheren Zustand in einen niedrigeren über. Die dabei frei werdende Energie wird in Form eines Photons abgegeben. Die Energie des ausgesendeten Lichts entspricht näherungsweise der Bandlückenenergie des verwendeten Halbleitermaterials. Wird an die LED eine Spannung in Sperrrichtung angelegt, so vergrößert sich die Raumladungszone am p-n-Übergang. Die freien Ladungsträger werden vom Übergangsbereich weggezogen, sodass kein nennenswerter Stromfluss stattfinden kann. Da keine Rekombination von Elektronen und Löchern erfolgt, wird kein Licht emittiert. Solange die angelegte Sperrspannung unterhalb der materialspezifischen Durchbruchspannung bleibt, verhält sich die LED wie ein Isolator.
+Die Farbe des emittierten Lichts wird somit durch die Größe der Bandlücke bestimmt und ist materialabhängig. Eine größere Bandlücke führt zu höherfrequentem (kurzwelligem) Licht, eine kleinere Bandlücke zu niederfrequentem (langwelligem) Licht.
+Da die Lichtemission direkt auf elektronischen Übergängen beruht, weisen LEDs einen hohen Wirkungsgrad, eine geringe Wärmeentwicklung und eine lange Lebensdauer auf.
+
+\subsubsection{Compton-Effekt}
+\label{sec:compton_effekt}
+Der Compton-Effekt beschreibt die inelastische Streuung von Röntgen- oder $\gamma$-Strahlung an (nahezu) freien Elektronen. Dabei überträgt ein Photon einen Teil seiner Energie und seines Impulses auf das Elektron, sodass das gestreute Photon eine größere Wellenlänge (geringere Energie) besitzt als zuvor. Die Wellenlängenänderung hängt ausschließlich vom Streuwinkel ab und lässt sich durch die folgende Formel beschreiben:
+\begin{gather}
+    \Delta \lambda = \frac{h}{m_\mathrm{e} c}\,(1-\cos\theta)
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\Delta \lambda$ & Wellenlängenänderung \\
+        $h$ & Planck-Konstante \\
+        $m_\mathrm{e}$ & Elektronenmasse \\
+        $c$ & Lichtgeschwindigkeit \\
+        $\theta$ & Streuwinkel
+    \end{tabular}
+\end{center}
+
+\subsubsection{Röntgenbeugung und Bragg-Reflexion}
+\label{sec:roentgenbeugung}
+Die Röntgenbeugung wird verwendet, um die atomare Struktur von Kristallen zu untersuchen. Da die Wellenlänge $\lambda$ von Röntgenstrahlung in der Größenordnung der atomaren Abstände im Kristallgitter liegt, tritt Beugung an den Gitteratomen auf. Dieses Phänomen wird vereinfacht als „Reflexion“ an den parallelen Netzebenen des Kristalls beschrieben (Bragg-Reflexion).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/bragg.png}
+    \caption{Schematische Darstellung der Bragg-Reflexion.}
+    \label{fig:bragg}
+\end{figure}
+\begin{center}
+    \begin{tabular}{rl}
+        $d$ & Netzebenenabstand (Abstand zweier benachbarter Atomebenen) \\
+        $\theta$ & Winkel zwischen einfallendem Strahl und der Netzebene (nicht dem Lot!) \\
+        $\delta$ & Hier die Hälfte des \hyperref[sec:gangunterschied]{Gesamt-Gangunterschieds}
+    \end{tabular}
+\end{center}
+Damit ein Intensitätsmaximum auf dem Schirm beobachtet werden kann, muss der Gangunterschied $\delta$ der an zwei benachbarten Netzebenen reflektierten Wellen ein ganzzahliges Vielfaches der Wellenlänge betragen:
+\begin{gather}
+    \delta_\mathrm{ges} = k \cdot \lambda \nonumber \\
+    \frac{\delta_\mathrm{ges}}{2} = \sin(\theta) \cdot d \nonumber \\
+    k \cdot \lambda = 2d \, \sin(\theta)
+\end{gather}
+
+\subsubsection{Beugung und Reflexion von Elektronen}
+\label{sec:elektronenbeugung_reflexion}
+Da Elektronen gemäß der de Broglie-Hypothese Welleneigenschaften besitzen ($\lambda_{\mathrm{dB}} = \frac{h}{p}$), können sie ebenfalls an Kristallgittern gebeugt werden. Dies ist ein zentraler Nachweis für den Welle-Teilchen-Dualismus.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/elektronenbeugung2.png}
+    \caption{Schematische Darstellung der Beugung von Elektronen an einem Kristallgitter.}
+    \label{fig:elektronenbeugung}
+\end{figure}
+An jedem Einzelkristall des polykristallenen Graphitgitters wird das Elektron nach der \hyperref[sec:roentgenbeugung]{Bragg-Reflexion} reflektiert. Da der einfallende Strahl und der reflektierte Strahl jeweils den Winkel $\theta$ zu den Netzebenen einschließen, beträgt der gesamte Ablenkwinkel gegenüber der ursprünglichen Bahn $2\theta$. (Vgl. Abbildung \ref{fig:bragg} zur Bragg-Reflexion).
+
+In der \hyperref[sec:elektronenbeugungsroehre]{Elektronenbeugungsröhre} gilt, sofern $l$ bei jedem Winkel der Durchmesser der Röhre ist:
+\begin{gather*}
+    \frac{r}{l} = \sin(2\theta)
+\end{gather*}
+Für kleine Winkel gilt nach der Kleinwinkelnäherung:
+\begin{gather*}
+    \sin(2\theta) \approx 2\sin(\theta)
+\end{gather*}
+Somit folgt:
+\begin{gather*}
+    \frac{r}{l} = 2\sin(\theta) \rightarrow \sin(\theta) = \frac{r}{2l}
+\end{gather*}
+Durch die Ähnlichkeit des Versuchs kann die Bragg'sche Interferenzbedingung der Röntgenbeugung für die Maxima bei der Interferenz auf die Elektronenbeugung übertragen werden:
+\begin{gather*}
+    k \, \lambda = 2d \, \sin(\theta) \rightarrow \sin(\theta) = \frac{k \, \lambda}{2d}
+\end{gather*}
+Wir können diese Ähnlichkeit nun weiter verwenden, indem wir die beiden Sinusbeziehungen gleichsetzen:
+\begin{gather}
+    \frac{r}{2l} = \frac{k \, \lambda}{2d} \\
+    \lambda = \frac{d \cdot r}{k \cdot l}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $r$ & Ringdurchmesser auf dem Schirm \\
+        $l$ & Röhrendurchmesser \\
+        $k$ & Ordnung des Maximums \\
+        $d$ & Netzebenenabstand von Graphit
+    \end{tabular}
+\end{center}
+Bei Graphit gibt es aufgrund der Polykristallstruktur zwei Netzebenenabstände bzw. Gitterkonstanten. Bei anderen Materialien kann es auch drei oder sogar mehr Netzebenenabstände geben.
+
+ Siehe auch: \url{https://www.leifiphysik.de/quantenphysik/quantenobjekt-elektron/versuche/elektronenbeugungsroehre-simulation-mintapps}
+
+\subsubsection{Doppelspaltexperiment}
+\label{sec:doppelspaltexperiment}
+Das Doppelspaltexperiment zeigt, dass Licht und Materie sowohl Wellen- als auch Teilcheneigenschaften besitzen: Schickt man einzelne Teilchen (z.~B. Elektronen oder Photonen) durch zwei enge, parallele Spalte, entsteht auf dem Schirm dahinter ein Interferenzmuster – ein typisches Wellenphänomen –, obwohl jedes Teilchen einzeln detektiert wird. Es demonstriert damit fundamentale Quantenphänomene wie Überlagerung und den Einfluss der Beobachtung auf das Ergebnis.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/doppelspalt.png}
+    \caption{Schematische Darstellung eines Doppelspalts.}
+    \label{fig:doppelspalt}
+\end{figure}
+\begin{center}
+    \begin{tabular}{rl}
+        $a$ & Abstand zwischen Spaltebene und Schirm \\
+        $g$ & Spaltabstand ($g \ll a$) \\
+        $d_k$ & Abstand vom 0. zum $k$-ten Maximum \\
+        $\delta$ & \hyperref[sec:gangunterschied]{Gangunterschied} \\
+        $\alpha$ & Winkel zwischen Spalten und Auftreffpunkt auf dem Schirm
+    \end{tabular}
+\end{center}
+Wie bei anderen Versuchen gilt auch hier die Kleinwinkelnäherung bis $\alpha \approx 5^\circ$ und $\sin(\alpha) \approx \tan(\alpha)$. Zudem wird angenommen, dass die Spaltbreite vernachlässigt werden kann:
+\begin{gather*}
+    \sin(\alpha) = \frac{\delta}{g} \\
+    \tan(\alpha) = \frac{d_k}{a} \\
+    \frac{\delta}{g} = \frac{d_k}{a} \\
+    d_k = \frac{\delta \cdot a}{g}
+\end{gather*}
+Für die Minima gilt $\delta = \frac{2k - 1}{2} \cdot \lambda$ mit $k \in \mathbb{N}$:
+\begin{gather}
+    d_k = \frac{(2k - 1) \cdot \lambda \cdot a}{2g}
+\end{gather}
+Für die Maxima neben dem Maximum der 0. Ordnung in der Mitte des Interferenzmusters gilt $\delta = k \cdot \lambda$:
+\begin{gather}
+    d_k = \frac{k \cdot \lambda \cdot a}{g}
+\end{gather}
+Jeder Abstand $d_k$ beschreibt hierbei den Abstand zweier Maxima oder Minima, deren Ordnung sich um $k$ unterscheidet. Es gibt keine Minima der 0. Ordnung und $d_k$ wird im Folgenden allgemein für den Abstand zweier Maxima verwendet.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/interferenzmuster.png}
+    \caption{Darstellung des am Doppelspalt entstehenden Interferenzmusters.}
+    \label{fig:interferenzmuster}
+\end{figure}
+
+\subsubsection{Interferenz am Gitter}
+\label{sec:interferenz_am_gitter}
+Interferenz am Gitter bezeichnet das Überlagerungsphänomen von Lichtwellen, die an den vielen, regelmäßig angeordneten Spalten eines Gitters gebeugt werden. Die einzelnen gebeugten Wellen laufen anschließend zusammen und verstärken oder schwächen sich je nach ihrem Gangunterschied. Dadurch entstehen scharfe, gut trennbare Maxima in bestimmten Richtungen.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/vielfachspalt.png}
+    \caption{Schematische Darstellung eines Vielfachspalts.}
+    \label{fig:vielfachspalt}
+\end{figure}
+\begin{center}
+    \begin{tabular}{rl}
+        $a$, $d_k$, $\delta$, $\alpha$ & Siehe Doppelspalt \\
+        $g$ & Gitterkonstante (Abstand der Spaltmitten)
+    \end{tabular}
+\end{center}
+Beim Mehrfachspalt bzw. beim Gitter überlagern sich die Lichtwellen dann maximal konstruktiv, wenn die Wellen benachbarter Spalte einen Gangunterschied von $\delta = k \cdot \lambda$ besitzen. Ist das nicht der Fall, so kommt es zwischen bestimmten Spalten zu einer destruktiven Interferenz und damit nicht zu einem Hauptmaximum, sondern zu einem Nebenmaximum, wenn dennoch einige Wellen konstruktiv interferieren.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/interferenzmuster_mehrfachspalt.png}
+    \caption{Darstellung des am Gitter entstehenden Interferenzmusters.}
+    \label{fig:gitterinterferenz}
+\end{figure}
+Auch hier wird zunächst angenommen, dass die Spaltbreite vernachlässigt werden kann.
+
+\begin{gather*}
+    \sin(\alpha) = \frac{\delta}{g} \\
+    \tan(\alpha) = \frac{d_k}{a} \\
+    \frac{\delta}{g} = \frac{d_k}{a}
+\end{gather*}
+Für die Maxima gilt $\delta = k \cdot \lambda$:
+\begin{gather}
+    d_k = \frac{k \cdot \lambda \cdot a}{g}
+\end{gather}
+Die Herleitung der exakten Position der Maxima erfolgt über trigonometrische Beziehungen:
+\begin{gather*}
+    \sin(\alpha) = \frac{\delta}{g} = \frac{k \cdot \lambda}{g} \\
+    \tan(\alpha) = \frac{d_k}{a} \rightarrow \alpha = \tan^{-1}\!\left(\frac{d_k}{a}\right) \\
+    \lambda = \frac{\sin(\alpha) \cdot g}{k} = \frac{\sin(\tan^{-1}\!\left(\frac{d_k}{a}\right)) \cdot g}{k} \\
+    d_k = a \cdot \tan\!\left(\sin^{-1}\!\left(\frac{k \lambda}{g}\right)\right)
+\end{gather*}
+Alternativ lassen sich die Beziehungen über den Satz des Pythagoras angeben:
+\begin{gather*}
+    \sin(\alpha) = \frac{k \cdot \lambda}{g} = \frac{d_k}{\sqrt{a^2 + (d_k)^2}} \\
+    \lambda = \frac{g}{k} \, \sin(\alpha) \\
+    d_k = a \, \tan(\alpha)
+\end{gather*}
+
+\subsubsection{Interferenz an dünnen Schichten}
+\label{sec:interferenz_an_duennen_schichten}
+Interferenz an dünnen Schichten entsteht, wenn Licht auf eine transparente Schicht trifft, deren Dicke in der Größenordnung der Lichtwellenlänge liegt. Ein Teil des Lichts wird an der Oberseite der Schicht reflektiert, während ein anderer Teil in die Schicht eindringt und an der Unterseite reflektiert wird. Diese beiden reflektierten Teilstrahlen überlagern sich und interferieren miteinander.
+Der Gangunterschied zwischen den beiden Teilstrahlen hängt von der Schichtdicke, dem Brechungsindex des Materials und dem Einfallswinkel ab. Je nach Gangunterschied kommt es zu konstruktiver oder destruktiver Interferenz, wodurch bestimmte Wellenlängen verstärkt und andere ausgelöscht werden.
+Wichtig ist dabei, dass bei der Reflexion an einem optisch dichteren Medium (höherer Brechungsindex) ein Phasensprung von einer halben Wellenlänge auftritt, während die Reflexion an einem optisch dünneren Medium ohne Phasensprung erfolgt. Dieser Phasensprung muss bei der Berechnung des Gangunterschieds berücksichtigt werden.
+
+Typische Beispiele für Interferenz an dünnen Schichten sind:
+\begin{itemize}
+    \item \emph{Seifenblasen:} Die schillernden Farben entstehen durch Interferenz an der dünnen Seifenhaut. Da die Schichtdicke über die Oberfläche variiert, werden an verschiedenen Stellen unterschiedliche Farben verstärkt.
+    \item \emph{Ölflecken auf Wasser:} Der dünne Ölfilm erzeugt ebenfalls farbige Interferenzmuster durch die Überlagerung der an Ober- und Unterseite reflektierten Lichtwellen.
+    \item \emph{Schmetterlingsflügel:} Die schillernden Farben vieler Schmetterlingsarten entstehen durch mikroskopische Strukturen auf den Flügelschuppen, die wie dünne Schichten wirken und das Licht durch Interferenz gezielt verstärken.
+\end{itemize}
+
+\subsubsection{Beugung und Interferenz am Einzelspalt}
+\label{sec:einzelspalt}
+Anders als zuvor wird bei Beugung und Interferenz am Einzelspalt die Breite $b$ des Spaltes selbst nicht mehr vernachlässigt. Das Maximum 0. Ordnung befindet sich weiterhin mittig auf dem Schirm, also vor der Mitte des Spalts.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/einzelspalt.png}
+    \caption{Schematische Darstellung eines Einzelspalts.}
+    \label{fig:einzelspalt}
+\end{figure}
+\begin{center}
+    \begin{tabular}{rl}
+        $a$, $g$, $d_k$, $\delta$, $\alpha$ & Siehe Doppelspalt \\
+        $b$ & Spaltbreite
+    \end{tabular}
+\end{center}
+Beim Einzelspalt gelten andere Formeln als beim Doppelspalt oder beim Gitter. Hier gilt für die Minima, dass $\delta = k \cdot \lambda$ und für die Maxima, dass $\delta = \frac{2k + 1}{2} \cdot \lambda$. Eine genaue Erklärung ist hier zu finden: \url{https://www.leifiphysik.de/optik/beugung-und-interferenz/grundwissen/einzelspalt} im interaktiven Video.
+
+\begin{gather*}
+    \sin(\alpha) = \frac{\delta}{b} \\
+    \tan(\alpha) = \frac{d_k}{a} \\
+    \frac{\delta}{b} = \frac{d_k}{a} \\
+    d_k = \frac{\delta \cdot a}{b}
+\end{gather*}
+Für die Minima gilt $\delta = k \cdot \lambda$:
+\begin{gather}
+    d_k = \frac{k \cdot \lambda \cdot a}{b}
+\end{gather}
+Für die Maxima gilt $\delta = \frac{2k + 1}{2} \cdot \lambda$:
+\begin{gather}
+    d_k = \frac{(2k + 1) \cdot \lambda \cdot a}{2b}
+\end{gather}
+Da $\sin(\alpha) \le 1$ sein muss, ist die Anzahl der beobachtbaren Minima und Maxima begrenzt. Aus $\sin(\alpha) = \frac{k \cdot \lambda}{b}$ für die Minima folgt $k \cdot \lambda \le b$, also $k \le \frac{b}{\lambda}$. Entsprechendes gilt für die Maxima.
+
+\subsubsection{Wellenfunktion}
+Die Wellenfunktion $\Psi(\vec{x}, t)$ ist eine mathematische Beschreibung des quantenmechanischen Zustands eines Teilchens oder Systems. Sie ist eine komplexwertige Funktion, deren Betragsquadrat $|\Psi(\vec{x}, t)|^2$ die Wahrscheinlichkeitsdichte angibt, das Teilchen zur Zeit $t$ am Ort $\vec{x}$ zu finden. Die Wellenfunktion selbst ist nicht direkt messbar, aber sie enthält alle physikalisch relevanten Informationen über das System und entwickelt sich gemäß der Schrödinger-Gleichung.
+
+\subsection{Apparaturen und Sonstiges}
+
+\subsubsection{Kometen}
+Ein Komet ist ein kleiner Himmelskörper, der vorwiegend aus Eis, Staub und Gestein besteht – oft als „schmutziger Schneeball“ bezeichnet. Nähert er sich der Sonne, sublimiert das Eis durch die Erwärmung; diese freigesetzten Gase und mitgerissenen Staubteilchen bilden eine Atmosphäre um den Kern, die Koma.
+
+Es bilden sich dabei zwei Arten von Schweifen aus, die beide grundsätzlich von der Sonne weg zeigen:
+\begin{itemize}
+    \item \emph{Gasschweif (Plasmaschweif):} Besteht aus ionisierten Gasmolekülen. Er ist schmal, gerade und leuchtet meist bläulich. Seine Ausrichtung wird durch den Sonnenwind (Strom geladener Teilchen) bestimmt, der die Ionen direkt von der Sonne wegdrückt.
+    \item \emph{Staubschweif:} Besteht aus schwereren Staubpartikeln. Er ist breiter, leicht gekrümmt und leuchtet weißlich durch reflektiertes Sonnenlicht.
+\end{itemize}
+Die Ausrichtung des Staubschweifs liefert einen direkten Hinweis auf den Lichtdruck (Strahlungsdruck). Das Sonnenlicht übt eine Kraft auf die Staubteilchen aus, was belegt, dass elektromagnetische Wellen (Photonen) einen Impuls $p = \frac{h}{\lambda} = \frac{E}{c}$ besitzen und diesen auf Materie übertragen können. Ohne diesen Impulsübertrag würde der Schweif allein der Gravitation folgen.
+
+\subsubsection{Gravitationslinsen}
+Gravitationslinsen sind Erscheinungen, bei denen die Schwerkraft einer massereichen Struktur (etwa Galaxien oder Galaxienhaufen) den Weg des Lichts von weiter entfernten Objekten messbar krümmt. Dadurch wirkt die Masse wie eine Linse: Das Licht wird abgelenkt, verstärkt, verzerrt oder mehrfach abgebildet.
+Im Gegensatz zu optischen Linsen entsteht die Ablenkung hier nicht durch Brechung in einem Medium, sondern ausschließlich durch die Krümmung der Raumzeit gemäß der Allgemeinen Relativitätstheorie.
+
+\subsubsection{Fotozelle}
+\label{sec:fotozelle}
+Eine Fotozelle reagiert auf einfallendes Licht, indem die Photonen an der Metalloberfläche der ersten Elektrode Elektronen aus dem Material herauslösen (\hyperref[sec:photoelektrischer_effekt]{Photoelektrischer Effekt}). Die freigesetzten Elektronen werden durch die angelegte elektrische Spannung abgebremst und können die zweite Elektrode erreichen, sofern ihre kinetische Energie ausreichend groß ist.
+Bei Alkalimetallen wie Caesium genügt sichtbares Licht, um die Elektronen freizusetzen.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/fotozelle.pdf}
+    \caption{Schematische Darstellung einer Fotozelle.}
+    \label{fig:fotozelle}
+\end{figure}
+Eine Simulation einer Fotozelle ist hier zu finden: \url{https://mintapps.org/html/mint-photoeffect.html}.
+
+\subsubsection{Michelson Interferometer}
+Das Michelson-Interferometer ist ein optisches Gerät, das zur Erzeugung von Interferenzmustern durch Teilung eines Lichtstrahls in zwei Arme verwendet wird, die unterschiedliche Weglängen haben können. Es besteht aus einem Strahlteiler, der einen einfallenden Strahl in einen transmittierten und einen reflektierten Strahl aufteilt. Diese beiden Teilstrahlen werden von zwei Spiegeln ($S_1$ und $S_2$) reflektiert und kehren zum Strahlteiler zurück, wo sie in Summe ohne Phasenverschiebung rekombiniert werden und am Detektor oder Schirm Interferenzmuster erzeugen.
+
+Das Michelson-Interferometer wird häufig zur Messung kleiner Abstandsänderungen (wie im LIGO-Experiment) oder zur Spektroskopie eingesetzt, da es empfindlich auf Änderungen der optischen Weglänge in einem der Arme reagiert.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/michelson_interferometer.pdf}
+    \caption{Schematische Darstellung eines Michelson-Interferometers.}
+    \label{fig:michelson_interferometer}
+\end{figure}
+Die optische Weglängendifferenz $\Delta L$ zwischen den beiden Armen ist entscheidend für die Entstehung von Maxima und Minima des Interferenzmusters und die Messung am Detektor:
+\begin{gather}
+    \Delta L = 2(l_2 - l_1)
+\end{gather}
+wobei $l_1$ und $l_2$ die Abstände zu den Spiegeln $S_1$ und $S_2$ vom Strahlteiler sind.
+
+\subsubsection{Mach-Zehnder-Interferometer}
+\label{sec:mach_zehnder_interferometer}
+Ein Mach-Zehnder-Interferometer teilt einen Lichtstrahl mit einem Strahlteiler in zwei räumlich getrennte Wege auf, führt sie durch zwei unabhängige Arme, in denen beide Lichtstrahlen reflektiert werden. Beide treffen auf einen zweiten Strahlteiler, so dass jeweils eine Hälfte beider Strahlen zu einem der beiden Detektoren oder Schirme führt und die beiden miteinander interferieren.
+
+Entscheidend ist, dass Licht bei Reflexion an einer Grenzfläche zu einem optisch dichteren Medium hin einen Phasensprung von $\pi$ und beim Übergang zwischen Medien durch Beugung ein Phasensprung von $\tfrac{\pi}{2}$ erfährt. Bei Transmission findet in keinem Fall ein Phasensprung statt.
+
+An Detektor 1 (oben) wird destruktive Interferent beobachtet, denn der vom Laser kommende Strahl wird zur Hälfte am ersten Strahlteiler reflektiert, und erfährt dabei einen Phasensprung von $\pi$. Anschließend wird er am oberen Spiegel reflektiert, wobei er nochmals einen Phasensprung von $\pi$ erfährt. Danach wird er am zweiten Strahlteiler reflektiert, hier findet kein Phasensprung statt, weil durch den Übergang zwischen den Medien beim Ein- und Austritt in und aus dem halbdurchlässigen Spiegel wegen der Beugung zusammen ein Phasensprung von $2 \cdot (-\tfrac{\pi}{2}) = -\pi$ entsteht und die eigentliche Phasenverschiebung um $\pi$ durch die Reflexion aufhebt, so dass der obere Lichtstrahl insgesamt um $2\pi$ phasenverschoben wird.
+Die andere Hälfte des vom Laser kommenden Strahls wird am ersten Strahlteiler transmittiert und erfährt keine Phasenverschiebung. Anschließend wird der Strahl am Spiegel unten rechts reflektiert, wobei er einen Phasensprung von $\pi$ erfährt. Danach wird er am zweiten Strahlteiler transmittiert, es findet kein Phasensprung statt, so dass der untere Lichtstrahl insgesamt um $\pi$ phasenverschoben wird.
+Zwischen den beiden Strahlen existiert also eine Phasendifferenz von $2\pi - \pi = \pi$. Die Strahlen löschen sich gerade gegenseitig aus und die Detektion an Detektor 1 bleibt aus.
+
+An Detektor 2 (rechts) wird konstruktive Interferenz beobachtet. Der vom Laser kommende Strahl wird zur Hälfte am ersten Strahlteiler reflektiert, am oberen Spiegel reflektiert und erhält wie eben einen Phasensprung von $2\pi$.
+Die andere Hälfte des vom Laser kommenden Strahls wird wie zuvor am ersten Strahlteiler transmittiert und am unteren Spiegel reflektiert, wobei das Licht einen Phasensprung von $\pi$ erfährt. Danach wird es am zweiten Strahlteiler reflektiert, es findet nochmals ein Phasensprung von $\pi$ statt, so dass die Welle insgesamt also um $2\pi$ phasenverschoben wird.
+Zwischen den beiden Strahlen besteht keine Phasendifferenz und die beiden Strahlen interferieren maximal konstruktiv und das Photon wird an Detektor 2 detektiert.
+
+Das Mach-Zehnder-Interferometer ist als Transmissionsinterferometer besonders nützlich für die Untersuchung von Phasenverschiebungen in transparenten Proben, da beide Teilstrahlen die Probe durchlaufen können, ohne reflektiert zu werden.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/mach_zehnder_interferometer.pdf}
+    \caption{Schematische Darstellung eines Mach-Zehnder-Interferometers.}
+    \label{fig:mach_zehnder_interferometer}
+\end{figure}
+
+\subsubsection{Interferenzmuster der Interferometer}
+\label{sec:interferenzmuster_interferometer}
+Die kreisförmigen Interferenzmuster, die bei Interferometern wie dem Michelson-Interferometer beobachtet werden können, entstehen, weil der optische Gangunterschied zwischen den beiden Teilstrahlen vom Beobachtungswinkel abhängt. Für einen festen Gangunterschied bilden alle Punkte, die unter demselben Winkel zur optischen Achse liegen, einen Kreis. Das Zentrum des Interferenzmusters (direkt auf der optischen Achse) zeigt je nach dem dortigen Gangunterschied konstruktive oder destruktive Interferenz.
+
+\subsubsection{Knallertest}
+\label{sec:knallertest}
+Der Knallertest ist ein Gedankenexperiment der Quantenphysik. Es zeigt, dass es unter bestimmten Bedingungen möglich ist, Informationen über ein Objekt zu gewinnen, ohne dass es zu einer direkten physikalischen Wechselwirkung kommt. Dieses Prinzip wird als wechselwirkungsfreie Quantenmessung bezeichnet.
+
+Gedanklich betrachtet man eine Bombe, die so empfindlich ist, dass bereits die Absorption eines einzelnen Photons eine Explosion auslöst. Neben funktionsfähigen Bomben gibt es jedoch in gleicher Anzahl auch Imitate, die für Photonen vollständig transparent sind. Ziel des Experiments ist es, eine funktionsfähige Bombe eindeutig zu identifizieren, ohne sie zur Explosion zu bringen.
+
+Dazu wird ein \hyperref[sec:mach_zehnder_interferometer]{Mach-Zehnder-Interferometer} verwendet. In einen der beiden Wege (beispielsweise den unteren) wird die zu überprüfende Bombe eingebracht. Ohne Bombe sieht man wie erwartet destruktive Interferenz am oberen Detektor und konstruktive Interferenz am rechten Detektor.
+
+Ein Imitat verhält sich genauso wie das leere Interferometer und nur rechts registriert man ein Photon. Befindet sich hingegen eine funktionsfähige Bombe im Interferometer, so wirkt sie als Messapparat. Nimmt das Photon den Weg mit der Bombe, wird es absorbiert und die Bombe explodiert (Wahrscheinlichkeit 50\%). Nimmt das Photon den anderen Weg, findet keine Explosion statt. Allerdings ist in diesem Fall die Interferenz aufgehoben, da prinzipiell eine Welcher-Weg-Information vorliegt. An jedem der Detektoren registriert man 50\% der Photonen.
+
+Man misst also am rechten Detektor die Photonen, die bei Imitaten registriert werden. Gleichzeitig misst man hier auch die Hälfte der Photonen, die bei einer funktionierenden Bombe den oberen Weg genommen haben. Insgesamt sind das $\tfrac{1}{2} + \tfrac{1}{8} = \tfrac{5}{8}$ aller Photonen, die rechts gemessen werden.
+Am oberen Detektor wird die andere Hälfte der Photonen, die bei einer funktionierenden Bombe den oberen Weg genommen haben, gemessen. Das ist $\tfrac{1}{8}$ aller Photonen.
+Das letzte Viertel der Photonen bringt eine Bombe zum explodieren.
+
+Das Gedankenexperiment verdeutlicht, dass bereits die bloße Möglichkeit einer Messung – also die potenzielle Wechselwirkung – den Zustand eines Quantensystems beeinflusst. Eine tatsächliche physische Wechselwirkung ist dafür nicht notwendig. In weiterentwickelten Experimenten, die diesen Effekt ausnutzen, lässt sich die Erfolgswahrscheinlichkeit eines solchen Nachweises ohne Explosion sogar nahezu auf 100\% steigern.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/knallertest.pdf}
+    \caption{Wahrscheinlichkeitsfluss beim Knallertest. Die Breite der Pfade entspricht der Wahrscheinlichkeit jedes Ausgangs.}
+    \label{fig:knallertest}
+\end{figure}
+
+\subsubsection{Delayed Choice an Doppelspalt und Interferometer}
+\label{sec:delayed_choice}
+Am klassischen Doppelspalt hängt das Auftreten einer Interferenz davon ab, ob nach dem Durchtreten des Photons der Spalte eine Detektion erfolgt. Ohne eine Detektion wird das Photon in eine Superposition zweier Zustände überführt und eine Interferenz entsteht. Mit einer Detektion wird das Photon in einen definierten Zustand überführt und eine Interferenz verhindert. Auf dem Schirm erkennt man zwei Streifen.
+
+Es stellt sich die Frage, wann sich das Photon entscheidet, ob es sich als Welle oder als Teilchen verhält: Entscheidet es sich beim Passieren der Schlitze oder entscheidet es sich erst, wenn es gemessen wird?
+
+John Wheeler schlug vor, die Entscheidung, ob man misst oder nicht, erst zu treffen, nachdem das Photon die Schlitze bereits passiert hat, aber bevor es auf dem Schirm auftrifft.
+Das verblüffende Ergebnis: Selbst wenn die Entscheidung zur Messung erst fällt, nachdem das Photon die Schlitze theoretisch schon passiert hat, verhält sich das Photon genau so, wie es die Messung erfordert: Entscheiden wir uns spät für eine Weg-Messung kommt es zum Teilchenverhalten (keine Interferenz). Entscheiden wir uns spät gegen eine Weg-Messung kommt es zum Wellenverhalten (Interferenz). Es wirkt so, als ob das Photon in der Gegenwart (bei der Entscheidung zu messen) die Vergangenheit (das Verhalten an den Schlitzen) beeinflussen könnte. Dieses Paradoxon wird auch als Delayed Choice Paradoxon bezeichnet.
+
+Die zentrale Einsicht des Delayed-Choice-Experiments besteht darin, dass die Frage „Wann entscheidet sich das Photon?“ falsch gestellt ist. Das Photon besitzt weder vor noch während des Experiments festgelegte klassische Eigenschaften wie „Welle“ oder „Teilchen“. Diese Begriffe beschreiben vielmehr unterschiedliche experimentelle Kontexte.
+
+Nach quantenmechanischer Beschreibung wird das Photon nach dem Durchgang durch die Spalte durch einen einzigen Quantenzustand beschrieben, der alle physikalisch möglichen Alternativen enthält. Solange keine Messung erfolgt, bleibt dieser Zustand kohärent. Erst die konkrete Messanordnung – also die Frage, welche Observablen zugänglich gemacht werden – legt fest, welche Aspekte dieses Zustands experimentell sichtbar werden.
+
+Die verzögerte Entscheidung zur Wegmessung ändert daher nicht rückwirkend das frühere Verhalten des Photons. Vielmehr war das Photon zu keinem Zeitpunkt eindeutig „auf einem Weg“ oder „auf beiden Wegen“. Die spätere Wahl der Messung bestimmt lediglich, welche Information aus dem bereits existierenden Quantenzustand extrahiert wird.
+
+Das scheinbare Paradoxon entsteht nur, wenn man dem Photon rückblickend klassische Eigenschaften zuschreibt, die es quantenmechanisch nie besessen hat.
+
+\subsection{Versuche}
+
+\subsubsection{Hallwachs-Versuch}
+\label{sec:hallwachs_versuch}
+Der Hallwachs-Versuch, durchgeführt von Wilhelm Hallwachs im Jahr 1887, demonstrierte erstmals den äußeren photoelektrischen Effekt. Er zeigte, dass eine negativ geladene Zinkplatte ihre Ladung verliert, wenn sie mit ultraviolettem Licht bestrahlt wird. Eine positiv geladene Platte hingegen behält ihre Ladung. Dies deutete darauf hin, dass Licht Elektronen aus der Metalloberfläche herauslösen kann, aber nur, wenn die Energie der Photonen (und damit die Frequenz des Lichts) einen bestimmten Schwellenwert überschreitet. Der Versuch war ein wichtiger experimenteller Beitrag zur Entwicklung der Quantenphysik und zur Erklärung des photoelektrischen Effekts durch Albert Einstein.
+
+Wird eine Glasplatte zwischen Lichtquelle und Zinkplatte platziert, die auch ohne Beschichtung das UV-Licht blockiert, kann dieses nicht mehr auf die Zinkplatte treffen und der photoelektrische Effekt bleibt aus.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/hallwachs_versuch.png}
+    \caption{Schematische Darstellung des Hallwachs-Versuchs.}
+    \label{fig:hallwachs_versuch}
+\end{figure}
+
+\subsubsection{Jönsson-Experiment und Elektronenbeugungsröhre}
+\label{sec:elektronenbeugungsroehre}
+Das Jönsson-Experiment, durchgeführt von Claus Jönsson im Jahr 1961, ist eine wegweisende Demonstration des Doppelspaltexperiments mit Elektronen. Es zeigte erstmals, dass Elektronen, die einzeln durch einen Doppelspalt geschickt werden, auf einem dahinterliegenden Schirm ein Interferenzmuster erzeugen, ähnlich dem, das bei Lichtwellen beobachtet wird. Dies belegt die Wellennatur von Materie im Allgemeinen und die Welle-Teilchen-Dualität von Elektronen. Obwohl jedes Elektron als einzelnes Teilchen detektiert wird, entsteht das Muster nur durch die Überlagerung der Wahrscheinlichkeitswellen des Elektrons, das scheinbar beide Spalte gleichzeitig durchquert.
+
+Eine Elektronenbeugungsröhre besteht aus einer Elektronenquelle, einer Graphitfolie und einem Fluoreszenzschirm. Die Elektronen werden durch die Graphitfolie gebeugt und treffen auf dem Fluoreszenzschirm auf. Auch mit diesem Expeiment kann die Wellennatur von Elektronen beobachtet werden.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/jönsson_doppelspalt.jpg}
+    \caption{Schematische Darstellung einer Elektronenbeugungsröhre.}
+    \label{fig:joensson_doppelspalt}
+\end{figure}
+Durch Glühemission werden Elektronen freigesetzt und mit einer Anodenspannung \(U_{a}\) (meist bis 5 kV) beschleunigt. Ein dünner Strahl trifft auf eine polykristalline Graphitschicht. Graphit dient hier als Beugungsgitter mit zwei Gitterkonstanten, wobei die Abstände der Atome (Netzebenen) in der Größenordnung der Wellenlänge liegen (\(d_{1}\approx 213\,\si{\pico\meter}\), \(d_{2}\approx 123\,\si{\pico\meter}\)). Die gebeugten Elektronen erzeugen auf einem Fluoreszenzschirm ein Muster aus konzentrischen Ringen.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/graphitfolie.png}
+    \caption{Schematische Darstellung einer Graphitschicht.}
+    \label{fig:graphitfolie}
+\end{figure}
+Die Bragg-Bedingung beschreibt die Bedingungen, unter denen Wellen (wie Röntgenstrahlen oder Elektronenwellen) an einem Kristallgitter konstruktiv interferieren, also ein Maximum (einen hellen Punkt oder Ring) bilden.
+In der Elektronenbeugungsröhre dient sie dazu, aus dem Radius der beobachteten Ringe auf die Wellenlänge der Elektronen oder die Gitterabstände im Graphit zu schließen.
+\begin{gather}
+    k \cdot \lambda = 2d \cdot \sin\left(\theta\right)
+\end{gather}
+
+\paragraph{Weitere Versuche}
+\begin{itemize}
+    \item Interferenz bei polychromatischem Licht am Overhead-Projektor
+    \item Bestimmung der Breite eines Haares
+    \item Bestimmung der Breite der Rillen einer CD
+\end{itemize}
+
+\emph{Weitere Versuche hier einfügen.}

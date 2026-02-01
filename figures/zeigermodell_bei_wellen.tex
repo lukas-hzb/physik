@@ -1,0 +1,77 @@
+% Parameter
+\pgfmathsetmacro{\nx}{9}            
+\pgfmathsetmacro{\dx}{1.2}          
+\pgfmathsetmacro{\nt}{9}            
+\pgfmathsetmacro{\planeSep}{1.4}    
+\pgfmathsetmacro{\A}{0.35}          
+\pgfmathsetmacro{\diskR}{0.35}      
+
+% Physikalische Größen
+\pgfmathsetmacro{\lambda}{4.8}                 
+\pgfmathsetmacro{\lambdaNew}{2*\lambda}        % neue Wellenlänge für doppelte Geschwindigkeit
+\pgfmathsetmacro{\kval}{2*pi/\lambdaNew}       % k = 2π/λ_new
+\pgfmathsetmacro{\T}{1.0}                      
+\pgfmathsetmacro{\omegaval}{2*pi/\T}           
+\pgfmathsetmacro{\tau}{0.125*\T}               
+\pgfmathsetmacro{\v}{\omegaval/\kval}          % neue Ausbreitungsgeschwindigkeit
+
+\pgfmathsetmacro{\xmax}{(\nx-1)*\dx}           
+\pgfmathsetmacro{\planeHeight}{1.2}            
+
+\definecolor{wavecol}{RGB}{200,50,50}
+\definecolor{diskcol}{RGB}{130,130,150}
+\definecolor{arrowcol}{RGB}{30,140,60}
+
+% -------------------------
+
+\begin{tikzpicture}[line cap=round,line join=round,>=stealth]
+
+\foreach \t in {0,...,\numexpr\nt-1\relax} {
+  \pgfmathsetmacro{\time}{\t * \tau}
+  \pgfmathsetmacro{\tz}{-\t * \planeSep}
+  \pgfmathsetmacro{\xfront}{min(\v * \time, \xmax)}
+  
+  \fill[wavecol,opacity=0.05] (0,\tz+\planeHeight/2) rectangle (\xmax,\tz-\planeHeight/2);
+  \draw[gray!40] (0,\tz+\planeHeight/2) rectangle (\xmax,\tz-\planeHeight/2);
+  
+  % Sinuswelle: Vorzeichen korrigiert, neue Wellenlänge
+  \draw[wavecol,thick]
+    plot[domain=0:\xfront,samples=200]
+      ({\x}, {\tz + \A*sin((\omegaval*\time - \kval*\x) r)});
+  
+  \foreach \i in {0,...,\numexpr\nx-1\relax} {
+    \pgfmathsetmacro{\xpos}{\i * \dx}
+    \pgfmathsetmacro{\active}{ifthenelse(\xpos <= \xfront,1,0)}
+    % Zeigerphase passend zur Welle
+    \pgfmathsetmacro{\phi}{ifthenelse(\active, \omegaval*\time - \kval*\xpos, 0)}
+    \pgfmathsetmacro{\ax}{\xpos + \diskR*cos(\phi r)}
+    \pgfmathsetmacro{\ay}{\tz   + \diskR*sin(\phi r)}
+    
+    \fill[diskcol,opacity=0.35] (\xpos,\tz) circle (\diskR);
+    \draw (\xpos,\tz) circle (\diskR);
+    
+    \ifnum\active>0
+      \draw[->,arrowcol,thick] (\xpos,\tz) -- (\ax,\ay);
+    \else
+      \draw[->,gray!60,thin] (\xpos,\tz) -- (\ax,\ay);
+    \fi
+    
+    \fill[black] (\xpos,\tz) circle (0.028);
+  }
+  
+  \node[anchor=east,font=\scriptsize] at (-0.3,\tz) {$t=\frac{\t}{8}T$};
+}
+
+\pgfmathsetmacro{\ymin}{-\planeSep*(\nt-1) - \planeHeight/2 - 0.2}
+\pgfmathsetmacro{\ymax}{\planeHeight/2 + 0.2}
+\draw[-,thick] (0,\ymin) -- (0,\ymax) node[above] {};
+\draw[->,thick] (0,\ymin) -- (\xmax+0.6,\ymin) node[right] {};
+
+\foreach \i in {0,...,\numexpr\nx-1\relax}{
+  \pgfmathsetmacro{\xpos}{\i * \dx}
+  \draw[thin] (\xpos,\ymin+0.05) -- (\xpos,\ymin-0.15);
+  \node[font=\scriptsize] at (\xpos,\ymin-0.25) {\i};
+}
+\node[font=\scriptsize] at (\xmax/2,\ymin-0.65) {Ortsindex $x$};
+
+\end{tikzpicture}

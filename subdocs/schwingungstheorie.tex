@@ -1,0 +1,432 @@
+\section{Schwingungstheorie}
+Die nachfolgenden Grundlagen der Schwingungstheorie wurden in der ersten Klausur der elften Klasse abgefragt.
+
+\subsection{Relevante Größen und deren Zusammenhänge}
+
+\subsubsection{Frequenz ($f$) und Periodendauer ($T$)}
+\label{sec:frequenz_und_periodendauer}
+Die Frequenz $f$ gibt die Anzahl der Wiederholungen eines periodischen Vorgangs pro Sekunde an. Die Periodendauer $T$ beschreibt die Zeit, die ein periodischer Vorgang für eine vollständige Wiederholung benötigt.
+Die Herleitung von $T$ und $f$ erfolgt zunächst über die \hyperref[sec:winkelgeschwindigkeit_und_kreisfrequenz]{Kreisfrequenz} $\omega$, die selbst hergeleitet werden muss.
+\begin{gather}
+    f = \frac{1}{T}
+\end{gather}
+Die Periodendauer eines Federpendels $T_\mathrm{fedp}$ hängt von der Masse $m$ des Körpers und der Federkonstanten $D$ ab. Nach dem Hooke'schen Gesetz ($F_\mathrm{rück} = -D \cdot s$) ist sie unabhängig von der Auslenkung. Sie berechnet sich zu:
+\begin{gather}
+    T_\mathrm{fedp} = 2 \pi \sqrt{\frac{m}{D}}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $m$ & Masse des schwingenden Körpers \\
+        $D$ & Federkonstante der Feder mit $[D] = \si{\newton\per\meter}$
+    \end{tabular}
+\end{center}
+Die Periodendauer eines Fadenpendels $T_\mathrm{fadp}$ ist für kleine Auslenkungen ($\varphi \lesssim 10^\circ$) unabhängig von der Masse $m$ und der horizontalen Auslenkung $s_\mathrm{H}$. Sie wird näherungsweise berechnet durch:
+\begin{gather}
+    T_\mathrm{fadp} = 2 \pi \sqrt{\frac{l}{g}}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $l$ & Länge des Fadens \\
+        $g$ & Erdbeschleunigung ($\approx 9{,}81\,\mathrm{m/s^2}$)
+    \end{tabular}
+\end{center}
+Die Einheiten der Frequenz und der Periodendauer sind
+\begin{center}
+    $[f] = \si{\hertz} = \mathrm{Hertz} = \si{\per\second}$ \\
+    $[T] = \si{\second}$
+\end{center}
+
+\subsubsection{Winkelgeschwindigkeit ($\omega$) und Kreisfrequenz ($\omega_0$)}
+\label{sec:winkelgeschwindigkeit_und_kreisfrequenz}
+Die Winkelgeschwindigkeit $\omega$ ist die momentane Änderungsrate eines Winkels $\varphi$ und beschreibt die Rotationsgeschwindigkeit. Die Kreisfrequenz $\omega_0$ ist eine charakteristische, meist konstante Größe eines harmonischen Oszillators, die dessen freie Schwingungsrate bestimmt. Obwohl bei vielen linearen Schwingungen kein geometrischer Winkel im Sinn einer wirklichen Kreisbewegung vorliegt, wird $\omega$ als analoge Winkelrate verwendet, weil sich die zeitliche Entwicklung der Schwingung als Projektion einer Kreisbewegung darstellen lässt. Die beiden Begriffe werden im Kontext der Schwingungslehre trotz der Unterschiede oft synonym verwendet.
+
+Mithilfe der Winkelgeschwindigkeit lassen sich die Periodendauer $T$ und die Frequenz $f$ herleiten.
+\begin{gather}
+    \omega = \frac{d\varphi}{dt} = 2\pi \cdot f
+\end{gather}
+Für die Kreisfrequenz $\omega_{0,\,\mathrm{fedp}}$ bei Federpendeln gilt nach der Herleitung unter~\ref{sec:federpendel}:
+\begin{gather}
+    \omega_{0,\,\mathrm{fedp}} = \sqrt{\frac{D}{m}}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $D$ & Federkonstante der Feder mit $[D] = \si{\newton\per\meter}$ \\
+        $m$ & Masse des schwingenden Körpers
+    \end{tabular}
+\end{center}
+Die Kreisfrequenz eines Fadenpendels $\omega_{0,\,\mathrm{fadp}}$ ergibt sich für kleine Auslenkungen ($\varphi \lesssim 10^\circ$) aus der Herleitung unter~\ref{sec:fadenpendel}:
+\begin{gather}
+    \omega_{0,\,\mathrm{fadp}} = \sqrt{\frac{g}{l}}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $l$ & Länge des Pendels \\
+        $g$ & Erdbeschleunigung ($\approx 9{,}81\,\mathrm{m/s^2}$)
+    \end{tabular}
+\end{center}
+Die Einheit der Winkelgeschwindigkeit und Kreisfrequenz ist
+\begin{center}
+    $[\omega] = [\omega_0] = \si{\per\second} = \si{\radian\per\second}$
+\end{center}
+
+\subsubsection{Rückstellkraft ($F_\mathrm{rück}$)}
+\label{sec:rueckstellkraft}
+Die Rückstellkraft $F_\mathrm{rück}$ wirkt auf eine Masse in einem harmonischen Oszillator, die aus ihrer Ruhelage ausgelenkt wird. Nach dem \hyperref[sec:hookesches_gesetz]{Hooke'schen Gesetz} ist sie proportional zur Auslenkung $s$.
+\begin{gather}
+    F_\mathrm{rück} = -D \cdot s
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $D$ & Federkonstante der Feder mit $[D] = \si{\newton\per\meter}$ \\
+        $s$ & Auslenkung der Feder
+    \end{tabular}
+\end{center}
+Das Minuszeichen zeigt an, dass die Kraft stets in Richtung der Ruhelage wirkt und die Masse dorthin zurückführt.
+
+\subsubsection{Schwingungsgleichung mit Elongation ($s$), Amplitude ($\hat{s}_0$) und Phase ($\varphi_0$)}
+\label{sec:schwingungsgleichung}
+Die Schwingungsgleichung $s(t)$ beschreibt die zeitliche Entwicklung der Auslenkung eines schwingungsfähigen Systems infolge der rücktreibenden Kraft und lässt sich in einem s-t-Diagramm darstellen. $s(t)$ ist dabei die Elongation des Oszillators. Die allgemeine Form gilt nur für \hyperref[sec:harmonische_schwingung]{harmonische Schwingungen}. \hyperref[sec:gedaempfte_schwingung]{Gedämpfte Schwingungen} müssen gesondert behandelt werden.
+\begin{align}
+    s(t) &= \hat{s}_0 \cdot \sin(\omega t + \varphi_0) \\
+    &= \hat{s}_0 \cdot \sin(2\pi f \, t + \varphi_0)
+\end{align}
+\begin{center}
+    \begin{tabular}{rl}
+        $\hat{s}_0$ & Amplitude (maximale Auslenkung) \\
+        $\varphi_0$ & Anfangsphase
+    \end{tabular}
+\end{center}
+Die konkrete Wahl von Sinus oder Kosinus und deren Vorzeichen hängt von den Anfangsbedingungen ab. Startet der Oszillator in der Ruhelage, eignet sich die Sinusfunktion. Beginnt er mit maximaler Auslenkung, wird die Kosinusfunktion verwendet. Liegt die Anfangsphase zwischen diesen Extremfällen, wird sie als Phasenwinkel $\varphi_0$ in die Gleichung eingesetzt.
+
+Die ersten beiden zeitlichen Ableitungen der Elongation entsprechen der Geschwindigkeit und Beschleunigung des schwingenden Körpers:
+\begin{gather}
+    v(t) = \dot{s}(t) \\
+    a(t) = \dot{v}(t) = \ddot{s}(t)
+\end{gather}
+Die Schwingungsgleichung erfüllt die lineare Differentialgleichung $\ddot{s}(t) + \omega^2 s(t) = 0$, die das grundlegende Modell einer ungedämpften harmonischen Schwingung darstellt.
+
+\medskip
+\begin{tcolorbox}[colframe=blue!30!gray, colback=blue!10, title=Vertiefung: Herleitung der Schwingungs-Differenzialgleichung]
+    Betrachten wir ein Federpendel: Eine Masse $m$ ist an einer idealen Feder mit Federkonstante $D$ aufgehängt und kann sich reibungsfrei bewegen. Die Ruhelage wird bei $s=0$ festgelegt.
+
+    Bei einer Auslenkung $s$ wirkt nach dem Hooke'schen Gesetz die rücktreibende Kraft
+    \begin{gather*}
+        F_\mathrm{rück,\,fed} = -D\,s.
+    \end{gather*}
+    Nach dem zweiten Newton'schen Gesetz gilt für die Summe aller Einzelkräfte
+    \begin{gather*}
+        F_\mathrm{sum} = m \cdot \ddot{s} = F_\mathrm{rück,\,fed}.
+    \end{gather*}
+    Damit folgt die lineare Differentialgleichung
+    \begin{gather*}
+        m \ddot{s} + D s = 0
+        \quad \Rightarrow \quad
+        \ddot{s} + \frac{D}{m}\,s = 0.
+    \end{gather*}
+    Mit der Definition $\omega = \sqrt{\tfrac{D}{m}}$ erhält man die normierte Form
+    \begin{gather*}
+        \ddot{s} + \omega^2 s = 0.
+    \end{gather*}
+    Ihre allgemeine Lösung ist eine harmonische Schwingung:
+    \begin{gather*}
+        s(t) = \hat{s}_0 \sin(\omega t + \varphi).
+    \end{gather*}
+\end{tcolorbox}
+
+\subsubsection{Kinetische Energie ($W_\mathrm{kin}$)}
+\label{sec:kinetische_energie}
+Die kinetische Energie $W_\mathrm{kin}$ ist die Bewegungsenergie eines Körpers. Sie hängt von seiner Masse $m$ und seiner Geschwindigkeit $v$ ab.
+\begin{gather}
+    W_\mathrm{kin} = \tfrac{1}{2} m v^2
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $m$ & Masse des Körpers \\
+        $v$ & Geschwindigkeit des Körpers
+    \end{tabular}
+\end{center}
+
+\subsubsection{Spannenergie ($W_\mathrm{span}$)}
+\label{sec:spannenergie}
+Die Spannenergie $W_\mathrm{span}$ ist die in einer Feder gespeicherte potenzielle Energie, die durch ihre Auslenkung $s$ entsteht.
+\begin{gather}
+    W_\mathrm{span} = \tfrac{1}{2} D s^2
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $D$ & Federkonstante der Feder mit $[D] = \si{\newton\per\meter}$ \\
+        $s$ & Auslenkung der Feder
+    \end{tabular}
+\end{center}
+
+\subsection{Wichtige Konzepte und Vertiefung}
+
+\subsubsection{Schwingung}
+\label{sec:schwingung}
+Eine Schwingung ist eine zeitlich periodische Hin- und Herbewegung eines Systems um eine stabile Gleichgewichtslage. Dabei führt die Trägheit des Körpers dazu, dass er die Gleichgewichtslage wiederholt überschreitet.
+
+\subsubsection{Hooke'sches Gesetz}
+\label{sec:hookesches_gesetz}
+Das Hooke'sche Gesetz beschreibt, dass die Rückstellkraft $F_\mathrm{rück}$ eines elastischen Körpers proportional zu seiner Auslenkung $s$ aus der Gleichgewichtslage ist, wenn es sich bei dem Aufbau um einen harmonischen Oszillator handelt.
+\begin{gather}
+    F_\mathrm{rück} = -D \cdot s
+\end{gather}
+
+\subsubsection{Harmonische Schwingung}
+\label{sec:harmonische_schwingung}
+Harmonische Schwingungen sind zeitlich periodische Bewegungen, bei denen die rücktreibende Kraft proportional zur Auslenkung ist. Ihr Verlauf lässt sich durch eine Sinus- oder Kosinusfunktion darstellen.
+Die in Abschnitt~\ref{sec:schwingungsgleichung} definierte Schwingungsgleichung gilt nur für harmonische Schwingungen. In der Praxis müssten stets Reibung und andere Störeinflüsse berücksichtigt werden, die nicht in der Schwingungsgleichung vorkommen.
+\begin{itemize}
+    \item Bei harmonischen Schwingungen bleibt die Gesamtenergie des Systems konstant, während die Energieformen (kinetische, potenzielle und Spannenergie) zeitlich wechseln.
+    \item Ihr Verlauf lässt sich durch eine Sinus- oder Kosinusfunktion darstellen.
+    \item Die maximale Auslenkung bleibt konstant.
+    \item Die Rückstellkraft ist die einzige wirkende Kraft.
+\end{itemize}
+
+\medskip
+\begin{tcolorbox}[colframe=red!30!gray, colback=red!10, title=Hinweis: Harmonisierung eines vertikalen Federpendels]
+    \label{sec:harmonisierung_vertikales_federpendels}
+    Bei einem vertikalen Federpendel wirkt zusätzlich zur Federkraft $F_\mathrm{Feder} = -D s$ die Gewichtskraft $F_\mathrm{g} = m g$ auf die Masse.
+    Verschiebt man den Nullpunkt der Auslenkung auf die neue Gleichgewichtslage $s_\mathrm{eq}$, sodass
+    \begin{gather*}
+        F_\mathrm{rück,\,fed}(s_\mathrm{eq}) + F_\mathrm{g} = 0 \quad \Rightarrow \quad D s_\mathrm{eq} = m g,
+    \end{gather*}
+    wirken bei aus dieser Lage gemessenen Auslenkungen $\tilde{s} = s - s_\mathrm{eq}$ nur noch durch die Rückstellkraft
+    \begin{gather*}
+        F_\mathrm{rück} = -D \tilde{s}
+    \end{gather*}
+    und die Gewichtskraft wirkt nur noch als konstante Verschiebung, nicht mehr als zeitabhängige Kraft.
+
+    Nach dem zweiten Newton'schen Gesetz folgt damit die Differentialgleichung deren allgemeine Lösung eine harmonische Schwingung ist. Somit verhält sich das vertikale Federpendel theoretisch wie ein idealer harmonischer Oszillator, solange Reibung und nichtlineare Effekte vernachlässigt werden.
+\end{tcolorbox}
+
+\subsubsection{Eigenfrequenz ($f_\mathrm{eigen}$)}
+\label{sec:eigenfrequenz}
+Die Eigenfrequenz ist die Frequenz, mit der ein schwingungsfähiges System ohne äußere Einflüsse aufgrund seiner eigenen physikalischen Eigenschaften frei schwingt.
+Bei einem Federpendel hängt sie beispielsweise von der Masse $m$ und der Federkonstante $D$ ab:
+\begin{gather}
+    f_\mathrm{eigen} = \frac{\omega_0}{2\pi} = \frac{1}{2\pi} \sqrt{\frac{D}{m}}.
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $D$ & Federkonstante der Feder mit $[D] = \si{\newton\per\meter}$ \\
+        $m$ & Masse des schwingenden Körpers
+    \end{tabular}
+\end{center}
+
+\subsubsection{Erzwungene Schwingung}
+\label{sec:erzwungene_schwingung}
+Eine erzwungene Schwingung ist eine zeitlich periodische Bewegung eines schwingungsfähigen Systems, die durch eine kontinuierlich von außen wirkende Kraft aufrechterhalten wird.
+Die Frequenz der Schwingung entspricht dabei der Frequenz der äußeren Anregung.
+Im Gegensatz zur freien Schwingung hängt das System hier nicht nur von seinen inneren Eigenschaften, sondern von der äußeren Kraft ab.
+
+\subsubsection{Erregerfrequenz ($f_\mathrm{erreg}$)}
+\label{sec:erregerfrequenz}
+Die Erregerfrequenz ist die Frequenz einer äußeren Kraft oder Anregung, die ein schwingungsfähiges System zum Schwingen bringt.
+Bei erzwungenen Schwingungen bestimmt die Erregerfrequenz die Frequenz der resultierenden Schwingung.
+Liegt sie nahe an der Eigenfrequenz des Systems, kann es zur \hyperref[sec:resonanz_und_resonazkatastrophe]{Resonanz oder zu einer Resonanzkatastrophe} kommen, bei der die Amplitude stark ansteigt.
+
+\subsubsection{Resonanz und Resonanzkatastrophe}
+\label{sec:resonanz_und_resonazkatastrophe}
+Resonanz ist der Effekt, dass ein schwingungsfähiges System besonders stark auf eine äußere Anregung reagiert, wenn deren Frequenz nahe der Eigenfrequenz des Systems liegt.
+Als Resonanzkatastrophe bezeichnet man die extrem starke, oft zerstörerische Schwingung, die auftritt, wenn die Anregungsfrequenz exakt der Eigenfrequenz entspricht und keine Dämpfung vorhanden ist.
+
+Die Eigenfrequenz eines Systems wird ausschließlich von seinen inneren Eigenschaften wie Masse und Federkonstante bestimmt.
+Wird es durch eine äußere Kraft mit der Erregerfrequenz $f_\mathrm{erreg}$ angeregt, versucht das System, dieser Frequenz zu folgen.
+Liegt die Erregerfrequenz weit von der Eigenfrequenz entfernt, bleibt die Amplitude klein, da Energiezufuhr und Schwingung oft gegenphasig wirken.
+Stimmen Erreger- und Eigenfrequenz überein, wird bei jeder Schwingung im optimalen Moment Energie zugeführt, wodurch die Amplitude stark anwächst – im Extremfall bis zur Resonanzkatastrophe.
+
+Ein typisches Alltagsbeispiel ist das Anschubsen einer Schaukel: Erfolgt das Anschubsen im richtigen Moment (Erregerfrequenz = Eigenfrequenz), wächst die Auslenkung bei jedem Schub.
+
+\subsubsection{Gedämpfte Schwingung ($s_\mathrm{dämpf}(t)$, $\hat{s}_\mathrm{dämpf}(t)$)}
+\label{sec:gedaempfte_schwingung}
+Eine gedämpfte Schwingung ist eine Schwingung, bei der die Amplitude mit der Zeit abnimmt, weil Energie durch Reibung, Luftwiderstand oder andere dissipative Kräfte verloren geht.
+Die Auslenkung und die zeitabhängige Amplitude lassen sich schreiben als:
+\begin{gather}
+    s_\mathrm{dämpf}(t) = \hat{s}_0 \, e^{-\lambda t} \, \cos(\omega t), \\
+    \hat{s}_\mathrm{dämpf}(t) = \hat{s}_0 \, e^{-\lambda t}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $\hat{s}_0$ & Anfangsamplitude \\
+        $\lambda$ & Dämpfungskoeffizient
+    \end{tabular}
+\end{center}
+Der Dämpfungskoeffizient $\lambda$ gibt an, wie schnell die Amplitude abnimmt. Mit ihm lässt sich auch die Halbwertszeit $t_{1/2}$ der Amplitude bestimmen:
+\begin{gather}
+    t_{1/2} = \frac{\ln(2)}{\lambda}
+\end{gather}
+Die harmonische Schwingung aus Abschnitt~\ref{sec:schwingungsgleichung} wird durch die Exponentialfunktion \(\mathrm{e}^{-\lambda t}\) „eingehüllt", wodurch die Amplitude zeitlich abnimmt.
+
+Bei kleiner Dämpfung ($\lambda \ll \omega_0$) bleibt die Schwingungsfrequenz nahezu unverändert. Bei starker Dämpfung kann die Schwingung kritisch oder überkritisch abklingen. Man unterscheidet drei Fälle:
+\begin{itemize}
+    \item \emph{Schwingfall:} $\lambda < \omega_0$, das System bleibt oszillierend, die Amplitude nimmt exponentiell ab.
+    \item \emph{Grenzfall:} $\lambda = \omega_0$, das System kehrt ohne Überschwingen am schnellsten in die Gleichgewichtslage zurück.
+    \item \emph{Kriechfall:} $\lambda > \omega_0$, das System kehrt langsam und ohne Oszillationen in die Gleichgewichtslage zurück.
+\end{itemize}
+Die Dämpfungskraft kann durch
+\begin{gather}
+    F_\mathrm{reib} = -k \cdot v
+\end{gather}
+beschrieben werden, wobei $k$ eine Materialkonstante und $v$ die Geschwindigkeit des Oszillators ist. Dies entspricht einer \emph{geschwindigkeitsproportionalen Reibung}.
+
+\subsubsection{Überlagerung von Schwingungen}
+\label{sec:ueberlagerung_von_schwingungen}
+Das Superpositionsprinzip besagt, dass sich physikalische Größen wie Schwingungen überlagern, ohne sich gegenseitig zu beeinflussen. Das Ergebnis ist die Summe der Einzelgrößen. Zwei harmonische Schwingungen $s_1(t)$ und $s_2(t)$ überlagern sich zu:
+\begin{align}
+    s_\mathrm{ges}(t) &= s_1(t) + s_2(t) \\
+    &= \hat{s}_1 \sin(\omega t + \varphi_1) + \hat{s}_2 \sin(\omega t + \varphi_2).
+\end{align}
+Die Phasenverschiebung $\varphi$ beschreibt die zeitliche Verschiebung der Schwingungen zueinander. Eine Phasendifferenz von $2\pi$ entspricht genau einer Periode.
+\begin{itemize}
+    \item $\varphi = 0$ oder $\varphi = 2\pi$: Die Schwingungen verlaufen gleichphasig.
+    \item $\varphi = \pi$: Die Schwingungen verlaufen gegenphasig.
+\end{itemize}
+Bei der Interferenz von Schwingungen lassen sich zwei Fälle unterscheiden:
+\begin{itemize}
+    \item \emph{Konstruktive Interferenz:} Die Amplituden addieren sich, wodurch die resultierende Schwingung maximal verstärkt wird.
+    \item \emph{Destruktive Interferenz:} Die Amplituden heben sich teilweise oder vollständig auf, wodurch die Schwingung abgeschwächt oder ausgelöscht wird. Ein praktisches Beispiel sind Noise-Cancelling-Kopfhörer, die destruktive Interferenz nutzen, um Umgebungsgeräusche zu reduzieren.
+\end{itemize}
+Treten zwei Schwingungen mit nahezu gleicher Frequenz $f_1 \approx f_2$ und ähnlicher Amplitude auf, so entsteht eine Schwebung. Die Amplitude schwankt dabei periodisch, wodurch die \enquote{lauten} und \enquote{leisen} Phasen hörbar werden. Ein Beispiel ist:
+\begin{gather*}
+    s(t) = 2\hat{s} \cdot \cos\left(2\pi \cdot \frac{f_1 - f_2}{2} \cdot t\right) \cdot \sin\left(2\pi \cdot \frac{f_1 + f_2}{2} \cdot t\right)
+\end{gather*}
+\begin{center}
+    \begin{tabular}{rl}
+        $f_R = \frac{f_1+f_2}{2}$ & Frequenz der resultierenden Schwingung \\
+        $f_\mathrm{schweb} = |f_1 - f_2|$ & Schwebungsfrequenz \\
+        $f_S = \frac{|f_1-f_2|}{2}$ & Frequenz der Einhüllenden
+    \end{tabular}
+\end{center}
+Überlagert man zwei Schwingungen in orthogonaler Richtung, entstehen charakteristische Kurvenbilder. Die Bahnkurve im $x$-$y$-Diagramm heißt Lissajous-Figur:
+\begin{align*}
+    x(t) &= \hat{s}_1 \cdot \sin(2\pi f_1 \cdot t + \varphi_1) \\
+    y(t) &= \hat{s}_2 \cdot \sin(2\pi f_2 \cdot t + \varphi_2)
+\end{align*}
+Bei rationalem Frequenzverhältnis $\left(\frac{f_1}{f_2} = \frac{m}{n}\right)$ entstehen geschlossene Figuren. Bei irrationalem Frequenzverhältnis füllen die Kurven langfristig die gesamte Fläche.
+
+\subsection{Apparaturen und Sonstiges}
+
+\subsubsection{Zeigermodell bei Schwingungen}
+\label{sec:zeigermodell}
+Das Zeigermodell ist eine anschauliche Methode, harmonische Schwingungen darzustellen.
+Dabei wird die zeitliche Änderung einer Schwinggröße durch einen rotierenden Vektor (Zeiger) in der Ebene visualisiert.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/zeigerdiagramm.png}
+    \caption{Schematische Darstellung des Zeigermodells.}
+    \label{fig:zeigerdiagramm}
+\end{figure}
+Wie in \hyperref[fig:zeigerdiagramm]{Abbildung~\ref{fig:zeigerdiagramm}} dargestellt, entspricht die Länge des Zeigers (hier $\hat y$) der Amplitude $\hat s_0$.
+Der Zeiger rotiert mit der Kreisfrequenz $\omega$ gegen den Uhrzeigersinn.
+Die Projektion des Zeigers auf die y-Achse (hier $y(t)$) entspricht der momentanen Auslenkung $s(t)$ der Schwingung:
+\begin{gather}
+    s(t) = \hat s_0 \, \sin(\omega t + \varphi_0).
+\end{gather}
+Dieses Modell verdeutlicht anschaulich die Beziehung zwischen Kreisbewegung und harmonischer Schwingung.
+
+\subsubsection{Federpendel}
+\label{sec:federpendel}
+Ein Federpendel ist ein mechanisches System, bei dem eine Masse an einer Feder hängt, auf einer Feder liegt oder zwischen zwei Federn eingespannt ist.
+Unter idealisierten Bedingungen kann das System harmonisch schwingen.
+Die Rückstellkraft der Feder und die Kreisfrequenz des Federpendels lassen sich schreiben als:
+\begin{align}
+    F_\mathrm{rück,\,fed} &= -D \, s, \\
+    \omega_{0,\,\mathrm{fed}} &= \sqrt{\frac{D}{m}},
+\end{align}
+\begin{center}
+    \begin{tabular}{rl}
+        $D$ & Gesamthärte aller beteiligten Federn als Summe der Einzelhärten \\
+        $s$ & Auslenkung aus der Ruhelage
+    \end{tabular}
+\end{center}
+\begin{itemize}
+    \item \emph{Horizontal:} Die Gewichtskraft wirkt senkrecht zur Schwingungsrichtung und wird durch die Normalkraft kompensiert, sodass die Schwingung ausschließlich durch die Feder bestimmt wird.
+    \item \emph{Vertikal:} Die Gewichtskraft verschiebt die Ruhelage nach unten. Um die Schwingung korrekt zu beschreiben, wird diese neue Gleichgewichtslage als Nullpunkt der Auslenkung gewählt (vgl. Abschnitt~\ref{sec:harmonisierung_vertikales_federpendels}).
+\end{itemize}
+
+\medskip
+\begin{tcolorbox}[colframe=purple!30!gray, colback=purple!10, title=Vertiefung: Herleitung der Kreisfrequenz beim Federpendel]
+    Die Kreisfrequenz $\omega_{0,\,\mathrm{fedp}}$ bei Federpendeln berechnet sich nach dem zweiten Newton'schen Gesetz folgendermaßen:
+    \begin{gather*}
+        m \cdot \ddot{x} = F = - k \cdot x \\
+        m \cdot \ddot{x} + k \cdot x = 0
+    \end{gather*}
+    Dies ist die Standardform der Differentialgleichung eines harmonischen Oszillators. Wir wählen als Lösungsansatz eine harmonische Schwingung:
+    \begin{gather*}
+        s(t) = \hat{s}_0 \cdot \sin(\omega t + \varphi_0) \\
+        \ddot{s}(t) = - \hat{s}_0 \cdot \omega^2 \cdot \sin(\omega t + \varphi_0)
+    \end{gather*}
+    Einsetzen in die Standardform der Differenzialgleichung und Kürzen ergibt dann:
+    \begin{gather*}
+        - m \cdot \hat{s}_0 \cdot \omega^2 \cdot \sin(\omega t + \varphi_0) = - D \cdot \hat{s}_0 \cdot \sin(\omega t + \varphi_0) \\
+        m \cdot \omega^2 = D
+    \end{gather*}
+    Für die Kreisfrequenz $\omega_{0,\,\mathrm{fedp}}$ bei Federpendeln ergibt sich:
+    \begin{gather*}
+        \omega_{0,\,\mathrm{fedp}} = \sqrt{\frac{D}{m}}
+    \end{gather*}
+\end{tcolorbox}
+
+\subsubsection{Fadenpendel}
+\label{sec:fadenpendel}
+Ein Fadenpendel ist ein einfaches mechanisches System, bei dem eine Masse an einem ungefederten, leichten Faden hängt und unter der Wirkung der Schwerkraft um eine stabile Gleichgewichtslage schwingt. Bei sehr kleiner Auslenkung mit $\varphi \leq 10^\circ$ wird über die Kleinwinkelnäherung eine harmonische Schwingung angenommen.
+\begin{gather}
+    F_\mathrm{rück,\,fadp} \approx -\frac{m \cdot g \cdot s}{l} \\
+    \omega_{0,\,\mathrm{fadp}} = \sqrt{\frac{g}{l}}
+\end{gather}
+\begin{center}
+    \begin{tabular}{rl}
+        $g$ & Erdbeschleunigung ($\approx 9{,}81\,\mathrm{m/s^2}$) \\
+        $s$ & Auslenkung aus der Ruhelage (am Kreisabschnitt und horizontal) \\
+        $l$ & Länge des Fadens
+    \end{tabular}
+\end{center}
+
+\medskip
+\begin{tcolorbox}[colframe=green!30!gray, colback=green!10, title=Vertiefung: Herleitung der Rückstellkraft beim Fadenpendel]
+    Im Folgenden wird die Rückstellkraft $F_\mathrm{rück,\,fadp}$ unter Annahme der Kleinwinkelnäherung und mithilfe von \hyperref[fig:fadenpendel]{Abbildung~\ref{fig:fadenpendel}} hergeleitet. Die rücktreibende Kraft am Pendel ist derjenige Anteil der Gewichtskraft, der senkrecht zum Faden wirkt. Dabei ist $\varphi$ der Auslenkungswinkel:
+    \begin{equation*}
+        F_\mathrm{rück,\,fadp} = -m \cdot g \cdot \sin(\varphi)
+    \end{equation*}
+    Unter der Annahme, dass für kleine Winkel $x \approx s$ gilt, lässt sich über die trigonometrischen Beziehungen $\sin(\varphi)$ berechnen:
+    \begin{equation*}
+        \sin(\varphi) = \frac{x}{l} \approx \frac{s}{l}
+    \end{equation*}
+    Mit der Kleinwinkelnäherung folgt also für die Rückstellkraft:
+    \begin{align*}
+        F_\mathrm{rück,\,fadp}  &= -m \cdot g \cdot \sin(\varphi) \\
+                               &\approx -m \cdot g \cdot \frac{s}{l}
+    \end{align*}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.25\linewidth]{figures/fadenpendel.png}
+        \caption{Schematische Darstellung eines Fadenpendels.}
+        \label{fig:fadenpendel}
+    \end{figure}
+\end{tcolorbox}
+
+\medskip
+\begin{tcolorbox}[colframe=orange!30!gray, colback=orange!10, title=Vertiefung: Herleitung der Kreisfrequenz beim Fadenpendel]
+    Die Herleitung der Kreisfrequenz $\omega_{0,\,\mathrm{fadp}}$ erfolgt über die bereits aus den Abschnitten~\ref{sec:rueckstellkraft} und~\ref{sec:federpendel} bekannten Gleichungen:
+    \begin{equation*}
+        D = \frac{|F_\mathrm{rück}|}{s} \qquad \omega_0 = \sqrt{\frac{D}{m}}
+    \end{equation*}
+    Versucht man, auch für das Fadenpendel eine Art Federhärte $D$ zu definieren, erhält man:
+    \begin{equation*}
+        D_\mathrm{fadp} = \frac{|F_\mathrm{rück,\,fadp}|}{s} = \frac{\frac{m \cdot g \cdot s}{l}}{s} = \frac{m \cdot g}{l}
+    \end{equation*}
+    Für die Kreisfrequenz ergibt sich:
+    \begin{equation*}
+        \omega_{0,\,\mathrm{fadp}} = \sqrt{\frac{D_\mathrm{fadp}}{m}} = \sqrt{\frac{\frac{m \cdot g}{l}}{m}} = \sqrt{\frac{g}{l}}
+    \end{equation*}
+\end{tcolorbox}
+
+\subsection{Versuche}
+\begin{itemize}
+    \item Den Zusammenhang zwischen harmonischen mechanischen Schwingungen und linearer
+    Rückstellkraft an Beispielen beschreiben
+    \item Energieumwandlungen beim Federpendel erklären
+\end{itemize}
+
+\emph{Weitere Versuche hier einfügen.}

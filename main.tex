@@ -1,0 +1,56 @@
+% Schlichtes und übersichtliches LaTeX-Layout
+\documentclass[a4paper, 11pt]{article}
+
+\input{./subdocs/preamble}
+
+\begin{document}
+
+% --- Titelseite und Inhaltsverzeichnis ---
+
+\pagestyle{empty}       % Keine Seitenzahlen im TOC
+
+\title{Physik-Leistungskurs – Wiederholung aller Themen}
+
+\maketitle
+\thispagestyle{empty}   % Keine Seitenzahl auf Titelseite
+
+\tableofcontents
+
+\clearpage              % Startet neuen Abschnitt
+\pagenumbering{arabic}  % Setzt Seitenzahlen auf arabisch
+\setcounter{page}{1}    % Startet mit 1 auf der ersten Inhaltsseite
+
+\pagestyle{contentstyle}
+
+% --- Inhalt ---
+
+\newpage
+\section{Einleitung}
+Dieses Dokument enthält detaillierte Herleitungen zentraler Größen und Formeln für den Physik-Leistungskurs in Baden-Württemberg (Abitur 2026), beginnend ab der elften Klasse. Darüber hinaus werden wichtige Phänomene sowie die Zusammenhänge zwischen verschiedenen Themengebieten erläutert. Die Kenntnisse aus Unter- und Mittelstufe werden dabei vorausgesetzt und nicht erneut behandelt.
+Bei Rechnungen gilt – sofern nicht ausdrücklich anders angegeben – die Konvention, dass der wissenschaftliche Taschenrechner (WTR) auf den Bogenmaß-Modus (Radian) eingestellt sein sollte. \par
+% --
+Zusätzliche Erklärungen zu den einzelnen Themengebieten und weiterführende Informationen sind auf der Webseite \url{https://physikbuch.schule/index.html/} zu finden. \par
+
+\newpage
+\input{./subdocs/schwingungstheorie}
+
+\newpage
+\input{./subdocs/wellentheorie}
+
+\newpage
+\input{./subdocs/elektrizitaetslehre}
+
+\newpage
+\input{./subdocs/magnetismus}
+
+\newpage
+\input{./subdocs/elektromagnetismus}
+
+\newpage
+\input{./subdocs/wellenoptik_und_quantenmechanik}
+
+\newpage
+
+% --- Abschluss ---
+
+\end{document}
