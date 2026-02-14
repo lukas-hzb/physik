@@ -3,6 +3,7 @@
 
 # Project-specific exclusions
 RULES.md
+NOTES.md
 other/
 scripts/
 

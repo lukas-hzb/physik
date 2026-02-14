@@ -50,7 +50,7 @@ Die Einheit der Phasenverschiebung ist
 \label{sec:gangunterschied}
 Der Gangunterschied ist der Unterschied in den Weglängen, die zwei Wellen bis zu einem gemeinsamen Punkt zurückgelegt haben bzw. die räumliche Verschiebung der Wellen zueinander. Er ist entscheidend dafür, ob sich die kohärenten Wellen am Überlagerungspunkt konstruktiv (Verstärkung) oder destruktiv (Auslöschung) überlagern.
 \begin{gather}
-    \delta = \frac{\Delta \varphi}{2\pi} \cdot \lambda
+    \delta = \Delta s = \frac{\Delta \varphi}{2\pi} \cdot \lambda
 \end{gather}
 \begin{center}
     \begin{tabular}{rl}
@@ -58,7 +58,12 @@ Der Gangunterschied ist der Unterschied in den Weglängen, die zwei Wellen bis z
         $\lambda$ & Wellenlänge
     \end{tabular}
 \end{center}
-Damit entspricht ein Gangunterschied von $\lambda$ einer Phasenverschiebung von $2\pi$, während ein Gangunterschied von $\frac{\lambda}{2}$ einer Phasenverschiebung von $\pi$ entspricht.
+Damit entspricht ein Gangunterschied von ganzzahligen Vielfachen der Wellenlänge ($\delta = k \cdot \lambda$) konstruktiver Interferenz, während ein ungeradzahliges Vielfaches der halben Wellenlänge ($\delta = (k + 0.5) \cdot \lambda$) zu destruktiver Interferenz führt.
+
+Die Einheit des Gangunterschieds ist
+\begin{center}
+    $[\delta] = \si{\meter}$
+\end{center}
 
 \subsubsection{Schnelle ($v_s$)}
 \label{sec:schnelle}
@@ -129,9 +134,14 @@ Eine stehende Welle entsteht, wenn sich zwei Wellen mit gleicher Frequenz, gleic
 
 Die Wellenlänge einer stehenden Welle kann durch Messung des Abstands benachbarter Knoten bestimmt werden: $\lambda = 2 \cdot d_{knot}$
 
-Ein klassisches Beispiel für stehende Wellen ist die schwingende Saite eines Musikinstruments. Die an beiden Enden fixierte Saite reflektiert die Wellen, wodurch stehende Wellen mit Knoten an den Enden entstehen. Je nach Frequenz bilden sich verschiedene Muster, von der Grundschwingung mit einem Bauch bis zu höheren Moden mit mehreren Knoten und Bäuchen.
+Ein klassisches Beispiel für stehende Wellen mit ist die schwingende Saite eines Musikinstruments. Die an beiden Enden fixierte Saite reflektiert die Wellen, wodurch stehende Wellen mit Knoten an den Enden entstehen. Je nach Frequenz bilden sich verschiedene Muster, von der Grundschwingung mit einem Bauch bis zu höheren Moden mit mehreren Knoten und Bäuchen.
 
-Werden zum Beispiel von zwei Erregern Wellen an einer Wasseroberfläche erzeugt, so überlagern sich diese. Genau in der Mitte zwischen diesen befindet sich bei gleicher Phase der Erreger stets ein Wellenbauch. Das liegt daran, dass der von beiden Erregern aus zurückgelegte Weg gleich lang ist und damit an diesem Punkt der Gangunterschied Null ist. Links und rechts von diesem Punkt bildet sich alle halbe Wellenlänge erneut ein Wellenbauch. Dazwischen sind Wellenknoten.
+Auch in Rohren mit offenen oder geschlossenen Enden kommt es zu stehenden Wellen. Mit Knoten und Bäuchen verhält es sich ähnlich wie bei der schwingenden Saite. \hyperref[sec:eigenschwingungen_mit_festen_und_losen_Enden]{Eigenschwingungen mit festen und losen Enden}
+
+Werden zum Beispiel von zwei Erregern Wellen an einer Wasseroberfläche erzeugt, überlagern sich diese zu einem Interferenzmuster. Am Punkt genau zwischen den beiden Erregern ist der Weg von beiden Erregern aus gleich lang, sodass der Gangunterschied $\delta = 0$ beträgt und ein Wellenbauch entsteht (konstruktive Interferenz).
+Allgemein treten Wellenbäuche dort auf, wo der Gangunterschied, also die Differenz der Abstände von den beiden Erregern zu dem betrachteten Punkt, ein ganzzahliges Vielfaches der Wellenlänge ist: $\delta = k \cdot \lambda \ (k \in \mathbb{N}_0)$
+Wellenknoten (destruktive Interferenz) entstehen dort, wo der Gangunterschied ein ungeradzahliges Vielfaches der halben Wellenlänge ist: $\delta = \left(k + \tfrac{1}{2}\right) \cdot \lambda \ (k \in \mathbb{N}_0)$
+Auf der Verbindungsstrecke der Erreger beträgt der Abstand zwischen benachbarten Knoten oder Bäuchen jeweils $\tfrac{\lambda}{2}$.
 
 Siehe auch: \url{https://www.leifiphysik.de/mechanik/mechanische-wellen/versuche/stehende-welle-simulation}
 
@@ -202,7 +212,7 @@ Die Richtung der reflektierten Welle wird durch den Einfallswinkel $\alpha$ zum 
 \label{sec:interferenz}
 Interferenz ist das Phänomen, das auftritt, wenn zwei oder mehr Wellen im gleichen Raum aufeinandertreffen und sich überlagern. Diese Überlagerung kann konstruktiv oder destruktiv sein, je nach \hyperref[sec:phasenverschiebung]{Phasenverschiebung} der Wellen. Die Phasenverschiebung wiederum lässt sich häufig durch den sogenannten \hyperref[sec:gangunterschied]{Gangunterschied} erklären, also den Unterschied in den zurückgelegten Weglängen der Wellen. Auch bei der Überlagerung von Wellen kann wie bei der Überlagerung von Schwingungen Schwebung auftreten, was gut bei Schallwellen wahrnehmbar ist.
 
-Bei konstruktiver Interferenz verstärken sich die Wellen, wenn ihre Auslenkungen in die gleiche Richtung zeigen, was zu einer größeren Amplitude führt. Bei destruktiver Interferenz schwächen sich die Wellen ab, wenn ihre Auslenkungen in entgegengesetzte Richtungen zeigen und sich gegenseitig auslöschen oder vermindern.
+Bei konstruktiver Interferenz verstärken sich die Wellen, wenn ihre Auslenkungen in die gleiche Richtung zeigen ($\delta \approx k \cdot \lambda$). Bei destruktiver Interferenz schwächen sich die Wellen ab oder löschen sich aus, wenn ihre Auslenkungen entgegenwirken ($\delta \approx (k + 0.5) \cdot \lambda$).
 
 Die resultierende Elongation an jedem Punkt ist das Ergebnis der Vektoraddition aller Einzelelongationen.
 
